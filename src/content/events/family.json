@@ -1,0 +1,610 @@
+[
+  {
+    "id": "event-kid",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "You're having a kid",
+    "body": "A due date, and a company that doesn't run itself. Something about how you work has to give.",
+    "options": [
+      {
+        "id": "opt-delegate",
+        "label": "Delegate more at work",
+        "detail": "Hand over real decisions to the team, starting now, before you have to.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          },
+          {
+            "type": "staff",
+            "value": 1
+          }
+        ],
+        "storyHeadline": "Became a parent, leaned on a stronger team",
+        "mentorHint": "You trust your team more. You'll also find out exactly how ready they were, at the worst possible time to learn it."
+      },
+      {
+        "id": "opt-grind",
+        "label": "Push even harder",
+        "detail": "Work more, not less, to build a bigger cushion before the baby arrives.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          },
+          {
+            "type": "revenueStep",
+            "value": 50000
+          }
+        ],
+        "storyHeadline": "Became a parent, worked harder",
+        "mentorHint": "Revenue keeps climbing. Nobody's tracking what pushing even harder costs somewhere else."
+      }
+    ]
+  },
+  {
+    "id": "event-parent-support",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "revenueAbove",
+        "value": 100000
+      }
+    ],
+    "headline": "A parent offers to invest",
+    "body": "They believe in you completely, and they want to put part of their retirement savings into the company to prove it.",
+    "options": [
+      {
+        "id": "opt-accept",
+        "label": "Accept the investment",
+        "detail": "Take their money and the weight of losing it if this doesn't work.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 50000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Took a parent's retirement savings as investment"
+      },
+      {
+        "id": "opt-decline",
+        "label": "Thank them and decline",
+        "detail": "It's too risky for their retirement, whatever they say. Turn it down gently.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Turned down family investment"
+      }
+    ]
+  },
+  {
+    "id": "event-moved-home",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "You had to move back home",
+    "body": "Runway is tight enough that your own rent is the easiest thing left to cut. You move in with family to save it.",
+    "options": [
+      {
+        "id": "opt-embrace",
+        "label": "Lean into it",
+        "detail": "Tell it as the bootstrap story it actually is, to yourself as much as anyone.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 36000
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Moved home to conserve cash, and made peace with it"
+      },
+      {
+        "id": "opt-resent",
+        "label": "Resent every day of it",
+        "detail": "Save the same money, but let it eat at you that it's come to this.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 36000
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Moved home, felt like a failure"
+      }
+    ]
+  },
+  {
+    "id": "ev-a-baby",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A baby",
+    "body": "You're going to be a parent in six months.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take four months off",
+        "detail": "The company drifts. You are happy.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.92,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Took real parental leave",
+        "tag": "TOOK LEAVE"
+      },
+      {
+        "id": "b",
+        "label": "Take two weeks",
+        "detail": "The company is fine. You miss things you won't get back.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Took two weeks and went straight back",
+        "tag": "BACK FAST"
+      },
+      {
+        "id": "c",
+        "label": "Bring the baby to the office",
+        "detail": "Somehow this works.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Brought the baby to the office",
+        "tag": "BABY AT WORK"
+      }
+    ]
+  },
+  {
+    "id": "ev-partner-offer-abroad",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Your partner gets an offer abroad",
+    "body": "It's the job they always wanted. It's in another country.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go with them, run the company remotely",
+        "detail": "Output slips. The relationship is intact.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.85,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Moved abroad to run the company remotely",
+        "tag": "MOVED ABROAD"
+      },
+      {
+        "id": "b",
+        "label": "Stay",
+        "detail": "A real gamble on the relationship.",
+        "effects": [],
+        "storyHeadline": "Stayed behind when the offer came",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "It was hard for a year. It held.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -20
+            }
+          ],
+          "loseText": "It didn't survive the distance.",
+          "winStoryHeadline": "Stayed, and it held",
+          "loseStoryHeadline": "Stayed, and it didn't hold"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-parent-ill",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A parent is ill",
+    "body": "Your mother is not well and lives four hours away.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go, for as long as it takes",
+        "detail": "The company slows. You have no regrets.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.9,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Went to be with a sick parent",
+        "tag": "WENT TO HER"
+      },
+      {
+        "id": "b",
+        "label": "Send money instead",
+        "detail": "It isn't the same and you know it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -20000
+          }
+        ],
+        "storyHeadline": "Sent money instead of going",
+        "tag": "SENT MONEY"
+      }
+    ]
+  },
+  {
+    "id": "ev-oldest-friend-wants-job",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 5
+      }
+    ],
+    "headline": "Your oldest friend wants a job",
+    "body": "They aren't qualified. They know you know.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire them",
+        "detail": "This could go either way.",
+        "effects": [],
+        "storyHeadline": "Hired an old friend, against your better judgement",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 10
+            }
+          ],
+          "winText": "They grew into it and stayed a decade.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "You fired them within a year. The friendship never quite recovered.",
+          "winStoryHeadline": "The old-friend hire worked out",
+          "loseStoryHeadline": "The old-friend hire didn't work out"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Say no honestly",
+        "detail": "The friendship survives, awkwardly.",
+        "effects": [],
+        "storyHeadline": "Said no to hiring a friend",
+        "tag": "SAID NO"
+      }
+    ]
+  },
+  {
+    "id": "ev-havent-slept-properly",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "moraleBelow",
+        "value": 40
+      }
+    ],
+    "headline": "You haven't slept properly in two years",
+    "body": "The doctor used the word \"seriously\".",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take three months off",
+        "detail": "The company drifts. You come back functional.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.9,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Took three months to recover",
+        "tag": "TOOK TIME OFF"
+      },
+      {
+        "id": "b",
+        "label": "Hire someone to run the day-to-day",
+        "detail": "Costs a real salary. You keep your health.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -25000,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Hired someone to run daily operations",
+        "tag": "HIRED A DEPUTY"
+      },
+      {
+        "id": "c",
+        "label": "Push through",
+        "detail": "Thirty percent odds this ends badly within two years.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Pushed through the exhaustion",
+        "tag": "PUSHED THROUGH"
+      }
+    ]
+  },
+  {
+    "id": "ev-sibling-wants-invest",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "yearMax",
+        "value": 6
+      }
+    ],
+    "headline": "Your sibling wants to invest",
+    "body": "They have savings. They believe in you completely, which is the problem.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take it",
+        "detail": "Cash in, and now family dinners are board meetings.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 80000
+          }
+        ],
+        "storyHeadline": "Took investment from family",
+        "tag": "FAMILY MONEY",
+        "mentorHint": "The cash is real. So is the fact that your sibling now has an opinion about the company forever."
+      },
+      {
+        "id": "b",
+        "label": "Refuse",
+        "detail": "They're hurt. You sleep fine.",
+        "effects": [],
+        "storyHeadline": "Turned down a sibling's investment",
+        "tag": "REFUSED",
+        "mentorHint": "They're hurt today. That's the whole cost, and it doesn't show up on any spreadsheet."
+      },
+      {
+        "id": "c",
+        "label": "Take it as a loan, not shares",
+        "detail": "You owe them, but you keep every share.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 80000
+          }
+        ],
+        "storyHeadline": "Took a loan from family instead of equity",
+        "tag": "FAMILY LOAN",
+        "mentorHint": "You keep every share. You also owe family money whether or not the company ever pays you a salary."
+      }
+    ]
+  },
+  {
+    "id": "ev-wedding-launch-day",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A wedding on launch day",
+    "body": "Your best friend set the date a year ago. So did your biggest customer.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go to the wedding",
+        "detail": "The launch slips two weeks. Nothing bad happens.",
+        "effects": [],
+        "storyHeadline": "Chose the wedding over the launch",
+        "tag": "WENT TO WEDDING",
+        "mentorHint": "The launch slips two weeks. Nothing bad happens \u2014 you just won't know what those two weeks cost until later."
+      },
+      {
+        "id": "b",
+        "label": "Skip it",
+        "detail": "The customer is happy. The friendship quietly never recovers.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Skipped the wedding for the launch",
+        "tag": "SKIPPED WEDDING",
+        "mentorHint": "The customer's happy today. Some friendships don't announce they're over, they just quietly stop being what they were."
+      }
+    ]
+  },
+  {
+    "id": "ev-kid-says-ruined-childhood",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 12
+      }
+    ],
+    "headline": "Your kid says the company ruined their childhood",
+    "body": "They're fifteen and they aren't being dramatic.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Step back properly",
+        "detail": "Output drops. The relationship repairs.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.85,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Stepped back to repair things at home",
+        "tag": "STEPPED BACK"
+      },
+      {
+        "id": "b",
+        "label": "Explain why it mattered",
+        "detail": "It doesn't land.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Tried to explain why it mattered",
+        "tag": "TRIED TO EXPLAIN"
+      }
+    ]
+  },
+  {
+    "id": "event-the-succession-question",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "yearMax",
+        "value": 18
+      },
+      {
+        "type": "hasFamily",
+        "value": false
+      }
+    ],
+    "headline": "Someone to hand it to",
+    "body": "Not just a kid. Someone who might actually want this, one day.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Start a family",
+        "detail": "Real time away, real cost. Also, genuinely, the whole point.",
+        "effects": [
+          {
+            "type": "startFamily"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.85,
+            "years": 3
+          },
+          {
+            "type": "cash",
+            "value": -60000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Started a family",
+        "tag": "STARTED A FAMILY",
+        "mentorHint": "Three years of slower growth is the honest price. Nobody prices the part where you're glad you did it."
+      },
+      {
+        "id": "b",
+        "label": "Not now",
+        "detail": "The company stays the only thing you're building.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Decided against starting a family, for now",
+        "tag": "NOT NOW"
+      }
+    ]
+  }
+]

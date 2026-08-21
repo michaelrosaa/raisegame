@@ -1,0 +1,144 @@
+[
+  {
+    "id": "event-year-one-funding",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "yearMax",
+        "value": 1
+      }
+    ],
+    "headline": "How will you pay for year one?",
+    "body": "Three ways to get going. Each one costs you something: a slice of the company, or time.",
+    "options": [
+      {
+        "id": "opt-year1-vc",
+        "label": "Take money from Alder Lane Partners",
+        "detail": "Marcus Delacroix and the people who follow him in. Cash in three weeks, opinions forever.",
+        "tag": "VC BACKED",
+        "icon": "investor",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-marcus",
+            "fundingStage": "seed",
+            "targetDilutionPct": 12
+          },
+          {
+            "type": "revenueStep",
+            "value": 40000
+          }
+        ],
+        "storyHeadline": "Alder Lane Partners leads the seed round",
+        "mentorHint": "The cash is real. The weekly calls that come with it are the problem."
+      },
+      {
+        "id": "opt-year1-accelerator",
+        "label": "Join Kestrel Group",
+        "detail": "A smaller stake for a smaller check. Three months of Karim Okonjo telling you what's wrong, then a room full of investors.",
+        "tag": "ACCELERATOR",
+        "icon": "mentor",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-karim",
+            "fundingStage": "seed",
+            "targetDilutionPct": 7
+          },
+          {
+            "type": "morale",
+            "value": 10
+          },
+          {
+            "type": "revenueStep",
+            "value": 25000
+          }
+        ],
+        "storyHeadline": "Joined Kestrel Group's cohort",
+        "mentorHint": "Three months of being told what's wrong. Some of it will be."
+      },
+      {
+        "id": "opt-year1-solo",
+        "label": "Fund it yourself",
+        "detail": "Do freelance work two days a week to pay for the other three. Slower, but nobody owns a piece of you.",
+        "tag": "NO INVESTORS",
+        "icon": "solo",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          },
+          {
+            "type": "revenueStep",
+            "value": 15000
+          }
+        ],
+        "storyHeadline": "Bootstrapped year one solo",
+        "mentorHint": "You'll be fine. That's the catch \u2014 you'll be fine forever."
+      }
+    ]
+  },
+  {
+    "id": "event-year-one-refounding",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "yearMax",
+        "value": 1
+      }
+    ],
+    "headline": "Year one, take two",
+    "body": "You already decided how much of your own money goes in. What's left is how fast you spend it.",
+    "options": [
+      {
+        "id": "opt-refound-aggressive",
+        "label": "Hire the team you need, now",
+        "detail": "Spend fast and staff up immediately \u2014 the capital's already committed, so put it to work.",
+        "tag": "MOVING FAST",
+        "icon": "solo",
+        "effects": [
+          { "type": "growthMultiplier", "value": 1.35, "years": 2 },
+          { "type": "morale", "value": -8 }
+        ],
+        "storyHeadline": "Staffed up hard out of the gate",
+        "mentorHint": "Move this fast and something breaks. It usually still works out."
+      },
+      {
+        "id": "opt-refound-careful",
+        "label": "Build the foundation first",
+        "detail": "Get the basics right before you scale \u2014 slower out of the gate, steadier once it's moving.",
+        "tag": "STEADY",
+        "icon": "solo",
+        "effects": [
+          { "type": "growthMultiplier", "value": 1.1, "years": 3 },
+          { "type": "morale", "value": 8 }
+        ],
+        "storyHeadline": "Took it slow and built the foundation",
+        "mentorHint": "Nothing breaks. Also, nothing moves very fast."
+      },
+      {
+        "id": "opt-refound-network",
+        "label": "Call in old favors",
+        "detail": "The relationships from last time are still worth something \u2014 investors, customers, hires who'll answer the phone.",
+        "tag": "CALLED IN FAVORS",
+        "icon": "solo",
+        "effects": [
+          { "type": "revenueStep", "value": 30000 },
+          { "type": "morale", "value": 3 }
+        ],
+        "storyHeadline": "Called in every favor from the last company",
+        "mentorHint": "Everyone remembers you. Not everyone remembers fondly."
+      }
+    ]
+  }
+]

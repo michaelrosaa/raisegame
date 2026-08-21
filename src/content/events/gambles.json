@@ -1,0 +1,1065 @@
+[
+  {
+    "id": "gamble-all-in",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "cashLastsAbove",
+        "value": 6
+      }
+    ],
+    "headline": "Bet the company on one enterprise deal",
+    "body": "A Fortune 500 company wants a custom version of your product. Your team estimates six months and real money to build it. Land it and you're in the door at a company a thousand times your size. Miss and you've spent both on nothing.",
+    "options": [
+      {
+        "id": "opt-gamble-enterprise",
+        "label": "Build it and go all in",
+        "detail": "Commit the team and the cash now, before you know if they'll actually sign.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -100000
+          },
+          {
+            "type": "staff",
+            "value": 3
+          }
+        ],
+        "gamble": {
+          "winPct": 60,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 400000
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 1.4,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 30
+            }
+          ],
+          "winText": "Deal closed. You're in the big leagues.",
+          "losePct": 40,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -200000
+            },
+            {
+              "type": "staff",
+              "value": -2
+            },
+            {
+              "type": "morale",
+              "value": -30
+            }
+          ],
+          "loseText": "Deal fell through. Six months wasted, most of the bank gone."
+        },
+        "storyHeadline": "Made a major enterprise bet"
+      },
+      {
+        "id": "opt-safe",
+        "label": "Stick to your roadmap",
+        "detail": "Let the deal go. Whatever you're already building stays the priority.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Decided not to swing for the fences"
+      }
+    ]
+  },
+  {
+    "id": "gamble-acquisition-offer",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueAbove",
+        "value": 500000
+      }
+    ],
+    "headline": "A strategic buyer wants to acquire you",
+    "body": "It's a real, fully-priced offer for the whole company. Your team thinks you could be worth far more if you stay independent another few years. The buyer's CEO is on the call right now, waiting for an answer.",
+    "options": [
+      {
+        "id": "opt-sell-now",
+        "label": "Take the offer",
+        "detail": "Sign today, at today's price, and end the company on this note.",
+        "effects": [
+          {
+            "type": "end",
+            "endingType": "sale"
+          }
+        ],
+        "storyHeadline": "Sold the company to a strategic buyer"
+      },
+      {
+        "id": "opt-hold-out",
+        "label": "Decline, hold out for more",
+        "detail": "Turn it down and bet that staying independent is worth more later.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.4,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 30
+            }
+          ],
+          "winText": "You were right. Your valuation roughly doubled.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.7143,
+              "years": 2
+            },
+            {
+              "type": "cash",
+              "value": -200000
+            },
+            {
+              "type": "morale",
+              "value": -20
+            }
+          ],
+          "loseText": "The market shifted and the buyer moved on. You're back to bootstrapping, offer gone."
+        },
+        "storyHeadline": "Rejected an acquisition offer"
+      }
+    ]
+  },
+  {
+    "id": "gamble-pivot",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "revenueAbove",
+        "value": 100000
+      }
+    ],
+    "headline": "Pivot to a new market",
+    "body": "A related market looks ten times bigger than the one you're in. Chasing it means abandoning your current customers and starting from scratch.",
+    "options": [
+      {
+        "id": "opt-pivot",
+        "label": "Drop everything and chase it",
+        "detail": "Walk away from today's customers and rebuild for the bigger market.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": -100000
+          },
+          {
+            "type": "cash",
+            "value": -80000
+          }
+        ],
+        "gamble": {
+          "winPct": 45,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.4,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 20
+            }
+          ],
+          "winText": "New market is 10x bigger. You nailed it.",
+          "losePct": 55,
+          "loseEffects": [
+            {
+              "type": "revenueStep",
+              "value": -150000
+            },
+            {
+              "type": "morale",
+              "value": -25
+            }
+          ],
+          "loseText": "New market doesn't want it. Lost original market too."
+        },
+        "storyHeadline": "Pivoted to new market"
+      },
+      {
+        "id": "opt-stay-course",
+        "label": "Stay the course",
+        "detail": "Let the bigger market go and keep serving the customers you already have.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Stayed focused on the core market"
+      }
+    ]
+  },
+  {
+    "id": "gamble-last-pitch",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "cashLastsBelow",
+        "value": 4
+      },
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "The last pitch",
+    "body": "One investor left on the list. {INVESTOR} sees eleven companies a week and remembers two.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fly there tonight and pitch in person",
+        "detail": "Everything, on one meeting.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -6000
+          }
+        ],
+        "storyHeadline": "Flew across the world for one last pitch",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "funding",
+              "characterId": "char-hannelore-specht",
+              "fundingStage": "seriesA",
+              "targetDilutionPct": 14
+            }
+          ],
+          "winText": "They wrote the cheque on the spot.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -2,
+              "unit": "runwayMonths"
+            }
+          ],
+          "loseText": "You spent your last savings on flights and heard nothing.",
+          "winStoryHeadline": "The last pitch landed",
+          "loseStoryHeadline": "The last pitch went nowhere"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Cut half the staff and stop needing the money",
+        "detail": "Runway stretches. Morale takes the hit.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 9,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": -30
+          },
+          {
+            "type": "staff",
+            "value": -50,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Cut deep instead of chasing one last cheque",
+        "tag": "CUT INSTEAD"
+      }
+    ]
+  },
+  {
+    "id": "gamble-all-on-one-customer",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueBelow",
+        "value": 2000000
+      }
+    ],
+    "headline": "All of it on one customer",
+    "body": "A company forty times your size will decide in one meeting. Preparing properly means dropping everything else for three months.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Drop everything and go for it",
+        "detail": "Win big, or lose a quarter of the business.",
+        "effects": [],
+        "storyHeadline": "Dropped everything to chase one enormous customer",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.8,
+              "years": 2
+            }
+          ],
+          "winText": "You won, and they became most of your revenue.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.6,
+              "years": 2
+            },
+            {
+              "type": "cash",
+              "value": -7,
+              "unit": "runwayMonths"
+            }
+          ],
+          "loseText": "They chose someone else. You lost a quarter of the business preparing.",
+          "winStoryHeadline": "Landed the deal that changed the company",
+          "loseStoryHeadline": "Lost everything preparing for one deal"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Prepare in the evenings, keep the lights on",
+        "detail": "A much smaller shot, nothing lost either way.",
+        "effects": [],
+        "storyHeadline": "Kept the day job while chasing a big deal quietly",
+        "tag": "PREPARED QUIETLY"
+      }
+    ]
+  },
+  {
+    "id": "gamble-move-the-money",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "countryHasCurrencyRisk",
+        "value": true
+      },
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Move the money",
+    "body": "Everyone says the currency will fall. Everyone has said that for two years.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Move every cent into dollars this week",
+        "detail": "A real bet on your own timing.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Bet the treasury on a currency call",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 40,
+              "unit": "percent"
+            }
+          ],
+          "winText": "The currency fell 40%. You saw it coming.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -20,
+              "unit": "percent"
+            }
+          ],
+          "loseText": "It strengthened instead. The transfer fees and the swing cost you a fifth.",
+          "winStoryHeadline": "Called the currency collapse right",
+          "loseStoryHeadline": "Called the currency wrong"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Move half",
+        "detail": "Safe. Boring. Usually correct.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -1,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Hedged the currency bet",
+        "tag": "HEDGED"
+      }
+    ]
+  },
+  {
+    "id": "gamble-rebuild-it",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueBelow",
+        "value": 8000000
+      }
+    ],
+    "headline": "Burn it down and start again",
+    "body": "Your engineers say the product is held together with tape. Rebuilding takes eight months of shipping nothing.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Rebuild it",
+        "detail": "Faster than anyone in the market, or fourteen months and nothing to show.",
+        "effects": [],
+        "storyHeadline": "Rebuilt the product from the ground up",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.5,
+              "years": 2
+            }
+          ],
+          "winText": "You emerged faster than anyone in the market.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.6,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": -20
+            }
+          ],
+          "loseText": "It took fourteen months. It wasn't better. Customers left.",
+          "winStoryHeadline": "The rebuild put you years ahead",
+          "loseStoryHeadline": "The rebuild cost more than it gave back"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Patch it forever",
+        "detail": "Nothing breaks today. Everything is slower every year.",
+        "effects": [],
+        "storyHeadline": "Kept patching instead of rebuilding",
+        "tag": "PATCHED IT"
+      }
+    ]
+  },
+  {
+    "id": "gamble-ship-friday",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "industryIs",
+        "value": "Software"
+      }
+    ],
+    "headline": "Ship it Friday",
+    "body": "It's nearly ready. The press embargo lifts Monday. Your lead engineer says one more week.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ship Friday",
+        "detail": "Catch the news cycle, or break in public on the biggest day you'll ever have.",
+        "effects": [],
+        "storyHeadline": "Shipped early to catch a press window",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.4,
+              "years": 2
+            }
+          ],
+          "winText": "You caught the news cycle perfectly.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.8,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "It broke in public on the biggest day you'll ever have.",
+          "winStoryHeadline": "Shipped early and landed everywhere at once",
+          "loseStoryHeadline": "Shipped early and broke in public"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Delay a week and miss the coverage",
+        "detail": "Safe. Nobody notices you launched.",
+        "effects": [],
+        "storyHeadline": "Delayed the launch and missed the coverage",
+        "tag": "DELAYED"
+      }
+    ]
+  },
+  {
+    "id": "gamble-famous-boss",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "staffAbove",
+        "value": 40
+      }
+    ],
+    "headline": "The famous boss",
+    "body": "A well-known executive wants to run your company day-to-day.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire them",
+        "detail": "They could double the business, or gut it before they leave.",
+        "effects": [],
+        "storyHeadline": "Handed the company to a famous outside executive",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.9,
+              "years": 2
+            }
+          ],
+          "winText": "They doubled the business in three years.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.75,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": -30
+            }
+          ],
+          "loseText": "They alienated your best people and the investors, then left after a year.",
+          "winStoryHeadline": "The famous hire doubled the business",
+          "loseStoryHeadline": "The famous hire nearly sank the business"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Keep doing it yourself",
+        "detail": "Absolute control. Personally exhausting.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Kept running the company yourself",
+        "tag": "KEPT DOING IT"
+      }
+    ]
+  },
+  {
+    "id": "gamble-enormous-advert",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "cashLastsAbove",
+        "value": 18
+      }
+    ],
+    "headline": "The enormous advert",
+    "body": "One advert, one night, in front of an audience of millions. It costs nearly everything you have.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy the slot",
+        "detail": "Wake up famous, or wake up having spent it all on nothing.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Bought a once-in-a-career advertising slot",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 2.2,
+              "years": 2
+            }
+          ],
+          "winText": "You woke up famous.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -11,
+              "unit": "runwayMonths"
+            }
+          ],
+          "loseText": "Nobody remembered it by Tuesday.",
+          "winStoryHeadline": "One advert made the company famous overnight",
+          "loseStoryHeadline": "One enormous advert vanished without a trace"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Spend a tenth of it on small ads that definitely work",
+        "detail": "Nobody ever tells this story. It works anyway.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -100000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Spent small and steady instead of going big",
+        "tag": "SPENT SMALL"
+      }
+    ]
+  },
+  {
+    "id": "gamble-sue-the-giant",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "Sue the giant",
+    "body": "A company two thousand times your size took your idea wholesale. Your lawyer thinks you have a case.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sue them",
+        "detail": "A settlement that makes headlines, or years of bills and a loss.",
+        "effects": [],
+        "storyHeadline": "Sued a company vastly bigger than yours",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 400000
+            }
+          ],
+          "winText": "They settled rather than be embarrassed.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -200000
+            },
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "Four years of legal bills, and you lost.",
+          "winStoryHeadline": "Won a settlement from a giant",
+          "loseStoryHeadline": "Lost a long legal fight with a giant"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Let it go and move faster than them",
+        "detail": "The sensible option, which is why nobody picks it.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Let a bigger rival's theft go and outran them instead",
+        "tag": "MOVED FASTER"
+      }
+    ]
+  },
+  {
+    "id": "gamble-tell-truth-first",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Tell the truth first",
+    "body": "Something went wrong. Nobody outside the company knows yet. You could fix it quietly.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Publish everything before anyone asks",
+        "detail": "Praised for a decade, or the reason there's a story at all.",
+        "effects": [],
+        "storyHeadline": "Published a mistake before anyone found out",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 20
+            }
+          ],
+          "winText": "You're praised for a decade. It becomes the thing people know about you.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.75,
+              "years": 2
+            }
+          ],
+          "loseText": "It became a news story that would otherwise never have existed.",
+          "winStoryHeadline": "Went public with a mistake and earned trust",
+          "loseStoryHeadline": "Went public with a mistake and made it a story"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Fix it quietly",
+        "detail": "Usually fine. Sometimes much worse later.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Fixed a mistake quietly instead of going public",
+        "tag": "FIXED QUIETLY"
+      }
+    ]
+  },
+  {
+    "id": "gamble-second-country",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "revenueAbove",
+        "value": 2000000
+      }
+    ],
+    "headline": "Open the second country",
+    "body": "Everyone says go now. Everyone also said that to companies that died doing it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go all in \u2014 office, staff, everything",
+        "detail": "Double the business, or eighteen months learning the market is different.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Went all in opening a second country",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 2.0,
+              "years": 2
+            }
+          ],
+          "winText": "It worked, and doubled the business.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -200000
+            },
+            {
+              "type": "morale",
+              "value": -20
+            }
+          ],
+          "loseText": "Eighteen months and a real amount of cash later, you retreated.",
+          "winStoryHeadline": "The second country doubled the business",
+          "loseStoryHeadline": "The second country was an expensive lesson"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Sell there from home first, no office",
+        "detail": "Slow, cheap, usually correct.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Tested a second country remotely first",
+        "tag": "TESTED REMOTELY"
+      }
+    ]
+  },
+  {
+    "id": "gamble-television-show",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Go on the television show",
+    "body": "The one where people pitch to rich investors on camera. Twelve million viewers. No editing rights.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go on",
+        "detail": "An offer live on air, or taken apart on national television.",
+        "effects": [],
+        "storyHeadline": "Went on national television to pitch",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "funding",
+              "characterId": "char-agnes-thorne",
+              "fundingStage": "seriesA",
+              "targetDilutionPct": 10
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 1.6,
+              "years": 2
+            }
+          ],
+          "winText": "You got an offer live, and the phone didn't stop for a month.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -25
+            }
+          ],
+          "loseText": "They took you apart on national television. The clip lives forever.",
+          "winStoryHeadline": "The television pitch landed a deal live on air",
+          "loseStoryHeadline": "The television pitch went badly, on camera, forever"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "Safe. {RIVAL} goes on instead, and it works for them.",
+        "effects": [],
+        "storyHeadline": "Turned down the television pitch show",
+        "tag": "DECLINED"
+      }
+    ]
+  },
+  {
+    "id": "gamble-poach-the-team",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "Poach the whole team",
+    "body": "Six engineers at {RIVAL} would come over together if you asked. All six or none.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take all six",
+        "detail": "Triple your output, or import a faction that breaks your culture.",
+        "effects": [],
+        "storyHeadline": "Poached a rival's entire engineering team at once",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.6,
+              "years": 2
+            }
+          ],
+          "winText": "Output tripled. {RIVAL} never recovered.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -25
+            },
+            {
+              "type": "staff",
+              "value": -4
+            }
+          ],
+          "loseText": "They arrived as a bloc and ran things their way. Your original team left.",
+          "winStoryHeadline": "Poaching a rival's whole team paid off",
+          "loseStoryHeadline": "Poaching a rival's whole team broke the culture"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Take the best two",
+        "detail": "Quiet, real gains, no drama.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 2
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Hired just the best two off a rival's team",
+        "tag": "TOOK JUST TWO"
+      }
+    ]
+  },
+  {
+    "id": "gamble-rename-company",
+    "rarity": "rare",
+    "isGamble": true,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Rename the company",
+    "body": "The name has never worked. Changing it costs a fortune and everybody who knows you knows the old one.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Change it",
+        "detail": "A name that finally fits, or a very expensive confusion.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Renamed the company entirely",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.2,
+              "years": 2
+            }
+          ],
+          "winText": "The new name fits so well nobody remembers the old one within two years.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.8,
+              "years": 2
+            }
+          ],
+          "loseText": "You confused every customer you had.",
+          "winStoryHeadline": "The rename finally fit",
+          "loseStoryHeadline": "The rename confused everyone"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Keep it and stop worrying",
+        "detail": "Free. Imperfect. Fine.",
+        "effects": [],
+        "storyHeadline": "Kept the name that never quite worked",
+        "tag": "KEPT THE NAME"
+      }
+    ]
+  }
+]

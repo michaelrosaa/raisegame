@@ -1,0 +1,521 @@
+[
+  {
+    "id": "event-sanctions",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "countryHasCurrencyRisk",
+        "value": true
+      },
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Sanctions hit your country",
+    "body": "Overnight, you can't export and your cloud provider cuts you off. Every customer outside {COUNTRY} goes dark at once.",
+    "options": [
+      {
+        "id": "opt-relocate",
+        "label": "Relocate the company",
+        "detail": "Re-incorporate somewhere neutral and rebuild your infrastructure there. Expensive, and it costs you customers while you move.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -100000
+          },
+          {
+            "type": "revenueStep",
+            "value": -50000
+          }
+        ],
+        "storyHeadline": "Relocated the company to escape sanctions",
+        "tag": "RELOCATED"
+      },
+      {
+        "id": "opt-shutdown",
+        "label": "Shut it down for good",
+        "detail": "No neutral country, no workaround — the company ends here, today.",
+        "effects": [
+          {
+            "type": "failure",
+            "value": 1
+          }
+        ],
+        "storyHeadline": "Shut down under sanctions",
+        "tag": "SHUT DOWN",
+        "mentorHint": "There's no coming back from this one. Make sure relocating genuinely isn't possible before you pick it."
+      }
+    ]
+  },
+  {
+    "id": "event-trade-deal",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "countryHasCurrencyRisk",
+        "value": true
+      }
+    ],
+    "headline": "New trade deal opens your market",
+    "body": "The export barriers that kept you at home just came down. Neighboring countries are suddenly reachable.",
+    "options": [
+      {
+        "id": "opt-expand",
+        "label": "Open a first international push",
+        "detail": "Hire locally, spend on entry costs, and go find out if the product travels.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -50000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 2
+          },
+          {
+            "type": "staff",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Expanded internationally",
+        "tag": "WENT INTERNATIONAL"
+      },
+      {
+        "id": "opt-consolidate",
+        "label": "Stay home and go deeper",
+        "detail": "Let the new market wait. Put the effort into the customers you already understand.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 50000
+          }
+        ],
+        "storyHeadline": "Focused on the home market instead",
+        "tag": "STAYED HOME"
+      }
+    ]
+  },
+  {
+    "id": "ev-currency-collapses",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "countryHasCurrencyRisk",
+        "value": true
+      },
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "The currency collapses",
+    "body": "Overnight, the money in your bank is worth 40% less. Your costs are local. Your revenue is not.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Move everything you can into dollars",
+        "detail": "Safe, but the transfer costs you a slice.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -8,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Moved the company's cash into dollars",
+        "tag": "MOVED TO DOLLARS"
+      },
+      {
+        "id": "b",
+        "label": "Raise prices immediately",
+        "detail": "Some customers leave. You survive.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.8,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Raised prices to survive a currency shock",
+        "tag": "REPRICED FOR SHOCK"
+      },
+      {
+        "id": "c",
+        "label": "Ride it out",
+        "detail": "A real gamble on the currency recovering.",
+        "effects": [],
+        "storyHeadline": "Rode out a currency collapse",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "It recovered within the year.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -20,
+              "unit": "percent"
+            }
+          ],
+          "loseText": "It got worse, and took half your cash with it.",
+          "winStoryHeadline": "The currency recovered",
+          "loseStoryHeadline": "The currency never recovered"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-new-law-lands",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A new law lands on you",
+    "body": "A rule written for enormous companies now technically applies to you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Comply properly",
+        "detail": "Expensive now. Becomes a moat later.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Complied fully with the new rule",
+        "tag": "COMPLIED"
+      },
+      {
+        "id": "b",
+        "label": "Do the minimum",
+        "detail": "Cheap now, risky later.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000
+          }
+        ],
+        "storyHeadline": "Did the bare minimum on compliance",
+        "tag": "MINIMUM COMPLIANCE"
+      },
+      {
+        "id": "c",
+        "label": "Move the company somewhere else",
+        "detail": "You leave your home country behind.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -150000
+          }
+        ],
+        "storyHeadline": "Relocated to escape a new law",
+        "tag": "RELOCATED"
+      }
+    ]
+  },
+  {
+    "id": "ev-hire-cant-get-visa",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Your best hire can't get a visa",
+    "body": "The person you spent four months finding has been refused entry.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Open a small office in their country",
+        "detail": "Works. Complicated forever.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Opened an office to hire around a visa problem",
+        "tag": "OPENED OFFICE",
+        "mentorHint": "It works. You now run two companies with two sets of everything, forever."
+      },
+      {
+        "id": "b",
+        "label": "Let them go",
+        "detail": "Start again. Months lost.",
+        "effects": [],
+        "storyHeadline": "Lost a great hire to a visa refusal",
+        "tag": "LOST THE HIRE",
+        "mentorHint": "Clean today. Four months of searching, gone \u2014 and you're starting that search from zero."
+      }
+    ]
+  },
+  {
+    "id": "ev-biggest-market-closes",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "revenueAbove",
+        "value": 500000
+      }
+    ],
+    "headline": "Your biggest market closes",
+    "body": "War, sanctions, or politics \u2014 either way you can't sell there from Tuesday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Pull out cleanly",
+        "detail": "Reputation intact. Revenue takes a real hit.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.65,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Pulled out of a closed market cleanly",
+        "tag": "PULLED OUT"
+      },
+      {
+        "id": "b",
+        "label": "Sell that part of the business to a local buyer",
+        "detail": "A clean number, and the market is gone.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 400000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.65,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Sold off the business in the closed market",
+        "tag": "SOLD LOCAL UNIT"
+      }
+    ]
+  },
+  {
+    "id": "ev-tariffs",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "industryIs",
+        "value": "Hardware"
+      }
+    ],
+    "headline": "Tariffs",
+    "body": "The parts you buy just got 25% more expensive by government decision.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Eat the cost",
+        "detail": "Profit gone. Customers stay.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 15,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Absorbed a new tariff instead of passing it on",
+        "tag": "ATE THE COST"
+      },
+      {
+        "id": "b",
+        "label": "Pass it on",
+        "detail": "Revenue per unit holds. Sales drop.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.7,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Passed the tariff on to customers",
+        "tag": "PASSED IT ON"
+      }
+    ]
+  },
+  {
+    "id": "ev-election-changes-everything",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "An election changes everything",
+    "body": "The new government likes companies like yours. Or doesn't.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take the government contract on offer",
+        "detail": "Revenue jumps. You now depend on politics.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.6,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Took a government contract",
+        "tag": "GOVERNMENT CONTRACT"
+      },
+      {
+        "id": "b",
+        "label": "Stay out of it",
+        "detail": "Nothing. Which is sometimes the win.",
+        "effects": [],
+        "storyHeadline": "Stayed out of the political shift",
+        "tag": "STAYED OUT"
+      }
+    ]
+  },
+  {
+    "id": "ev-cheap-talent-arrives",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Cheap talent arrives",
+    "body": "A crisis next door means brilliant people are suddenly looking for work in {COUNTRY}.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire ten of them",
+        "detail": "Output jumps. Costs rise. Culture changes completely.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 10
+          },
+          {
+            "type": "monthlyBurn",
+            "value": 20,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Hired a wave of new arrivals",
+        "tag": "HIRED THE WAVE"
+      },
+      {
+        "id": "b",
+        "label": "Hire two carefully",
+        "detail": "Modest gains, no disruption.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Hired carefully from the new talent pool",
+        "tag": "HIRED CAREFULLY"
+      },
+      {
+        "id": "c",
+        "label": "Don't",
+        "detail": "Your rival hires eight of them instead.",
+        "effects": [],
+        "storyHeadline": "Passed on the new talent pool",
+        "tag": "PASSED"
+      }
+    ]
+  },
+  {
+    "id": "ev-cable-cut",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The internet cable is cut",
+    "body": "An anchor severed the cable. Half the country is offline for eleven days.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Refund everyone",
+        "detail": "Costs you now. Customers love you forever.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Refunded every customer after the outage",
+        "tag": "REFUNDED EVERYONE"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "Some customers leave quietly.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Said nothing about the outage",
+        "tag": "SAID NOTHING"
+      },
+      {
+        "id": "c",
+        "label": "Send everyone a handwritten apology",
+        "detail": "Cheap, and one customer posts it online.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Sent handwritten apologies after the outage",
+        "tag": "HANDWRITTEN APOLOGY"
+      }
+    ]
+  }
+]

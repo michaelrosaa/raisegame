@@ -1,0 +1,1569 @@
+[
+  {
+    "id": "event-first-customer",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "revenueAbove",
+        "value": 0
+      },
+      {
+        "type": "staffAbove",
+        "value": 0
+      }
+    ],
+    "headline": "Your first real customer",
+    "body": "A lead from your network just signed a real contract. Not a friend doing you a favour — an actual paying customer.",
+    "options": [
+      {
+        "id": "opt-celebrate",
+        "label": "Celebrate properly",
+        "detail": "Take the team out and mark the moment before getting back to work tomorrow.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Celebrated the first real contract"
+      },
+      {
+        "id": "opt-reinvest",
+        "label": "Reinvest every cent",
+        "detail": "Skip the celebration and put the money straight back into the product.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 5000
+          }
+        ],
+        "storyHeadline": "Put the first revenue straight back into the product"
+      }
+    ]
+  },
+  {
+    "id": "event-mentor-call",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "yearMax",
+        "value": 3
+      }
+    ],
+    "headline": "{MENTOR} calls, unprompted",
+    "body": "She's heard how things are going and has opinions about your strategy that she didn't wait to be asked for.",
+    "options": [
+      {
+        "id": "opt-listen",
+        "label": "Listen carefully",
+        "detail": "Take detailed notes and actually weigh what she's saying.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Took a mentor's advice to heart"
+      },
+      {
+        "id": "opt-disagree",
+        "label": "Push back politely",
+        "detail": "Hear her out, then explain why you're sticking with your own read on this.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "You trust your instincts"
+      }
+    ]
+  },
+  {
+    "id": "event-hiring-offer",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "cashLastsAbove",
+        "value": 6
+      }
+    ],
+    "headline": "Great engineer wants in",
+    "body": "Someone you respect is interested in joining as employee #2. They want 5% equity.",
+    "options": [
+      {
+        "id": "opt-hire-cheap",
+        "label": "Hire for cash + 2%",
+        "detail": "Negotiate them down to 2% equity plus a bigger cash number today.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 1
+          },
+          {
+            "type": "cash",
+            "value": -60000
+          }
+        ],
+        "storyHeadline": "Hired first employee",
+        "mentorHint": "You save equity today. They know what the fair offer was, and they'll remember who didn't make it."
+      },
+      {
+        "id": "opt-hire-fair",
+        "label": "Give them what they want",
+        "detail": "The full 5% equity they asked for, at market rate.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 1
+          },
+          {
+            "type": "cash",
+            "value": -50000
+          }
+        ],
+        "storyHeadline": "First hire joins at fair terms",
+        "mentorHint": "Market rate costs more equity now, permanently, in every future cap table calculation."
+      },
+      {
+        "id": "opt-wait",
+        "label": "Can't afford it yet",
+        "detail": "Tell them honestly and hope they're still available when you can.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Passed on first hire opportunity",
+        "mentorHint": "Nothing costs anything today. Someone this good doesn't usually wait around to be affordable."
+      }
+    ]
+  },
+  {
+    "id": "event-product-feedback",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "revenueAbove",
+        "value": 50000
+      }
+    ],
+    "headline": "Customers want a feature you didn't plan",
+    "body": "Multiple paying customers request the same capability. Building it would delay other work.",
+    "options": [
+      {
+        "id": "opt-build-it",
+        "label": "Build what customers want",
+        "detail": "Drop what's next in line and build the feature they're actually asking for.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          },
+          {
+            "type": "revenueStep",
+            "value": 30000
+          }
+        ],
+        "storyHeadline": "Customer-driven product update",
+        "mentorHint": "Customers get what they asked for. Everything else on the roadmap quietly slips behind it."
+      },
+      {
+        "id": "opt-stick-plan",
+        "label": "Stick to your roadmap",
+        "detail": "Explain the vision and hold the line — the feature stays unbuilt for now.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Stayed true to product vision",
+        "mentorHint": "You keep the roadmap intact. The customers who asked notice you didn't build it for them."
+      }
+    ]
+  },
+  {
+    "id": "event-competitor-launches",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "climateIs",
+        "value": "frothy"
+      }
+    ],
+    "headline": "A rival launches, funded at $20M",
+    "body": "A well-financed newcomer enters your market and starts undercutting you on price.",
+    "options": [
+      {
+        "id": "opt-compete",
+        "label": "Compete on product, not price",
+        "detail": "Ignore their pricing and double down on what only you do well.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Doubled down on product excellence"
+      },
+      {
+        "id": "opt-pivot",
+        "label": "Sidestep into an adjacent market",
+        "detail": "Skip the price war entirely and find customers they haven't reached yet.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": -25000
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Pivoted to a new market"
+      }
+    ]
+  },
+  {
+    "id": "ev-customer-wants-it-their-way",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "revenueAbove",
+        "value": 100000
+      }
+    ],
+    "headline": "The customer who wants it built their way",
+    "body": "A big customer will sign if you build three things only they need.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Build it",
+        "detail": "Six months of engineering you'll probably regret.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Bent the roadmap for one customer",
+        "tag": "CUSTOM BUILT",
+        "mentorHint": "Six months of engineering for one customer. You'll find out whether it was worth it long after you've already spent it."
+      },
+      {
+        "id": "b",
+        "label": "Say no politely",
+        "detail": "They walk, you stay clean.",
+        "effects": [],
+        "storyHeadline": "Turned down a demanding customer",
+        "tag": "STAYED CLEAN",
+        "mentorHint": "They walk, and you stay clean. You also don't get to know what that contract would have become."
+      },
+      {
+        "id": "c",
+        "label": "Build one of the three",
+        "detail": "They're half happy. So are you.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.12,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Compromised on the roadmap",
+        "tag": "PARTIAL BUILD",
+        "mentorHint": "They're half happy. You've now built a third of a feature you may end up finishing anyway."
+      }
+    ]
+  },
+  {
+    "id": "ev-everyone-wants-same-feature",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Everyone is asking for the same missing thing",
+    "body": "Forty customers have now asked for the same feature. Your team thinks it's boring.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Build it",
+        "detail": "Engineers grumble. Customers stop asking.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Shipped the feature everyone wanted",
+        "tag": "LISTENED",
+        "mentorHint": "Customers stop asking. Your engineers remember exactly whose idea this was."
+      },
+      {
+        "id": "b",
+        "label": "Build what's exciting instead",
+        "detail": "Morale is up. Customers quietly leave.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.92,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Chased the interesting problem instead",
+        "tag": "FOLLOWED PASSION",
+        "mentorHint": "Morale's up in the building. The forty people who asked are quietly starting to look elsewhere."
+      }
+    ]
+  },
+  {
+    "id": "ev-prices-too-low",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "revenueAbove",
+        "value": 50000
+      }
+    ],
+    "headline": "Your prices are too low",
+    "body": "Nobody has ever said no because of the price. That's usually a sign.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Raise prices 30%",
+        "detail": "Lose 8% of customers, keep the rest at a better price.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.22,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Raised prices across the board",
+        "tag": "REPRICED",
+        "mentorHint": "You lose 8% of customers on purpose. You won't know which 8% until they're already gone."
+      },
+      {
+        "id": "b",
+        "label": "Raise them for new customers only",
+        "detail": "No complaints from anyone already in.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Quietly raised prices for new signups",
+        "tag": "NEW PRICING",
+        "mentorHint": "No complaints from anyone already in \u2014 and a two-tier price list you'll be explaining for years."
+      },
+      {
+        "id": "c",
+        "label": "Leave them",
+        "detail": "Nothing changes, forever.",
+        "effects": [],
+        "storyHeadline": "Left the pricing alone",
+        "tag": "NO CHANGE",
+        "mentorHint": "Nothing changes today. Nothing changes tomorrow either, which is exactly the problem."
+      }
+    ]
+  },
+  {
+    "id": "ev-one-customer-third-revenue",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "One customer is a third of your revenue",
+    "body": "If they leave, you're in serious trouble. They know this.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Spend a year chasing smaller customers",
+        "detail": "Growth slows. You sleep better.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Diversified away from one big customer",
+        "tag": "DIVERSIFIED"
+      },
+      {
+        "id": "b",
+        "label": "Go even deeper with them",
+        "detail": "They practically own you now.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.3,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Went all-in on the biggest customer",
+        "tag": "CONCENTRATED"
+      }
+    ]
+  },
+  {
+    "id": "ev-customer-wont-pay",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A customer won't pay",
+    "body": "Four months late. They keep saying next week.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Cut them off",
+        "detail": "Lose the revenue. Others notice you're serious.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.94,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Cut off a customer who wouldn't pay",
+        "tag": "CUT THEM OFF",
+        "mentorHint": "You lose the revenue today. Everyone watching learns you're serious, including the customers who pay on time."
+      },
+      {
+        "id": "b",
+        "label": "Keep serving them and hope",
+        "detail": "A coin flip on whether they ever pay.",
+        "effects": [],
+        "storyHeadline": "Kept a non-paying customer, for now",
+        "tag": "WAITED",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.03,
+              "years": 2
+            }
+          ],
+          "winText": "They finally paid, in full, with an apology.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.94,
+              "years": 2
+            }
+          ],
+          "loseText": "They never paid. You should have known.",
+          "winStoryHeadline": "The late payer finally paid up",
+          "loseStoryHeadline": "Wrote off a customer who never paid"
+        }
+      },
+      {
+        "id": "c",
+        "label": "Offer a payment plan",
+        "detail": "You get most of it, slowly.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Put a non-payer on a payment plan",
+        "tag": "PAYMENT PLAN",
+        "mentorHint": "You get most of it, slowly \u2014 and you've just taught them that not paying gets them a better deal."
+      }
+    ]
+  },
+  {
+    "id": "ev-wrong-customers",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueBelow",
+        "value": 3000000
+      }
+    ],
+    "headline": "The customers you have are the wrong ones",
+    "body": "They're small, difficult and don't pay much. The good ones are somewhere else.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Stop selling to them, start again upmarket",
+        "detail": "Painful now, much better later.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.7,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Walked away from the wrong customers",
+        "tag": "REPOSITIONED"
+      },
+      {
+        "id": "b",
+        "label": "Keep them, they're paying",
+        "detail": "Safe. Capped. Forever.",
+        "effects": [],
+        "storyHeadline": "Kept the customers who were easy to keep",
+        "tag": "STAYED PUT"
+      }
+    ]
+  },
+  {
+    "id": "ev-support-drowning",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 3
+      }
+    ],
+    "headline": "Support is drowning",
+    "body": "Every question comes to two people and both are exhausted.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire two more",
+        "detail": "Costs go up. Morale recovers fast.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 2
+          },
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Hired to fix the support backlog",
+        "tag": "HIRED SUPPORT"
+      },
+      {
+        "id": "b",
+        "label": "Write help pages and hope",
+        "detail": "Half the questions stop. Half don't.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Wrote documentation instead of hiring",
+        "tag": "WROTE DOCS"
+      },
+      {
+        "id": "c",
+        "label": "Do nothing",
+        "detail": "Someone quits.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -20
+          },
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Let the support backlog burn people out",
+        "tag": "IGNORED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-simple-or-powerful",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Simple or powerful",
+    "body": "Your customers want more features. New customers find it confusing already.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Add the features",
+        "detail": "Existing customers happy, new signups slower.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.08,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Added the features customers asked for",
+        "tag": "ADDED FEATURES",
+        "mentorHint": "Existing customers stay happy. New signups take longer to convince, quietly, for a while."
+      },
+      {
+        "id": "b",
+        "label": "Strip it back",
+        "detail": "New signups jump. A dozen loyal customers are furious.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Simplified the product on purpose",
+        "tag": "STRIPPED BACK",
+        "mentorHint": "New signups jump. The loyal customers furious about it were also your best word of mouth."
+      }
+    ]
+  },
+  {
+    "id": "ev-build-or-buy",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Build it or buy it",
+    "body": "You could buy a small tool that does part of the job, or spend six months building it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy it",
+        "detail": "Working next month.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -60000
+          }
+        ],
+        "storyHeadline": "Bought instead of building",
+        "tag": "BOUGHT IT",
+        "mentorHint": "Working next month. You'll be paying for someone else's roadmap for as long as you use it."
+      },
+      {
+        "id": "b",
+        "label": "Build it",
+        "detail": "Six months of work. Better. Yours.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -20000
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Built it in-house, the slow way",
+        "tag": "BUILT IT",
+        "mentorHint": "Six months of work you can't spend building anything else, for something a tool already does."
+      }
+    ]
+  },
+  {
+    "id": "ev-feature-nobody-uses",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The feature nobody uses",
+    "body": "Eleven percent of the product is used by 0.3% of customers. It costs a fortune to maintain.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Delete it",
+        "detail": "Costs down. A handful of very angry emails.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -5,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Cut a feature almost nobody used",
+        "tag": "CUT IT",
+        "mentorHint": "Costs come down today. The handful of angry emails are from the customers who cared enough to write one."
+      },
+      {
+        "id": "b",
+        "label": "Keep it",
+        "detail": "Nothing changes. Everything is slower.",
+        "effects": [],
+        "storyHeadline": "Kept maintaining a feature nobody uses",
+        "tag": "KEPT IT",
+        "mentorHint": "Nothing changes today. It keeps costing you the same fortune tomorrow, and the day after."
+      }
+    ]
+  },
+  {
+    "id": "ev-product-too-slow",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "industryIs",
+        "value": "Software"
+      }
+    ],
+    "headline": "The product is too slow",
+    "body": "Customers don't complain. They just use it less.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Spend a quarter fixing speed",
+        "detail": "Nothing visible ships. Usage climbs.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Spent a quarter on nothing but speed",
+        "tag": "FIXED SPEED"
+      },
+      {
+        "id": "b",
+        "label": "Ship new features instead",
+        "detail": "Usage keeps sliding.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Shipped features instead of fixing speed",
+        "tag": "SHIPPED FEATURES"
+      }
+    ]
+  },
+  {
+    "id": "ev-free-trial",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Should it be free to try?",
+    "body": "Right now people have to pay before they see it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Free trial",
+        "detail": "Way more signups, worth less per customer.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Opened up a free trial",
+        "tag": "FREE TRIAL",
+        "mentorHint": "Way more signups. Each one is worth less, and you won't know how much less until you add it up later."
+      },
+      {
+        "id": "b",
+        "label": "Keep the paywall",
+        "detail": "Fewer, better customers.",
+        "effects": [],
+        "storyHeadline": "Kept the product behind a paywall",
+        "tag": "KEPT PAYWALL",
+        "mentorHint": "Fewer, better customers \u2014 and a much smaller number of people ever finding out you exist."
+      }
+    ]
+  },
+  {
+    "id": "ev-first-real-manager",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 8
+      }
+    ],
+    "headline": "Your first real manager",
+    "body": "You can't be in every conversation any more.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire an experienced one from outside",
+        "detail": "Costs more. Some resentment. It works.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000
+          }
+        ],
+        "storyHeadline": "Hired an outside manager",
+        "tag": "HIRED OUTSIDE"
+      },
+      {
+        "id": "b",
+        "label": "Promote someone loyal",
+        "detail": "Cheap. They might be out of their depth.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Promoted from within",
+        "tag": "PROMOTED FROM WITHIN",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "They grew into it faster than anyone expected.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "They were out of their depth, and everyone could see it.",
+          "winStoryHeadline": "The internal promotion paid off",
+          "loseStoryHeadline": "The internal promotion struggled"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-cheap-or-expensive-hire",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Cheap and eager or expensive and proven",
+    "body": "Two candidates. One costs three times the other.",
+    "options": [
+      {
+        "id": "a",
+        "label": "The expensive one",
+        "detail": "Output jumps immediately.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.08,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Paid up for a proven hire",
+        "tag": "PAID UP",
+        "mentorHint": "Output jumps now. That's cash you can't spend twice, whether or not they're still here in a year."
+      },
+      {
+        "id": "b",
+        "label": "The cheap one",
+        "detail": "Slower, loyal, might be brilliant in two years.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -5000
+          }
+        ],
+        "storyHeadline": "Bet on a cheaper, unproven hire",
+        "tag": "BET CHEAP",
+        "mentorHint": "Cheaper today. 'Might be brilliant in two years' is doing a lot of work in that sentence."
+      }
+    ]
+  },
+  {
+    "id": "ev-everyone-wants-raise",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "staffAbove",
+        "value": 5
+      }
+    ],
+    "headline": "Everyone wants a pay rise",
+    "body": "Not unreasonably.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give it",
+        "detail": "Costs go up. Morale is much better.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 12,
+            "unit": "percent"
+          },
+          {
+            "type": "morale",
+            "value": 25
+          }
+        ],
+        "storyHeadline": "Gave everyone a raise",
+        "tag": "GAVE RAISES"
+      },
+      {
+        "id": "b",
+        "label": "Say not yet",
+        "detail": "Morale drops. Two people start looking.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -20
+          }
+        ],
+        "storyHeadline": "Held off on raises",
+        "tag": "HELD OFF"
+      }
+    ]
+  },
+  {
+    "id": "ev-rival-hiring-your-people",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "A rival is hiring your people",
+    "body": "{RIVAL} has been calling your team.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Match their offers",
+        "detail": "Costs rise across the board.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 18,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Matched a rival's offers to keep the team",
+        "tag": "MATCHED OFFERS"
+      },
+      {
+        "id": "b",
+        "label": "Let whoever wants to go, go",
+        "detail": "Two leave. The rest are committed.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -2
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Let the door swing both ways",
+        "tag": "LET THEM GO"
+      }
+    ]
+  },
+  {
+    "id": "ev-office-or-remote",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Do you need an office at all?",
+    "body": "The lease is up.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take a bigger one",
+        "detail": "The team likes it. It costs more.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Signed a bigger office lease",
+        "tag": "BIGGER OFFICE",
+        "mentorHint": "The team likes it. That's real money leaving every month whether or not the team's actually bigger."
+      },
+      {
+        "id": "b",
+        "label": "Go fully remote",
+        "detail": "Cheaper. New people take longer to fit in.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 8,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Went fully remote",
+        "tag": "WENT REMOTE",
+        "mentorHint": "Cheaper immediately. New people take longer to actually feel like they're on the team."
+      }
+    ]
+  },
+  {
+    "id": "ev-hire-salesperson",
+    "rarity": "common",
+    "isGamble": false,
+    "category": "people",
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "revenueBelow",
+        "value": 1000000
+      }
+    ],
+    "headline": "Hire a salesperson or sell it yourself",
+    "body": "You've been doing all the selling.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire one",
+        "detail": "Costs more up front, revenue climbs after.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -30000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Hired a first salesperson",
+        "tag": "HIRED SALES"
+      },
+      {
+        "id": "b",
+        "label": "Keep doing it yourself",
+        "detail": "Revenue grows slower. You do nothing else.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Kept selling everything yourself",
+        "tag": "FOUNDER-LED SALES"
+      }
+    ]
+  },
+  {
+    "id": "ev-cut-costs-or-grow",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "cashLastsBelow",
+        "value": 12
+      }
+    ],
+    "headline": "Cut costs or keep growing",
+    "body": "You can be safe or you can be fast.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Cut 15% of spending",
+        "detail": "Growth slows. Cash lasts much longer.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -15,
+            "unit": "percent"
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Cut costs to buy runway",
+        "tag": "CUT COSTS"
+      },
+      {
+        "id": "b",
+        "label": "Keep spending",
+        "detail": "You're betting on the growth showing up in time.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Kept spending through the scare",
+        "tag": "KEPT SPENDING"
+      }
+    ]
+  },
+  {
+    "id": "ev-late-payers",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Late payers",
+    "body": "Everyone pays 60 days late. That's two months of your money sitting elsewhere.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Charge a fee for late payment",
+        "detail": "Better cash flow. Two customers annoyed.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 3,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Started charging for late payment",
+        "tag": "LATE FEES",
+        "mentorHint": "Better cash flow. The two customers you annoyed are the ones who talk to other customers."
+      },
+      {
+        "id": "b",
+        "label": "Offer a discount for paying early",
+        "detail": "Cash lasts longer. Revenue is a little lower.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 4,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.96,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Offered a discount for paying early",
+        "tag": "EARLY-PAY DISCOUNT",
+        "mentorHint": "Cash lasts longer. You've just told every customer that paying late is worth less than paying you at all."
+      }
+    ]
+  },
+  {
+    "id": "ev-borrow-vs-raise",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueAbove",
+        "value": 500000
+      },
+      {
+        "type": "bankruptciesBelow",
+        "value": 2
+      },
+      {
+        "type": "hasLoan",
+        "value": false
+      }
+    ],
+    "headline": "Borrow instead of selling shares",
+    "body": "A bank will lend against your revenue.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take the loan",
+        "detail": "No shares given up. Repayments start immediately.",
+        "effects": [
+          {
+            "type": "loan",
+            "value": 400000,
+            "years": 5,
+            "holderLabel": "Meridian Community Bank"
+          }
+        ],
+        "storyHeadline": "Took on debt instead of dilution",
+        "tag": "TOOK ON DEBT",
+        "mentorHint": "No shares given up. Repayments don't care whether revenue shows up on time."
+      },
+      {
+        "id": "b",
+        "label": "Raise from investors",
+        "detail": "No repayments, but you give up equity.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-priya",
+            "fundingStage": "seriesA",
+            "targetDilutionPct": 10
+          }
+        ],
+        "storyHeadline": "Raised equity instead of debt",
+        "tag": "RAISED EQUITY",
+        "mentorHint": "No repayments \u2014 but the equity's gone even in the years the loan would've been paid off."
+      }
+    ]
+  },
+  {
+    "id": "ev-should-you-write-publicly",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Should you write publicly?",
+    "body": "Everyone says the founder should post about the company.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Start writing every week",
+        "detail": "Slow burn, real signups over time.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.06,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Started writing publicly every week",
+        "tag": "WRITING WEEKLY",
+        "mentorHint": "Slow burn. Every week you don't write becomes a small, visible admission that you stopped."
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "Nothing. And nobody knows who you are.",
+        "effects": [],
+        "storyHeadline": "Decided not to bother with public writing",
+        "tag": "STAYED QUIET",
+        "mentorHint": "Costs nothing today. Nobody outside your customers will ever know this company exists."
+      }
+    ]
+  },
+  {
+    "id": "ev-advertise-or-not",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "revenueAbove",
+        "value": 300000
+      }
+    ],
+    "headline": "Advertise or not",
+    "body": "Paid advertising works but it never stops costing.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Spend on it",
+        "detail": "Signups jump while you pay. Stop paying, stop growing.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -80000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Turned on paid advertising",
+        "tag": "PAID ADS"
+      },
+      {
+        "id": "b",
+        "label": "Spend on content instead",
+        "detail": "Slow for a year, then free forever.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -20000
+          }
+        ],
+        "storyHeadline": "Invested in content instead of ads",
+        "tag": "CONTENT INSTEAD"
+      }
+    ]
+  },
+  {
+    "id": "ev-write-the-handbook",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "staffAbove",
+        "value": 15
+      }
+    ],
+    "headline": "Write it down or keep it in your head",
+    "body": "Nobody knows how anything is decided.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Write the handbook",
+        "detail": "Slower for a week. Clearer forever.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Finally wrote the company handbook",
+        "tag": "WROTE IT DOWN"
+      },
+      {
+        "id": "b",
+        "label": "Keep improvising",
+        "detail": "Fast today. Every new hire takes months to ramp.",
+        "effects": [],
+        "storyHeadline": "Kept everything undocumented",
+        "tag": "KEPT IMPROVISING"
+      }
+    ]
+  },
+  {
+    "id": "ev-a-holiday",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "moraleBelow",
+        "value": 60
+      }
+    ],
+    "headline": "A holiday",
+    "body": "Two weeks, no laptop.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go",
+        "detail": "Nothing breaks. The company runs fine without you, which is unsettling.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Took two real weeks off",
+        "tag": "TOOK THE HOLIDAY"
+      },
+      {
+        "id": "b",
+        "label": "Stay",
+        "detail": "You keep working. You keep being tired.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Skipped the holiday, again",
+        "tag": "SKIPPED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-supplier-goes-bust",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A supplier goes bust owing you nothing",
+    "body": "They simply vanish. You need a new one by Tuesday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Scramble and find a replacement fast",
+        "detail": "Two weeks of chaos, then fine.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Scrambled to replace a vanished supplier",
+        "tag": "SCRAMBLED"
+      }
+    ]
+  },
+  {
+    "id": "ev-long-review",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Someone leaves a very long review",
+    "body": "Two thousand words, mostly positive, deeply strange.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Reply properly",
+        "detail": "They become an evangelist for a decade.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Replied properly to a strange, long review",
+        "tag": "REPLIED"
+      },
+      {
+        "id": "b",
+        "label": "Ignore it",
+        "detail": "Nothing.",
+        "effects": [],
+        "storyHeadline": "Ignored a very long review",
+        "tag": "IGNORED"
+      }
+    ]
+  }
+]

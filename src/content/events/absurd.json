@@ -1,0 +1,1228 @@
+[
+  {
+    "id": "event-celebrity-customer",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "revenueAbove",
+        "value": 500000
+      }
+    ],
+    "headline": "A-list celebrity uses your product on camera",
+    "body": "Nobody asked permission. Fifty million people just watched them use your app live, and your servers are starting to buckle.",
+    "options": [
+      {
+        "id": "opt-scale-fast",
+        "label": "Scale the servers immediately",
+        "detail": "Spend whatever it takes, right now, to keep the app up while the moment lasts.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -100000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": 30
+          }
+        ],
+        "storyHeadline": "Scaled up fast for a celebrity moment"
+      },
+      {
+        "id": "opt-ride-it",
+        "label": "Ride the wave",
+        "detail": "Don't spend anything. Hope the infrastructure holds on its own.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 100000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Survived viral moment"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "event-meme",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      }
+    ],
+    "headline": "Your product is now a meme",
+    "body": "Somebody found something funny about your app, and it will not stop spreading. A hundred thousand posts in a day. Some of them are even kind.",
+    "options": [
+      {
+        "id": "opt-lean-meme",
+        "label": "Embrace it",
+        "detail": "Post funny responses yourself and lean all the way into the joke.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Leaned into becoming an internet meme"
+      },
+      {
+        "id": "opt-ignore",
+        "label": "Ignore it and stay focused",
+        "detail": "Say nothing publicly. There's real work to do either way.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Stayed above the fray"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "event-stolen-idea",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "A giant copies your entire product",
+    "body": "A company a thousand times your size just launched something suspiciously identical to what you've spent years building.",
+    "options": [
+      {
+        "id": "opt-sue",
+        "label": "Lawyer up and sue",
+        "detail": "Fight it on principle, whatever the legal bill turns out to be.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -50000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Took on a giant over a stolen idea"
+      },
+      {
+        "id": "opt-exit",
+        "label": "Sell them the part they didn't copy",
+        "detail": "Take a payout for whatever they still need from you instead of fighting them.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 200000
+          }
+        ],
+        "storyHeadline": "Took a payout instead of fighting the copy"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-name-rude-elsewhere",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Your name is rude in another language",
+    "body": "{COMPANY} means something very unfortunate in a market of 80 million people.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Rebrand there only",
+        "detail": "Mildly confusing, forever, in one country.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -90000
+          }
+        ],
+        "storyHeadline": "Rebranded in one unfortunate market",
+        "tag": "LOCAL REBRAND"
+      },
+      {
+        "id": "b",
+        "label": "Rebrand everywhere",
+        "detail": "A clean slate, at a real cost.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Rebranded the whole company",
+        "tag": "FULL REBRAND"
+      },
+      {
+        "id": "c",
+        "label": "Do nothing, it's free advertising",
+        "detail": "Sales in that country are enormous, for the wrong reason.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Leaned into an accidentally rude name",
+        "tag": "LEANED IN"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-famous-person-mistags",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "A famous person tags you by mistake",
+    "body": "They meant to tag a company with a similar name. Four million people didn't check.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Say nothing and take the customers",
+        "detail": "A huge spike. Almost none of it sticks.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Quietly kept the customers from a viral mistake",
+        "tag": "TOOK THE CUSTOMERS"
+      },
+      {
+        "id": "b",
+        "label": "Politely correct it",
+        "detail": "They thank you publicly. Worth more than the traffic.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Corrected a viral mix-up honestly",
+        "tag": "CORRECTED IT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-office-floods",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "The office floods",
+    "body": "A pipe upstairs. Nobody was there. The photographs are extraordinary.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Claim on insurance",
+        "detail": "Six weeks of paperwork. Most of it comes back.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -20000
+          }
+        ],
+        "storyHeadline": "Claimed on insurance after a flood",
+        "tag": "CLAIMED INSURANCE"
+      },
+      {
+        "id": "b",
+        "label": "Post the photos",
+        "detail": "It goes mildly viral. A few journalists call.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Posted the flood photos online",
+        "tag": "POSTED THE PHOTOS"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-domain-name-bought",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Someone bought your domain name",
+    "body": "They want a number with five digits in it. They're 19 and completely within their rights.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Pay",
+        "detail": "Done. Mildly humiliating.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000
+          }
+        ],
+        "storyHeadline": "Paid to get the company's own domain back",
+        "tag": "PAID FOR IT"
+      },
+      {
+        "id": "b",
+        "label": "Refuse and rename",
+        "detail": "Expensive, but the domain problem is gone for good.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Rebranded rather than pay for a domain",
+        "tag": "RENAMED INSTEAD"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-conspiracy-theory",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A conspiracy theory about your product",
+    "body": "People believe your product does something it very much does not do.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Explain calmly",
+        "detail": "Nobody listens. It fades in four months.",
+        "effects": [],
+        "storyHeadline": "Calmly explained away a conspiracy theory",
+        "tag": "EXPLAINED CALMLY"
+      },
+      {
+        "id": "b",
+        "label": "Make a joke of it",
+        "detail": "Signups jump. Some people are furious.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.08,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Made a joke out of a conspiracy theory",
+        "tag": "MADE A JOKE"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-logo-rude-small",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Your logo means something rude when small",
+    "body": "At 16 pixels it is not what you intended. Someone made a very popular post about this.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fix it quietly",
+        "detail": "A quiet, cheap correction.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -30000
+          }
+        ],
+        "storyHeadline": "Quietly fixed an unfortunate logo",
+        "tag": "FIXED IT"
+      },
+      {
+        "id": "b",
+        "label": "Sell merchandise of the bad version",
+        "detail": "A permanent, profitable reputation.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 60000
+          }
+        ],
+        "storyHeadline": "Sold merchandise of the accidentally rude logo",
+        "tag": "LEANED IN"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-birdwatchers-took-over",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "industryIs",
+        "value": "Software"
+      }
+    ],
+    "headline": "Birdwatchers have taken over your product",
+    "body": "Your software is being used by 4,000 birdwatchers to log sightings. Nobody knows why.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Build them a real version",
+        "detail": "A whole new, unplanned business.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Built a real product for the birdwatchers",
+        "tag": "BUILT FOR THEM"
+      },
+      {
+        "id": "b",
+        "label": "Do nothing",
+        "detail": "They stay forever, your most loyal, strangest customers.",
+        "effects": [],
+        "storyHeadline": "Let the birdwatchers keep doing their thing",
+        "tag": "LEFT THEM TO IT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-hit-song-mentions-you",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "A hit song mentions your company",
+    "body": "It isn't flattering. It is extremely catchy.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Embrace it, sponsor the tour",
+        "detail": "Expensive. The brand becomes genuinely famous.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Sponsored the tour of a song that mocked you",
+        "tag": "EMBRACED IT"
+      },
+      {
+        "id": "b",
+        "label": "Do nothing",
+        "detail": "Awareness soars. Sales climb. You're a little embarrassed for a decade.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Did nothing about a hit song mocking the company",
+        "tag": "IGNORED IT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-customer-is-criminal",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "revenueAbove",
+        "value": 2000000
+      }
+    ],
+    "headline": "Your biggest customer is a criminal enterprise",
+    "body": "A journalist calls to ask how well you know them.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Cut them off immediately",
+        "detail": "Revenue drops. Reputation stays clean.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.7,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Cut off a customer under investigation",
+        "tag": "CUT THEM OFF"
+      },
+      {
+        "id": "b",
+        "label": "Wait for proof",
+        "detail": "A real gamble on what the story finds.",
+        "effects": [],
+        "storyHeadline": "Waited for proof before acting on a bad customer",
+        "gamble": {
+          "winPct": 40,
+          "winEffects": [],
+          "winText": "It was nothing.",
+          "losePct": 60,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "The story ran, with your name in it.",
+          "winStoryHeadline": "The story about a bad customer came to nothing",
+          "loseStoryHeadline": "Named in a story about a bad customer"
+        }
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-drunk-billionaire-3am",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "A drunk billionaire offers to buy you at 3am",
+    "body": "The message is real. The number is absurd. It's 3am.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Reply immediately",
+        "detail": "A real gamble on whether they remember sending it.",
+        "effects": [],
+        "storyHeadline": "Replied to a 3am acquisition offer immediately",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "end",
+              "endingType": "sale"
+            }
+          ],
+          "winText": "They meant every word. It's the deal of your life.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -10
+            }
+          ],
+          "loseText": "They don't remember. Their assistant does, and isn't impressed.",
+          "winStoryHeadline": "The 3am offer was real",
+          "loseStoryHeadline": "The 3am offer evaporated by morning"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Screenshot it and tell nobody",
+        "detail": "Nothing happens. You have a very good story.",
+        "effects": [],
+        "storyHeadline": "Screenshotted a 3am billionaire and moved on",
+        "tag": "SAID NOTHING"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-cat-shipped-bug",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "industryIs",
+        "value": "Software"
+      }
+    ],
+    "headline": "A cat shipped a bug",
+    "body": "An engineer's cat stood on a keyboard during a video call. The bug reached 40,000 customers.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Tell the truth publicly",
+        "detail": "The internet loves you for it, for a week.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Told the truth about a cat-caused bug",
+        "tag": "TOLD THE TRUTH"
+      },
+      {
+        "id": "b",
+        "label": "Blame the process, fix the process",
+        "detail": "Nobody's fault, on the record. Respect goes up.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Fixed the process after a cat-caused bug",
+        "tag": "FIXED THE PROCESS"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-someone-left-you-money",
+    "rarity": "rare",
+    "isGamble": false,
+    "category": "luck",
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "Someone left you money",
+    "body": "{MENTOR} died and left their shares to you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give them to the staff",
+        "detail": "A gesture that buys permanent loyalty.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 40
+          }
+        ],
+        "storyHeadline": "Gave an inherited stake to the staff",
+        "tag": "GAVE TO STAFF"
+      },
+      {
+        "id": "b",
+        "label": "Accept",
+        "detail": "You feel strange about it for years.",
+        "effects": [],
+        "storyHeadline": "Accepted an inherited stake",
+        "tag": "ACCEPTED IT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-rival-hires-your-mother",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 7
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "Your rival hires your mother",
+    "body": "She says the commute is better and they have a canteen.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Laugh about it publicly",
+        "detail": "Everyone loves it. {RIVAL} looks ridiculous.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Made a joke of a rival hiring your mother",
+        "tag": "LAUGHED IT OFF"
+      },
+      {
+        "id": "b",
+        "label": "Take it extremely personally",
+        "detail": "You look a little unwell about it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Took a family hire by a rival very personally",
+        "tag": "TOOK IT PERSONALLY"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-parcel-nobody-ordered",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A parcel arrives that nobody ordered",
+    "body": "Four hundred branded umbrellas. Somebody approved this eleven months ago.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hand them out and move on",
+        "detail": "Morale ticks up. Storage is a problem for later.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Handed out four hundred mystery umbrellas",
+        "tag": "HANDED THEM OUT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-power-goes-out",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The power goes out for a day",
+    "body": "Everyone goes to a caf\u00e9 and has the most productive day of the quarter.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Notice, and say nothing about it",
+        "detail": "Nobody learns the right lesson.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "A power cut turned into the best day of the quarter",
+        "tag": "NOTICED AND MOVED ON"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-national-holiday-forgot",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A national holiday you forgot about",
+    "body": "Half your market is closed for a week you didn't plan for.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Adjust and move on",
+        "detail": "Revenue is delayed a month. No lasting harm.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Forgot a national holiday in a key market",
+        "tag": "ADJUSTED"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-mascot",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The mascot",
+    "body": "Your designer built a costume with company money, without asking. It is genuinely unsettling.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Send it to the trade show",
+        "detail": "A real gamble on how the internet reacts.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -4000
+          }
+        ],
+        "storyHeadline": "Sent a strange homemade mascot to a trade show",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.15,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 10
+            }
+          ],
+          "winText": "It became a phenomenon. People queue to be photographed with it.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "A child cried on camera. It is the only thing anyone remembers about your company.",
+          "winStoryHeadline": "The mascot became a phenomenon",
+          "loseStoryHeadline": "The mascot became a cautionary tale"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Quietly destroy it",
+        "detail": "Cheap. The designer resigns within the year.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -4000
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Quietly destroyed the mascot costume",
+        "tag": "DESTROYED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-strange-email",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Answer the strange email",
+    "body": "An anonymous message offers something extraordinary and asks for a meeting in a city you've never visited.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go",
+        "detail": "Almost certainly nothing. Possibly everything.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3000
+          }
+        ],
+        "storyHeadline": "Followed up on a strange anonymous email",
+        "gamble": {
+          "winPct": 30,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 400000
+            }
+          ],
+          "winText": "It was a fund that doesn't like phone calls.",
+          "losePct": 70,
+          "loseEffects": [],
+          "loseText": "It was a man with a slide deck about a floating city. Excellent anecdote.",
+          "winStoryHeadline": "A strange email turned into real money",
+          "loseStoryHeadline": "A strange email turned into a great story and nothing else"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Delete it",
+        "detail": "Nothing.",
+        "effects": [],
+        "storyHeadline": "Deleted a strange anonymous email",
+        "tag": "DELETED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-let-intern-run-account",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Let the intern run the account",
+    "body": "Your 22-year-old intern has asked to run the company's social media for one month, unsupervised.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give them the password",
+        "detail": "A real gamble on their sense of humour.",
+        "effects": [],
+        "storyHeadline": "Let the intern run social media unsupervised",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.15,
+              "years": 2
+            }
+          ],
+          "winText": "It became genuinely funny and signups tripled.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -10
+            }
+          ],
+          "loseText": "One post ended up in a newspaper. You spent a week apologising.",
+          "winStoryHeadline": "The intern's social media takeover paid off",
+          "loseStoryHeadline": "The intern's social media takeover ended up in the news"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Approve every post first",
+        "detail": "It is dreadful, as always.",
+        "effects": [],
+        "storyHeadline": "Kept approving every post the intern wrote",
+        "tag": "APPROVED EVERYTHING"
+      }
+    ]
+  },
+  {
+    "id": "ev-bet-with-rival",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 7
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "The bet with your rival",
+    "body": "{RIVAL} proposes a public bet on which company hits a number first. Loser does something humiliating, publicly.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Accept",
+        "detail": "Four million people will watch either way.",
+        "effects": [],
+        "storyHeadline": "Accepted a public bet with a rival",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.3,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 20
+            }
+          ],
+          "winText": "You won. The video is seen four million times.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "You lost. It follows you to every interview for a decade.",
+          "winStoryHeadline": "Won a public bet against a rival",
+          "loseStoryHeadline": "Lost a public bet against a rival"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Decline",
+        "detail": "{RIVAL} mentions it publicly for years.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Declined a public bet with a rival",
+        "tag": "DECLINED"
+      }
+    ]
+  },
+  {
+    "id": "ev-buy-strange-building",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 8
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      },
+      {
+        "type": "cashLastsAbove",
+        "value": 24
+      }
+    ],
+    "headline": "Buy the strange building",
+    "body": "A decommissioned lighthouse or a disused railway station is for sale, cheap, and would make an unforgettable office.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy it",
+        "detail": "A real gamble on whether it's a landmark or a money pit.",
+        "effects": [],
+        "storyHeadline": "Bought a decommissioned building for an office",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 20
+            }
+          ],
+          "winText": "It becomes the reason people want to work for you.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -200000
+            }
+          ],
+          "loseText": "The roof, the damp, and the council take three years.",
+          "winStoryHeadline": "The strange building became a landmark",
+          "loseStoryHeadline": "The strange building became a money pit"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Rent a normal office",
+        "detail": "Normal.",
+        "effects": [],
+        "storyHeadline": "Rented a completely normal office instead",
+        "tag": "STAYED NORMAL"
+      }
+    ]
+  },
+  {
+    "id": "ev-old-colleague-reappears",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "An old colleague reappears",
+    "body": "Someone from before the company wants to catch up. They have money now.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Meet them",
+        "detail": "A real gamble on what they actually want.",
+        "effects": [],
+        "storyHeadline": "Met an old colleague who reappeared with money",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 200000
+            }
+          ],
+          "winText": "They invested, no drama at all.",
+          "losePct": 50,
+          "loseEffects": [],
+          "loseText": "They wanted a job. An awkward coffee.",
+          "winStoryHeadline": "An old colleague came back and invested",
+          "loseStoryHeadline": "An old colleague came back wanting a job"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "Nothing.",
+        "effects": [],
+        "storyHeadline": "Skipped catching up with an old colleague",
+        "tag": "SKIPPED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-product-in-film",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "Your product appears in a film",
+    "body": "Nobody asked you. Nobody paid you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Enjoy it",
+        "detail": "A month of extra signups, unprompted.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.08,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Watched signups spike after an unplanned film cameo",
+        "tag": "ENJOYED IT"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "ev-accidental-team-holiday",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The whole team took the same day off by accident",
+    "body": "A scheduling mix-up, not a holiday — everyone independently decided to skip the same Friday. Nothing broke.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Make it official next year",
+        "detail": "Turn the accident into a standing day off. Morale ticks up for something that cost nothing.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Made an accidental day off official",
+        "tag": "MADE IT OFFICIAL"
+      }
+    ],
+    "isWeather": true
+  }
+]

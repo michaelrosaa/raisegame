@@ -1,0 +1,768 @@
+[
+  {
+    "id": "event-first-bad-quarter",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": -1
+      }
+    ],
+    "headline": "The first bad quarter",
+    "body": "Revenue missed by 6%. The stock is down 22% in a day.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Reassure the market with a bold forecast",
+        "detail": "The price recovers now. You'll need to actually hit the number.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": 0.14
+          },
+          {
+            "type": "analystSentiment",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Talked the market back up with a bold forecast",
+        "tag": "BOLD FORECAST",
+        "mentorHint": "The price comes back today on a promise. Someone is going to remember you made it."
+      },
+      {
+        "id": "b",
+        "label": "Say it plainly and take the hit",
+        "detail": "The price stays down for a while. Nobody catches you overpromising.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.18
+          },
+          {
+            "type": "analystSentiment",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Took the hit and said it plainly",
+        "tag": "PLAIN TRUTH"
+      },
+      {
+        "id": "c",
+        "label": "Announce a buyback",
+        "detail": "Company cash props the price up artificially.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -600000
+          },
+          {
+            "type": "sharePriceShock",
+            "value": 0.1
+          }
+        ],
+        "storyHeadline": "Announced a buyback to support the price",
+        "tag": "BUYBACK"
+      }
+    ]
+  },
+  {
+    "id": "event-lockup-expires",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 0
+      }
+    ],
+    "headline": "The lockup expires",
+    "body": "For the first time, you're actually allowed to sell.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sell 10% of your stake",
+        "detail": "Real money. The market reads it as a signal, and it isn't a good one.",
+        "effects": [
+          {
+            "type": "sellShares",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Sold 10% the day the lockup expired",
+        "tag": "SOLD A LOT",
+        "mentorHint": "The cash is real. So is every headline that starts with 'founder dumps shares.'"
+      },
+      {
+        "id": "b",
+        "label": "Sell 2% quietly",
+        "detail": "Barely anyone notices.",
+        "effects": [
+          {
+            "type": "sellShares",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Sold a small slice quietly",
+        "tag": "SOLD QUIETLY"
+      },
+      {
+        "id": "c",
+        "label": "Sell nothing",
+        "detail": "Everything you have stays exactly as liquid as it was yesterday: not very.",
+        "effects": [],
+        "storyHeadline": "Held everything at the lockup expiry",
+        "tag": "HELD"
+      }
+    ]
+  },
+  {
+    "id": "event-activist-investor",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 0
+      }
+    ],
+    "headline": "An activist arrives",
+    "body": "A fund has bought 6% of the company and published a letter about your leadership.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Meet them and concede something",
+        "detail": "They go quiet. You lose a plan you cared about.",
+        "effects": [
+          {
+            "type": "boardPatience",
+            "value": 10
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.92,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Conceded ground to an activist investor",
+        "tag": "MADE A DEAL"
+      },
+      {
+        "id": "b",
+        "label": "Fight publicly",
+        "detail": "A real bet on whether the market backs you or them.",
+        "effects": [],
+        "storyHeadline": "Fought an activist investor publicly",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "analystSentiment",
+              "value": 12
+            },
+            {
+              "type": "boardPatience",
+              "value": 5
+            }
+          ],
+          "winText": "The market backs you. They go quiet.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "boardPatience",
+              "value": -25
+            },
+            {
+              "type": "sharePriceShock",
+              "value": -0.15
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 0.9,
+              "years": 2
+            }
+          ],
+          "loseText": "A two-year proxy battle, and you're already tired.",
+          "winStoryHeadline": "Won a public fight with an activist investor",
+          "loseStoryHeadline": "Lost a public fight with an activist investor"
+        }
+      },
+      {
+        "id": "c",
+        "label": "Buy them out at a premium",
+        "detail": "Expensive. Also over, immediately.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -1200000
+          },
+          {
+            "type": "boardPatience",
+            "value": 15
+          },
+          {
+            "type": "chainFlag",
+            "chainFlagKey": "boughtOutActivist"
+          }
+        ],
+        "storyHeadline": "Bought out an activist investor at a premium",
+        "tag": "BOUGHT THEM OUT"
+      }
+    ]
+  },
+  {
+    "id": "event-board-wants-professional-ceo",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      }
+    ],
+    "headline": "The board wants a professional CEO",
+    "body": "They think the company has outgrown you. They might be right.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Step aside, stay as chairman",
+        "detail": "The company does better without you in the way. You stop deciding.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 3
+          },
+          {
+            "type": "boardPatience",
+            "value": 20
+          },
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Stepped aside for a professional CEO",
+        "tag": "STEPPED ASIDE"
+      },
+      {
+        "id": "b",
+        "label": "Refuse",
+        "detail": "You're still running this. They notice.",
+        "effects": [
+          {
+            "type": "boardPatience",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Refused to step aside for a professional CEO",
+        "tag": "REFUSED"
+      },
+      {
+        "id": "c",
+        "label": "Offer a two-year deadline on the numbers",
+        "detail": "Hit them, and this goes away. Miss, and it gets much worse.",
+        "effects": [],
+        "storyHeadline": "Bet the board on hitting a two-year target",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "boardPatience",
+              "value": 15
+            }
+          ],
+          "winText": "You hit the numbers. Nobody mentions it again.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "boardPatience",
+              "value": -30
+            }
+          ],
+          "loseText": "You missed, and now it's not really a question anymore.",
+          "winStoryHeadline": "Hit the numbers and silenced the board",
+          "loseStoryHeadline": "Missed the numbers the board gave you"
+        }
+      }
+    ]
+  },
+  {
+    "id": "event-market-crash",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 0
+      }
+    ],
+    "headline": "A market crash that has nothing to do with you",
+    "body": "The index fell 30%. Your business is unchanged. Your paper wealth just halved anyway.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Announce a buyback",
+        "detail": "Company cash props up the price, partially.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -900000
+          },
+          {
+            "type": "sharePriceShock",
+            "value": -0.22
+          }
+        ],
+        "storyHeadline": "Bought back shares through a market crash",
+        "tag": "BOUGHT BACK"
+      },
+      {
+        "id": "b",
+        "label": "Ignore it and keep working",
+        "detail": "The correct answer, which is why it's boring.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.3
+          }
+        ],
+        "storyHeadline": "Kept working through a market crash that had nothing to do with the business",
+        "tag": "STAYED THE COURSE",
+        "mentorHint": "Nothing about the business changed today. The number attached to it did anyway."
+      }
+    ]
+  },
+  {
+    "id": "event-going-private-option",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      },
+      {
+        "type": "bankruptciesBelow",
+        "value": 2
+      }
+    ],
+    "headline": "You could buy it all back",
+    "body": "Take it private yourself. It would cost everything you don't have.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take it private",
+        "detail": "Borrow the rest of the company back from every other shareholder. You own it all again, heavily indebted.",
+        "effects": [
+          {
+            "type": "takePrivate"
+          }
+        ],
+        "storyHeadline": "Took the company private again, heavily indebted",
+        "tag": "WENT PRIVATE",
+        "mentorHint": "You own all of it again. The bank owns a claim on all of it too, until the loan is gone."
+      },
+      {
+        "id": "b",
+        "label": "Stay public",
+        "detail": "The board, the quarterly numbers, the analysts \u2014 all of it, still.",
+        "effects": [],
+        "storyHeadline": "Decided to stay public rather than buy the company back",
+        "tag": "STAYED PUBLIC"
+      }
+    ]
+  },
+  {
+    "id": "event-analyst-downgrade",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 0
+      }
+    ],
+    "headline": "An analyst downgrades you",
+    "body": "One influential note, and the tone in every headline changes for a week.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Respond publicly",
+        "detail": "You make your case. It half-works.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.04
+          },
+          {
+            "type": "analystSentiment",
+            "value": 3
+          }
+        ],
+        "storyHeadline": "Responded publicly to an analyst downgrade",
+        "tag": "RESPONDED"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "It passes, the way most weeks do.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.08
+          },
+          {
+            "type": "analystSentiment",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Said nothing after an analyst downgrade",
+        "tag": "SAID NOTHING"
+      }
+    ]
+  },
+  {
+    "id": "event-index-inclusion",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      }
+    ],
+    "headline": "You're being added to an index",
+    "body": "Every fund that tracks it now has to own you, whether they like the business or not.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ride the wave",
+        "detail": "Forced buying pushes the price up on its own.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": 0.15
+          },
+          {
+            "type": "analystSentiment",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Rode an index-inclusion rally",
+        "tag": "RODE THE WAVE"
+      },
+      {
+        "id": "b",
+        "label": "Sell into the strength",
+        "detail": "The price is up for reasons that have nothing to do with you. Take some of it.",
+        "effects": [
+          {
+            "type": "sellShares",
+            "value": 5
+          },
+          {
+            "type": "sharePriceShock",
+            "value": 0.08
+          }
+        ],
+        "storyHeadline": "Sold shares into an index-inclusion rally",
+        "tag": "SOLD INTO IT"
+      }
+    ]
+  },
+  {
+    "id": "event-accounting-restatement",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      }
+    ],
+    "headline": "The numbers need restating",
+    "body": "Nothing criminal. Just wrong, in a way that makes last year's results look better than they were.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Come clean immediately",
+        "detail": "It's bad. It's also over quickly.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.32
+          },
+          {
+            "type": "analystSentiment",
+            "value": -18
+          },
+          {
+            "type": "boardPatience",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Came clean immediately about an accounting restatement",
+        "tag": "CAME CLEAN"
+      },
+      {
+        "id": "b",
+        "label": "Let the lawyers manage the story",
+        "detail": "Slower, and you don't fully control how it ends.",
+        "effects": [],
+        "storyHeadline": "Let the lawyers manage an accounting restatement",
+        "gamble": {
+          "winPct": 55,
+          "winEffects": [
+            {
+              "type": "sharePriceShock",
+              "value": -0.2
+            },
+            {
+              "type": "analystSentiment",
+              "value": -10
+            }
+          ],
+          "winText": "It gets contained. Painful, survivable.",
+          "losePct": 45,
+          "loseEffects": [
+            {
+              "type": "end",
+              "endingType": "failure"
+            }
+          ],
+          "loseText": "It doesn't stay contained. It unravels the whole thing.",
+          "winStoryHeadline": "Contained an accounting restatement",
+          "loseStoryHeadline": "An accounting restatement unraveled the company"
+        }
+      }
+    ]
+  },
+  {
+    "id": "event-employees-leave-after-vesting",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 0
+      }
+    ],
+    "headline": "The vesting cliff hits",
+    "body": "Four years in, right on schedule, a chunk of your earliest employees are fully vested \u2014 and gone within the month.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Refresh everyone's grants early",
+        "detail": "Expensive, and most of them stay.",
+        "effects": [
+          {
+            "type": "sellShares",
+            "value": 3
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Refreshed equity grants to keep the team after vesting",
+        "tag": "REFRESHED GRANTS",
+        "mentorHint": "The dilution is the visible cost. The alternative is watching four years of institutional knowledge walk out the door at once."
+      },
+      {
+        "id": "b",
+        "label": "Let it happen",
+        "detail": "They earned it. You start over with whoever stays.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1,
+            "unit": "percent"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.93,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Lost staff to the first vesting cliff",
+        "tag": "LET THEM GO"
+      }
+    ]
+  },
+  {
+    "id": "event-short-seller-report",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      }
+    ],
+    "headline": "A short-seller publishes a report on you",
+    "body": "Ninety pages, some of it wrong, some of it uncomfortably not.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Rebut it point by point",
+        "detail": "A real bet on whether the market believes the rebuttal.",
+        "effects": [],
+        "storyHeadline": "Rebutted a short-seller report point by point",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "sharePriceShock",
+              "value": 0.12
+            },
+            {
+              "type": "analystSentiment",
+              "value": 10
+            }
+          ],
+          "winText": "The rebuttal holds up. The report ages badly instead.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "sharePriceShock",
+              "value": -0.15
+            },
+            {
+              "type": "analystSentiment",
+              "value": -12
+            }
+          ],
+          "loseText": "One of the uncomfortable parts turns out to be true.",
+          "winStoryHeadline": "Successfully rebutted a short-seller report",
+          "loseStoryHeadline": "A short-seller report turned out to have a point"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Say nothing and let it pass",
+        "detail": "Most of these fade on their own, eventually.",
+        "effects": [
+          {
+            "type": "sharePriceShock",
+            "value": -0.1
+          }
+        ],
+        "storyHeadline": "Said nothing about a short-seller report",
+        "tag": "SAID NOTHING"
+      }
+    ]
+  },
+  {
+    "id": "event-dual-class-share-fight",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      }
+    ],
+    "headline": "Investors want to end your control structure",
+    "body": "Your shares vote more than theirs do. A growing number of them would like that to stop.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Keep the control structure",
+        "detail": "You stay firmly in charge. Some investors stay firmly annoyed.",
+        "effects": [
+          {
+            "type": "boardPatience",
+            "value": -8
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Kept a dual-class share structure against investor pressure",
+        "tag": "KEPT CONTROL"
+      },
+      {
+        "id": "b",
+        "label": "Simplify for investors",
+        "detail": "One share, one vote. Cleaner governance, less of it yours.",
+        "effects": [
+          {
+            "type": "analystSentiment",
+            "value": 15
+          },
+          {
+            "type": "boardPatience",
+            "value": 10
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Gave up dual-class shares to simplify governance",
+        "tag": "SIMPLIFIED"
+      }
+    ]
+  },
+  {
+    "id": "event-first-dividend",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearsPublicAbove",
+        "value": 1
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "You could pay a dividend",
+    "body": "The company throws off more cash than it needs. Some investors have been asking.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Pay it",
+        "detail": "A real signal of stability. Also real cash, gone quarterly, from now on.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -500000
+          },
+          {
+            "type": "analystSentiment",
+            "value": 10
+          },
+          {
+            "type": "sharePriceShock",
+            "value": 0.05
+          }
+        ],
+        "storyHeadline": "Paid the company's first dividend",
+        "tag": "FIRST DIVIDEND",
+        "mentorHint": "A dividend is a promise to keep paying it. The market notices a lot more when you stop than when you start."
+      },
+      {
+        "id": "b",
+        "label": "Reinvest instead",
+        "detail": "Slower to reward shareholders, faster to grow.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Reinvested instead of paying a dividend",
+        "tag": "REINVESTED"
+      }
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Fluid scale for the narrow-viewport pass — every value reaches its
+     current (max) size at 1440px viewport width and above, so nothing
+     changes at full desktop, and reaches its floor at 900px, the smallest
+     width the layout is required to support without reflowing. Linear
+     between those two points via clamp(min, const + vw*slope, max). Font
+     sizes shrink gently (ratio ~0.7-0.9 of max, more for small mono
+     labels so they stay legible); spacing shrinks harder (ratio ~0.62)
+     since panels have more room to give there than text does. */
+  :root {
+    /* Font sizes */
+    --fs-34: clamp(24px, 7.333px + 1.8519vw, 34px);
+    --fs-32: clamp(23px, 8.000px + 1.6667vw, 32px);
+    --fs-30: clamp(22px, 8.667px + 1.4815vw, 30px);
+    --fs-23: clamp(18px, 9.667px + 0.9259vw, 23px);
+    --fs-22: clamp(17px, 8.667px + 0.9259vw, 22px);
+    --fs-19: clamp(15px, 8.333px + 0.7407vw, 19px);
+    --fs-18: clamp(14px, 7.333px + 0.7407vw, 18px);
+    --fs-17: clamp(14px, 9.000px + 0.5556vw, 17px);
+    --fs-15: clamp(12.5px, 8.333px + 0.4630vw, 15px);
+    --fs-14-5: clamp(12px, 7.833px + 0.4630vw, 14.5px);
+    --fs-14: clamp(12px, 8.667px + 0.3704vw, 14px);
+    --fs-13-5: clamp(11.5px, 8.167px + 0.3704vw, 13.5px);
+    --fs-13: clamp(11px, 7.667px + 0.3704vw, 13px);
+    --fs-12-5: clamp(11px, 8.500px + 0.2778vw, 12.5px);
+    --fs-11-5: clamp(10px, 7.500px + 0.2778vw, 11.5px);
+    --fs-11: clamp(9.5px, 7.000px + 0.2778vw, 11px);
+    --fs-10-5: clamp(9.5px, 7.833px + 0.1852vw, 10.5px);
+    --fs-10: clamp(9px, 7.333px + 0.1852vw, 10px);
+    --fs-9-5: clamp(8.5px, 6.833px + 0.1852vw, 9.5px);
+    --fs-9: clamp(8px, 6.333px + 0.1852vw, 9px);
+    --fs-8-5: clamp(7.5px, 5.833px + 0.1852vw, 8.5px);
+    /* Matching Tailwind's default text-xs/sm/base/lg/xl/2xl/3xl scale */
+    --fs-12: clamp(10.5px, 8.000px + 0.2778vw, 12px);
+    --fs-16: clamp(13px, 8.000px + 0.5556vw, 16px);
+    --fs-20: clamp(16px, 9.333px + 0.7407vw, 20px);
+    --fs-24: clamp(18px, 8.000px + 1.1111vw, 24px);
+
+    /* Spacing — panel/card padding, margins, structural gaps */
+    --sp-40: clamp(24.8px, -0.533px + 2.8148vw, 40px);
+    --sp-28: clamp(17.4px, -0.267px + 1.9630vw, 28px);
+    --sp-26: clamp(16.1px, -0.400px + 1.8333vw, 26px);
+    --sp-24: clamp(14.9px, -0.267px + 1.6852vw, 24px);
+    --sp-22: clamp(13.6px, -0.400px + 1.5556vw, 22px);
+    --sp-20: clamp(12.4px, -0.267px + 1.4074vw, 20px);
+    --sp-18: clamp(11.2px, -0.133px + 1.2593vw, 18px);
+    --sp-17: clamp(10.5px, -0.333px + 1.2037vw, 17px);
+    --sp-16: clamp(9.9px, -0.267px + 1.1296vw, 16px);
+    --sp-15: clamp(9.3px, -0.200px + 1.0556vw, 15px);
+    --sp-14: clamp(8.7px, -0.133px + 0.9815vw, 14px);
+    --sp-13: clamp(8.1px, -0.067px + 0.9074vw, 13px);
+    --sp-12: clamp(7.4px, -0.267px + 0.8519vw, 12px);
+    --sp-11: clamp(6.8px, -0.200px + 0.7778vw, 11px);
+
+    /* Border radii on large containers */
+    --r-20: clamp(14px, 4px + 1.111vw, 20px);
+    --r-16: clamp(12px, 5.333px + 0.741vw, 16px);
+    --r-12: clamp(10px, 6.667px + 0.370vw, 12px);
+  }
+
+  /* The fluid scale above floors at 900px (see its own comment) — it was
+     never designed to go as narrow as a phone, so three of its mono-label
+     tokens (--fs-8-5/9/9-5) bottom out under the mobile build's own "mono
+     labels never below 10px" floor. Scoped to .mobile-shell (the root
+     wrapper every screen's mobile JSX branch renders) and re-gated by the
+     same max-width the mobile/desktop split itself uses, so this can only
+     ever affect a screen that already opted into the mobile layout —
+     desktop's :root values above are untouched in every other context.
+     Every shared component that reads these tokens (Chip, MetricCell,
+     StatCell, the ledger) gets a mobile-safe size for free, with nothing
+     in those component files touched. */
+  @media (max-width: 767px) {
+    .mobile-shell {
+      --fs-8-5: 10px;
+      --fs-9: 10px;
+      --fs-9-5: 10px;
+    }
+
+    /* iOS: the address bar changes viewport height mid-scroll, so 100vh
+       jumps the fixed action bar/ad strip around. 100dvh tracks the real
+       visible viewport instead — see App.tsx's outer shell. */
+    html, body, #root {
+      height: 100dvh;
+    }
+
+    /* Stops the whole page rubber-banding behind the fixed action bar/ad
+       strip on iOS Safari when a scrollable region is over-scrolled. */
+    body {
+      overscroll-behavior-y: none;
+    }
+
+    [class*='overflow-y-auto'],
+    [class*='overflow-x-auto'] {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  /* Horizontally-scrollable single rows (header tags, chip rows, the
+     scorecard timeline) that should read as a plain row, not a scrollbar
+     widget — the ability to scroll is discoverable by touch, not chrome. */
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ground text-ink font-sans;
+    margin: 0;
+    /* The app never scrolls — individual panels scroll internally. */
+    overflow: hidden;
+  }
+
+  input, textarea, select {
+    @apply bg-field border border-lineStrong text-ink;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A4456;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* The macro cycle's page-background shift (game.tsx) — a player advancing
+     a year sees the world cool or warm around them over ~1.2s. */
+  .climate-bg {
+    transition: background-color 1200ms ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .climate-bg {
+      transition: none;
+    }
+    .animate-ledgerRowIn,
+    .animate-yearBeatIn {
+      animation: none !important;
+    }
+  }
+}

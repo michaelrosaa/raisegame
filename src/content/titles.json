@@ -1,0 +1,37 @@
+[
+  {
+    "id": "title-solopreneur",
+    "label": "Solopreneur",
+    "description": "Still just you",
+    "staffMinimum": 1,
+    "staffMaximum": 1
+  },
+  {
+    "id": "title-founder",
+    "label": "Founder",
+    "description": "Building the team",
+    "staffMinimum": 1,
+    "staffMaximum": 10
+  },
+  {
+    "id": "title-ceo",
+    "label": "CEO",
+    "description": "Leading a company",
+    "staffMinimum": 10,
+    "staffMaximum": 100
+  },
+  {
+    "id": "title-ceo-scale",
+    "label": "Scaling CEO",
+    "description": "Managing rapid growth",
+    "staffMinimum": 100,
+    "staffMaximum": 1000
+  },
+  {
+    "id": "title-executive",
+    "label": "Executive",
+    "description": "Part of leadership",
+    "staffMinimum": 1000,
+    "staffMaximum": 10000
+  }
+]

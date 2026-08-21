@@ -1,0 +1,1887 @@
+[
+  {
+    "id": "event-team-conflict",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "staffAbove",
+        "value": 3
+      }
+    ],
+    "headline": "Two of your senior people disagree on direction",
+    "body": "They want to take the product in opposite directions, and neither will budge. One of them has started talking about leaving.",
+    "options": [
+      {
+        "id": "opt-cofounder-a",
+        "label": "Back one of them and move on",
+        "detail": "Pick a side, commit publicly, and accept that the other one may not stay.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          },
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Picked a side in a team conflict"
+      },
+      {
+        "id": "opt-compromise",
+        "label": "Find a middle ground",
+        "detail": "Build a hybrid neither of them fully wanted, so both stay unhappy but neither leaves.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Navigated conflicting visions"
+      }
+    ]
+  },
+  {
+    "id": "event-burnout",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "moraleBelow",
+        "value": 40
+      }
+    ],
+    "headline": "You're burning out",
+    "body": "You haven't slept properly in weeks and your team can tell. One engineer just quit, and cited it as part of why.",
+    "options": [
+      {
+        "id": "opt-take-break",
+        "label": "Take a real vacation",
+        "detail": "A full week off, no laptop, no email — actually disconnect.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Took a real break to recharge"
+      },
+      {
+        "id": "opt-push",
+        "label": "Push through it",
+        "detail": "Too much is happening right now to stop. Keep going.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          },
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Burned out but kept going"
+      }
+    ]
+  },
+  {
+    "id": "event-great-hire",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 1
+      },
+      {
+        "type": "staffAbove",
+        "value": 1
+      }
+    ],
+    "headline": "A star operator wants to join",
+    "body": "Someone with a proven track record of building and scaling companies wants in — a real adult in the room, if you can afford them.",
+    "options": [
+      {
+        "id": "opt-hire-now",
+        "label": "Hire them as COO, right away",
+        "detail": "A real salary and a clean 10% equity stake, starting Monday.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 1
+          },
+          {
+            "type": "morale",
+            "value": 15
+          },
+          {
+            "type": "cash",
+            "value": -100000
+          }
+        ],
+        "storyHeadline": "Hired an experienced operator as COO"
+      },
+      {
+        "id": "opt-consult",
+        "label": "Bring them on as an advisor first",
+        "detail": "No equity yet — a lighter arrangement to see how it works before committing.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Got experienced advisor"
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-wants-out",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "yearMax",
+        "value": 9
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      },
+      {
+        "type": "moraleBelow",
+        "value": 55
+      }
+    ],
+    "headline": "The co-founder wants out",
+    "body": "{COFOUNDER} has been quiet for months. Today they said they're done. They hold their stake, and they're keeping it \u2014 unless you do something about it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy the shares back",
+        "detail": "It costs you, but the company is fully yours again.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          },
+          {
+            "type": "cofounderExit",
+            "keepsEquity": false
+          }
+        ],
+        "storyHeadline": "Bought out a departing co-founder",
+        "tag": "BOUGHT THEM OUT",
+        "mentorHint": "The company's fully yours again. So is everything that goes wrong from here."
+      },
+      {
+        "id": "b",
+        "label": "Let them walk with it",
+        "detail": "They go, and they keep every point. The story writes itself.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          },
+          {
+            "type": "cofounderExit",
+            "keepsEquity": true
+          }
+        ],
+        "storyHeadline": "Let a co-founder walk with their stake",
+        "tag": "LET THEM WALK",
+        "mentorHint": "They keep every point. You'll see their name on the cap table at every future raise."
+      },
+      {
+        "id": "c",
+        "label": "Ask for six more months",
+        "detail": "A real gamble on whether that helps.",
+        "effects": [],
+        "storyHeadline": "Asked a burned-out co-founder for six more months",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 20
+            }
+          ],
+          "winText": "They stayed, and meant it.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -20
+            },
+            {
+              "type": "staff",
+              "value": -2
+            },
+            {
+              "type": "cofounderExit",
+              "keepsEquity": true
+            }
+          ],
+          "loseText": "They left anyway, and took two engineers with them.",
+          "winStoryHeadline": "The co-founder stayed after all",
+          "loseStoryHeadline": "The co-founder left, and took people with them"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-someone-stealing",
+    "rarity": "rare",
+    "isGamble": false,
+    "category": "trouble",
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 15
+      }
+    ],
+    "headline": "Someone is stealing",
+    "body": "Your bookkeeper has been moving small amounts for two years. It adds up to more than a year of your own salary.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Police",
+        "detail": "Legal fees. It goes public.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Went to the police over embezzlement",
+        "tag": "WENT TO POLICE"
+      },
+      {
+        "id": "b",
+        "label": "Quiet settlement",
+        "detail": "Cheaper. Nobody finds out.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          }
+        ],
+        "storyHeadline": "Settled an embezzlement quietly",
+        "tag": "QUIET SETTLEMENT"
+      },
+      {
+        "id": "c",
+        "label": "Let it go",
+        "detail": "The rest of the team eventually works it out.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -25
+          }
+        ],
+        "storyHeadline": "Let an embezzlement slide",
+        "tag": "LET IT GO"
+      }
+    ]
+  },
+  {
+    "id": "ev-star-hire-poison",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "staffAbove",
+        "value": 20
+      }
+    ],
+    "headline": "The star hire is poison",
+    "body": "Your best salesperson brings in a third of the revenue and has made four people cry this year.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fire them",
+        "detail": "Revenue drops. The team recovers.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.75,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Fired a brilliant, toxic hire",
+        "tag": "FIRED THEM"
+      },
+      {
+        "id": "b",
+        "label": "Keep them",
+        "detail": "Revenue holds. Two good people leave.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -2
+          },
+          {
+            "type": "morale",
+            "value": -20
+          }
+        ],
+        "storyHeadline": "Kept a toxic top performer",
+        "tag": "KEPT THEM"
+      }
+    ]
+  },
+  {
+    "id": "ev-everyone-wfh-forever",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 25
+      }
+    ],
+    "headline": "Everyone wants to work from home forever",
+    "body": "The office is empty on Fridays. Then Thursdays.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Close the office",
+        "detail": "Cash lasts longer. Morale is up. New hires ramp slower.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 6,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Closed the office for good",
+        "tag": "WENT REMOTE"
+      },
+      {
+        "id": "b",
+        "label": "Order everyone back",
+        "detail": "Morale drops. Four people quit. Output rises.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -20
+          },
+          {
+            "type": "staff",
+            "value": -4
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Ordered everyone back to the office",
+        "tag": "BACK TO OFFICE"
+      },
+      {
+        "id": "c",
+        "label": "Let each team decide",
+        "detail": "Nothing dramatic. Which is its own outcome.",
+        "effects": [],
+        "storyHeadline": "Let teams decide their own working pattern",
+        "tag": "TEAM'S CHOICE"
+      }
+    ]
+  },
+  {
+    "id": "ev-first-firing",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "staffAbove",
+        "value": 6
+      }
+    ],
+    "headline": "The first firing",
+    "body": "Someone isn't working out. Everyone knows. You've been avoiding it for four months.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Do it today",
+        "detail": "The team was waiting for this.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Finally made the first firing",
+        "tag": "DID IT TODAY"
+      },
+      {
+        "id": "b",
+        "label": "Give them another quarter",
+        "detail": "The problem grows.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -30000
+          }
+        ],
+        "storyHeadline": "Gave an underperformer another quarter",
+        "tag": "GAVE MORE TIME"
+      }
+    ]
+  },
+  {
+    "id": "ev-nobody-knows-what-you-do",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Nobody knows what the company does",
+    "body": "You asked six employees to describe the product. You got six answers.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Cut half the product",
+        "detail": "Revenue dips now, doubles down later.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.8,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Cut half the product to clarify the story",
+        "tag": "CUT THE PRODUCT"
+      },
+      {
+        "id": "b",
+        "label": "Hire someone to fix the messaging",
+        "detail": "It costs, and it works.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -120000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Hired to fix a confused message",
+        "tag": "FIXED THE MESSAGE"
+      },
+      {
+        "id": "c",
+        "label": "Ignore it",
+        "detail": "Nothing, until the next event.",
+        "effects": [],
+        "storyHeadline": "Ignored the messaging problem",
+        "tag": "IGNORED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-half-team-wants-you-out",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "moraleBelow",
+        "value": 30
+      },
+      {
+        "type": "hasInvestors",
+        "value": true
+      }
+    ],
+    "headline": "Half the team wants to fire you",
+    "body": "Three senior people went to the board without telling you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fight it",
+        "detail": "A real fight for control of your own company.",
+        "effects": [],
+        "storyHeadline": "Fought to keep control of the company",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 15
+            }
+          ],
+          "winText": "You kept it, and your authority with it.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -30
+            }
+          ],
+          "loseText": "You're out. You keep your shares, not your seat.",
+          "winStoryHeadline": "Fought off a boardroom coup",
+          "loseStoryHeadline": "Lost the fight for the company"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Bring in a professional boss and stay as founder",
+        "detail": "You keep every share. You lose the wheel.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Brought in a CEO and stepped back",
+        "tag": "BROUGHT IN A CEO"
+      }
+    ]
+  },
+  {
+    "id": "ev-disagree-about-direction",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "You disagree about direction",
+    "body": "{COFOUNDER} wants one thing, you want the other. Both are defensible.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Insist",
+        "detail": "You get your way. Something between you is different afterwards.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Insisted on your own direction over a co-founder",
+        "tag": "INSISTED"
+      },
+      {
+        "id": "b",
+        "label": "Give in",
+        "detail": "They're energised. It might even be the right call.",
+        "effects": [],
+        "storyHeadline": "Gave way to a co-founder's direction",
+        "tag": "GAVE IN",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 10
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 1.15,
+              "years": 1
+            }
+          ],
+          "winText": "They were right.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": 10
+            }
+          ],
+          "loseText": "They weren't, but at least morale held.",
+          "winStoryHeadline": "A co-founder's call paid off",
+          "loseStoryHeadline": "Gave way to a co-founder's direction"
+        }
+      },
+      {
+        "id": "c",
+        "label": "Split the effort",
+        "detail": "Neither happens properly.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.85,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Split the effort between two directions",
+        "tag": "SPLIT THE EFFORT"
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-working-less",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "They're working less than you",
+    "body": "Same shares, different hours. You've noticed. They know you've noticed.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Say it directly",
+        "detail": "Uncomfortable, resolved.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Said it directly to a co-founder",
+        "tag": "SAID IT DIRECTLY"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "It compounds for three years, then ends badly.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Said nothing about an uneven co-founder split",
+        "tag": "SAID NOTHING"
+      },
+      {
+        "id": "c",
+        "label": "Renegotiate the shares",
+        "detail": "A real gamble on whether that clears the air.",
+        "effects": [],
+        "storyHeadline": "Tried to renegotiate a co-founder's shares",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 15
+            }
+          ],
+          "winText": "It cleared the air.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -10
+            },
+            {
+              "type": "cofounderExit",
+              "keepsEquity": true
+            }
+          ],
+          "loseText": "They left instead.",
+          "winStoryHeadline": "Renegotiated a co-founder's shares",
+          "loseStoryHeadline": "A co-founder left over renegotiated shares"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-hire-friend",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "Their friend needs a job",
+    "body": "You don't rate the candidate. {COFOUNDER} feels strongly.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire them",
+        "detail": "A mediocre hire. {COFOUNDER} owes you one.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 1
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Hired a co-founder's friend",
+        "tag": "HIRED THEM"
+      },
+      {
+        "id": "b",
+        "label": "Block it",
+        "detail": "You're right. They resent it for a year.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Blocked a co-founder's friend-hire",
+        "tag": "BLOCKED IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-who-is-in-charge",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      },
+      {
+        "type": "staffAbove",
+        "value": 25
+      }
+    ],
+    "headline": "Who is actually in charge",
+    "body": "The team asks two people and gets two answers.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Split responsibilities formally",
+        "detail": "Clear, slightly cold, works.",
+        "effects": [],
+        "storyHeadline": "Formally split responsibilities with a co-founder",
+        "tag": "SPLIT RESPONSIBILITIES",
+        "mentorHint": "Clean on paper. Every decision at the boundary between you two now takes a meeting."
+      },
+      {
+        "id": "b",
+        "label": "One of you is the boss",
+        "detail": "Morale improves. One of you is unhappy forever.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Settled who was actually the boss",
+        "tag": "ONE BOSS",
+        "mentorHint": "Morale goes up. It goes up for one of you, and stays up for as long as the other one lets it."
+      },
+      {
+        "id": "c",
+        "label": "Leave it",
+        "detail": "Decisions take twice as long, permanently.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.9,
+            "years": 50
+          }
+        ],
+        "storyHeadline": "Left it unresolved who was in charge",
+        "tag": "LEFT IT",
+        "mentorHint": "Nothing happens today. Every decision after this one happens slightly slower, for as long as you both run this."
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-better-offer",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "They got a better offer",
+    "body": "A large company offered {COFOUNDER} a salary you cannot match.",
+    "options": [
+      {
+        "id": "a",
+        "label": "More shares to stay",
+        "detail": "It costs you equity, not cash.",
+        "effects": [
+          {
+            "type": "growEquityCofounder",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Gave a co-founder more shares to stay",
+        "tag": "GAVE MORE SHARES",
+        "mentorHint": "It costs equity, not cash \u2014 the kind of cost that's easy to agree to and hard to get back."
+      },
+      {
+        "id": "b",
+        "label": "Let them go with their shares",
+        "detail": "They keep every point. It's awkward forever.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          },
+          {
+            "type": "cofounderExit",
+            "keepsEquity": true
+          }
+        ],
+        "storyHeadline": "Let a co-founder go to a better offer",
+        "tag": "LET THEM GO",
+        "mentorHint": "They keep every point, and you keep explaining to investors why they're not on the team anymore."
+      },
+      {
+        "id": "c",
+        "label": "Buy them out",
+        "detail": "Clean, and expensive.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -400000
+          },
+          {
+            "type": "cofounderExit",
+            "keepsEquity": false
+          }
+        ],
+        "storyHeadline": "Bought out a co-founder before they left",
+        "tag": "BOUGHT THEM OUT",
+        "mentorHint": "Clean, and expensive. You're paying today for a decision you can't actually undo."
+      }
+    ]
+  },
+  {
+    "id": "ev-investor-weekly-updates",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasInvestors",
+        "value": true
+      }
+    ],
+    "headline": "Your investor wants weekly updates",
+    "body": "They mean well. It's four hours a week.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Do it properly",
+        "detail": "Four hours a week, forever.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Started sending proper weekly updates",
+        "tag": "WEEKLY UPDATES"
+      },
+      {
+        "id": "b",
+        "label": "Monthly only",
+        "detail": "They're mildly annoyed. You get your time back.",
+        "effects": [],
+        "storyHeadline": "Cut investor updates back to monthly",
+        "tag": "MONTHLY ONLY"
+      }
+    ]
+  },
+  {
+    "id": "ev-board-wants-bigger-plan",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasInvestors",
+        "value": true
+      },
+      {
+        "type": "revenueBelow",
+        "value": 5000000
+      }
+    ],
+    "headline": "The board wants a bigger plan",
+    "body": "They think you're not ambitious enough.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give them the aggressive plan",
+        "detail": "Cash lasts less time. Revenue can climb fast.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -8,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.5,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Committed to the board's aggressive plan",
+        "tag": "WENT AGGRESSIVE"
+      },
+      {
+        "id": "b",
+        "label": "Give them the honest plan",
+        "detail": "They're disappointed. You hit it.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Gave the board an honest, smaller plan",
+        "tag": "STAYED HONEST"
+      }
+    ]
+  },
+  {
+    "id": "ev-investor-wants-out",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "hasInvestors",
+        "value": true
+      }
+    ],
+    "headline": "An investor wants out",
+    "body": "They need to return money to their own backers and want to sell their shares.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy them out yourself",
+        "detail": "Costs, but you get the shares.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          },
+          {
+            "type": "investorDeparts"
+          }
+        ],
+        "storyHeadline": "Bought out a departing investor",
+        "tag": "BOUGHT SHARES BACK",
+        "mentorHint": "The cash leaves today. The shares you bought back should be growing, not sitting on your balance sheet."
+      },
+      {
+        "id": "b",
+        "label": "Nothing you can do",
+        "detail": "They push for a sale of the whole company from now on.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Let a restless investor stay on the cap table",
+        "tag": "LEFT AS IS",
+        "mentorHint": "It costs nothing right now. What it costs is a cap table with someone on it who wants out and can't leave."
+      }
+    ]
+  },
+  {
+    "id": "ev-investors-want-cuts",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasInvestors",
+        "value": true
+      },
+      {
+        "type": "cashLastsBelow",
+        "value": 12
+      }
+    ],
+    "headline": "They ask you to cut staff",
+    "body": "The board wants a 20% reduction. You think it's premature.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Do it",
+        "detail": "Cash lasts longer. Morale drops hard.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 7,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": -35
+          },
+          {
+            "type": "staff",
+            "value": -20
+          }
+        ],
+        "storyHeadline": "Cut staff at the board's request",
+        "tag": "CUT STAFF"
+      },
+      {
+        "id": "b",
+        "label": "Refuse and hit the numbers instead",
+        "detail": "A real bet on proving the board wrong.",
+        "effects": [],
+        "storyHeadline": "Refused a board-mandated cut",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "morale",
+              "value": 10
+            }
+          ],
+          "winText": "You hit the numbers. The board backed off.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "staff",
+              "value": -30
+            },
+            {
+              "type": "morale",
+              "value": -20
+            }
+          ],
+          "loseText": "You cut deeper, six months later, on worse terms.",
+          "winStoryHeadline": "Proved the board wrong on cuts",
+          "loseStoryHeadline": "Cut deeper than the board first asked"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-name-not-registered",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "You never registered the name properly",
+    "body": "Someone else just did.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy it from them",
+        "detail": "A clean, annoying payment.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -60000
+          }
+        ],
+        "storyHeadline": "Bought back your own company name",
+        "tag": "BOUGHT IT BACK",
+        "mentorHint": "A clean, annoying payment. Whoever registered it now knows exactly how much your name is worth to you."
+      },
+      {
+        "id": "b",
+        "label": "Change the name",
+        "detail": "Expensive. A clean slate.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Changed the company name entirely",
+        "tag": "CHANGED NAME",
+        "mentorHint": "Expensive. Every customer who already knows you by the old name has to learn the new one."
+      }
+    ]
+  },
+  {
+    "id": "ev-staff-shares-not-formalised",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 20
+      }
+    ],
+    "headline": "Staff shares were never formalised",
+    "body": "You promised people shares. Nothing was signed.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sort it out properly",
+        "detail": "Morale climbs. Everyone is finally clear.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 30
+          }
+        ],
+        "storyHeadline": "Formalised staff equity properly",
+        "tag": "FORMALISED IT"
+      },
+      {
+        "id": "b",
+        "label": "Keep promising",
+        "detail": "Morale collapses the moment anyone asks a lawyer.",
+        "effects": [],
+        "storyHeadline": "Kept promising staff equity informally",
+        "tag": "KEPT PROMISING"
+      }
+    ]
+  },
+  {
+    "id": "ev-copied-claim",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Someone claims you copied them",
+    "body": "A letter from a company you've never heard of.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fight it",
+        "detail": "Expensive, and you'll probably win.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -70000
+          }
+        ],
+        "storyHeadline": "Fought an accusation of copying",
+        "gamble": {
+          "winPct": 70,
+          "winEffects": [],
+          "winText": "You won, cleanly.",
+          "losePct": 30,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -100000
+            }
+          ],
+          "loseText": "You lost, and paid for it.",
+          "winStoryHeadline": "Won a copying dispute outright",
+          "loseStoryHeadline": "Lost a copying dispute"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Settle quietly",
+        "detail": "Done, at a price.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -120000
+          }
+        ],
+        "storyHeadline": "Settled a copying dispute quietly",
+        "tag": "SETTLED"
+      }
+    ]
+  },
+  {
+    "id": "ev-what-are-you-for",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 30
+      }
+    ],
+    "headline": "What are you actually for?",
+    "body": "You're doing a bit of everything and none of it well.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Only do sales",
+        "detail": "Revenue climbs. The product drifts.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.3,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Focused entirely on sales",
+        "tag": "FOCUSED ON SALES"
+      },
+      {
+        "id": "b",
+        "label": "Only do product",
+        "detail": "The product improves. Revenue is flat.",
+        "effects": [],
+        "storyHeadline": "Focused entirely on product",
+        "tag": "FOCUSED ON PRODUCT"
+      },
+      {
+        "id": "c",
+        "label": "Only manage people",
+        "detail": "Morale climbs. You stop enjoying it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 25
+          }
+        ],
+        "storyHeadline": "Became a full-time manager",
+        "tag": "FOCUSED ON PEOPLE"
+      }
+    ]
+  },
+  {
+    "id": "ev-someone-offers-you-a-job",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "moraleBelow",
+        "value": 45
+      }
+    ],
+    "headline": "Someone offers you a job",
+    "body": "A big salary, no risk, starts Monday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Stay",
+        "detail": "You'll think about this again someday.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Turned down a safe job to stay",
+        "tag": "STAYED"
+      }
+    ]
+  },
+  {
+    "id": "ev-bored-at-year-ten",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 10
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "You're bored",
+    "body": "It works. It runs. You're not needed the way you were.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Start something new inside the company",
+        "detail": "A real risk to something that already works.",
+        "effects": [],
+        "storyHeadline": "Started something new inside a stable company",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.2,
+              "years": 2
+            },
+            {
+              "type": "morale",
+              "value": 15
+            }
+          ],
+          "winText": "It revived you, and the numbers.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.85,
+              "years": 2
+            }
+          ],
+          "loseText": "You broke something that worked.",
+          "winStoryHeadline": "A new bet inside the company paid off",
+          "loseStoryHeadline": "A new bet inside the company backfired"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Hire someone to run it and step back",
+        "detail": "You keep your shares. You keep your evenings.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Hired a CEO and stepped back",
+        "tag": "STEPPED BACK"
+      }
+    ]
+  },
+  {
+    "id": "ev-first-employee-buy-company",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 12
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "Your first employee wants to buy the company",
+    "body": "They've been there since the start and they've found the money.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sell to them",
+        "detail": "Take their offer, at whatever the market says the company is worth.",
+        "effects": [
+          {
+            "type": "end",
+            "endingType": "sale"
+          }
+        ],
+        "storyHeadline": "Sold the company to the person who joined second",
+        "tag": "SOLD TO THEM",
+        "mentorHint": "What you're actually choosing here is the ending you get to tell, not the number on the cheque."
+      },
+      {
+        "id": "b",
+        "label": "Turn them down, hold out for a bigger buyer",
+        "detail": "Keep running the company and wait for a better offer to come along instead.",
+        "effects": [],
+        "storyHeadline": "Turned down the first employee to hold out for more",
+        "tag": "HELD OUT",
+        "mentorHint": "You might get a bigger number later. The person who believed in this before anyone else doesn't get to be part of it either way."
+      }
+    ]
+  },
+  {
+    "id": "ev-give-shares-to-staff",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 10
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "Give shares to the staff",
+    "body": "You could give away a slice to everyone who works there.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give away 10% to everyone",
+        "detail": "Nobody leaves for a decade.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 45
+          }
+        ],
+        "storyHeadline": "Gave staff a real stake in the company",
+        "tag": "GAVE AWAY EQUITY"
+      },
+      {
+        "id": "b",
+        "label": "Keep it",
+        "detail": "Richer. Lonelier.",
+        "effects": [],
+        "storyHeadline": "Kept the equity for yourself",
+        "tag": "KEPT IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-what-do-you-stand-for",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 30
+      }
+    ],
+    "headline": "What do you actually stand for?",
+    "body": "Someone asked and you didn't have an answer.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Write it down with the team",
+        "detail": "Two days. Occasionally useful.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Wrote the company's values with the team",
+        "tag": "WROTE VALUES TOGETHER"
+      },
+      {
+        "id": "b",
+        "label": "Nothing",
+        "detail": "Fine, until you need it.",
+        "effects": [],
+        "storyHeadline": "Never wrote down what the company stands for",
+        "tag": "NOTHING"
+      }
+    ]
+  },
+  {
+    "id": "ev-team-wants-salary-transparency",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 25
+      }
+    ],
+    "headline": "The team wants to know what everyone earns",
+    "body": "A group of them raised it at the last all-hands: full salary transparency, company-wide. They're waiting on an answer.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Publish everything",
+        "detail": "Three difficult months. Permanent trust after.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Made every salary public",
+        "tag": "FULL TRANSPARENCY"
+      },
+      {
+        "id": "b",
+        "label": "Publish bands only",
+        "detail": "The middle path. Works.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Published salary bands, not figures",
+        "tag": "BANDS ONLY"
+      },
+      {
+        "id": "c",
+        "label": "Refuse",
+        "detail": "Morale drops.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Refused salary transparency",
+        "tag": "REFUSED"
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-third-founder",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "yearMax",
+        "value": 6
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "They want to bring in a third",
+    "body": "{COFOUNDER} found someone excellent, who wants founder-level shares to join.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Agree",
+        "detail": "A real third founder, with real equity.",
+        "effects": [
+          {
+            "type": "grantNewEquity",
+            "value": 8,
+            "holderLabel": "A third co-founder"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 3
+          }
+        ],
+        "storyHeadline": "Brought on a third co-founder",
+        "tag": "THIRD FOUNDER",
+        "mentorHint": "Real equity, permanently split three ways. That's true in the good years and the bad ones."
+      },
+      {
+        "id": "b",
+        "label": "Employee terms instead",
+        "detail": "A smaller stake, if they'll even take it.",
+        "effects": [],
+        "storyHeadline": "Offered employee terms instead of a third founder",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "grantNewEquity",
+              "value": 2,
+              "holderLabel": "A senior hire"
+            }
+          ],
+          "winText": "They took the smaller deal.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -5
+            }
+          ],
+          "loseText": "They declined and went elsewhere.",
+          "winStoryHeadline": "A senior hire joined on employee terms",
+          "loseStoryHeadline": "A senior hire declined employee terms"
+        }
+      },
+      {
+        "id": "c",
+        "label": "No third founder",
+        "detail": "{COFOUNDER} is quietly disappointed.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Turned down a third co-founder",
+        "tag": "STAYED TWO",
+        "mentorHint": "Nothing costs money today. Someone excellent is now available to a competitor instead."
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-famous",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "They got famous",
+    "body": "{COFOUNDER} posted something unrelated to work. Nine million views.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Put them in front of every camera",
+        "detail": "Signups spike. They stop working.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 3,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Put a newly-famous co-founder in front of every camera",
+        "tag": "WENT ALL IN"
+      },
+      {
+        "id": "b",
+        "label": "Ask them to keep it separate",
+        "detail": "They're not thrilled about it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Asked a famous co-founder to keep it separate",
+        "tag": "KEPT IT SEPARATE"
+      },
+      {
+        "id": "c",
+        "label": "Nothing",
+        "detail": "It might just fade.",
+        "effects": [],
+        "storyHeadline": "Let a co-founder's fame run its course",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "It faded.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cofounderExit",
+              "keepsEquity": true
+            }
+          ],
+          "loseText": "They left to do it full-time.",
+          "winStoryHeadline": "A co-founder's fame faded on its own",
+          "loseStoryHeadline": "A co-founder left to chase their fame full-time"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-cofounder-trait",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "It's the thing about them again",
+    "body": "{COFOUNDER} {COFOUNDER_TRAIT} \u2014 and this week it's a real problem, not a quirk.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Address it directly",
+        "detail": "An honest conversation, and some cleanup.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -20000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Addressed a co-founder's pattern head-on",
+        "tag": "ADDRESSED IT"
+      },
+      {
+        "id": "b",
+        "label": "Let it go",
+        "detail": "Easier this week. Not next week.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Let a co-founder's pattern slide again",
+        "tag": "LET IT GO"
+      }
+    ]
+  },
+  {
+    "id": "ev-solo-founder-partner",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      },
+      {
+        "type": "hasCofounder",
+        "value": false
+      }
+    ],
+    "headline": "Someone excellent wants in",
+    "body": "You've done everything alone. Someone excellent wants to join, at real equity.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take them on",
+        "detail": "A real partner, and a real stake.",
+        "effects": [
+          {
+            "type": "grantNewEquity",
+            "value": 20,
+            "holderLabel": "A new co-founder"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.5,
+            "years": 3
+          }
+        ],
+        "storyHeadline": "Took on a co-founder after years solo",
+        "tag": "TOOK THEM ON",
+        "mentorHint": "A real stake, forever. You've just given up the thing that made every decision only yours to make."
+      },
+      {
+        "id": "b",
+        "label": "Hire them instead",
+        "detail": "A smaller stake, and you stay in charge.",
+        "effects": [
+          {
+            "type": "grantNewEquity",
+            "value": 4,
+            "holderLabel": "A senior hire"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 3
+          }
+        ],
+        "storyHeadline": "Hired a would-be co-founder as an employee instead",
+        "tag": "HIRED INSTEAD",
+        "mentorHint": "A smaller stake, and you stay in charge \u2014 of someone who could have been an equal."
+      },
+      {
+        "id": "c",
+        "label": "Stay solo",
+        "detail": "Nothing changes, and it stays hard.",
+        "effects": [],
+        "storyHeadline": "Stayed solo rather than take on a partner",
+        "tag": "STAYED SOLO",
+        "mentorHint": "Nothing changes. It also doesn't get easier, and the someone-excellent doesn't wait."
+      }
+    ]
+  }
+]

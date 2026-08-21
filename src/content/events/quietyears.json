@@ -1,0 +1,122 @@
+[
+  {
+    "id": "quiet-year-1",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "A quiet year",
+    "body": "No calls, no offers, no crises. You keep building.",
+    "options": [
+      {
+        "id": "quiet-year-1-opt",
+        "label": "Keep going",
+        "detail": "Heads down, one more year.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "Another quiet year at the desk"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "quiet-year-2",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "Nothing much happens",
+    "body": "The inbox is quiet. You use the time to get ahead of the work, for once.",
+    "options": [
+      {
+        "id": "quiet-year-2-opt",
+        "label": "Keep going",
+        "detail": "No news is fine news.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "A year with no headlines"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "quiet-year-3",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "Business as usual",
+    "body": "Nothing that will make the story feed. The work is the work.",
+    "options": [
+      {
+        "id": "quiet-year-3-opt",
+        "label": "Keep going",
+        "detail": "Steady, unremarkable progress.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "Kept the lights on, nothing more"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "quiet-year-4",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "A year of maintenance",
+    "body": "No drama. You fix the small things nobody else noticed were broken.",
+    "options": [
+      {
+        "id": "quiet-year-4-opt",
+        "label": "Keep going",
+        "detail": "Unglamorous, necessary work.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "A year of small fixes"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "quiet-year-5",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "Steady as it goes",
+    "body": "No investors calling, no fires to put out. You just build.",
+    "options": [
+      {
+        "id": "quiet-year-5-opt",
+        "label": "Keep going",
+        "detail": "Consistency, mostly.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "A year that stayed on plan"
+      }
+    ],
+    "isWeather": true
+  },
+  {
+    "id": "quiet-year-6",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [],
+    "headline": "An uneventful stretch",
+    "body": "The kind of year nobody writes about. You take it.",
+    "options": [
+      {
+        "id": "quiet-year-6-opt",
+        "label": "Keep going",
+        "detail": "Quiet years compound too.",
+        "tag": "QUIET YEAR",
+        "icon": "solo",
+        "effects": [],
+        "storyHeadline": "One more unremarkable year"
+      }
+    ],
+    "isWeather": true
+  }
+]

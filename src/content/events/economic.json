@@ -1,0 +1,1389 @@
+[
+  {
+    "id": "ev-still-no-revenue",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      { "type": "yearMin", "value": 3 },
+      { "type": "revenueBelow", "value": 5000 }
+    ],
+    "headline": "Nothing has caught on",
+    "body": "Years in, and there's still no real revenue. Something isn't working, and it's time to actually decide what to do about it.",
+    "options": [
+      {
+        "id": "opt-pivot",
+        "label": "Pivot to something else",
+        "detail": "Same team, same cash left — a completely different idea.",
+        "effects": [],
+        "storyHeadline": "Pivoted to a different idea",
+        "tag": "PIVOTED",
+        "gamble": {
+          "winPct": 45,
+          "winEffects": [
+            { "type": "revenueStep", "value": 40000 },
+            { "type": "growthMultiplier", "value": 1.4, "years": 2 }
+          ],
+          "winText": "The new direction actually caught on.",
+          "winStoryHeadline": "Pivoted, and it worked",
+          "losePct": 55,
+          "loseEffects": [
+            { "type": "cash", "value": -30000 },
+            { "type": "morale", "value": -10 }
+          ],
+          "loseText": "The pivot didn't take either.",
+          "loseStoryHeadline": "Pivoted, and it still didn't work"
+        }
+      },
+      {
+        "id": "opt-abandon",
+        "label": "Abandon it",
+        "detail": "Wind it down now, before it costs any more.",
+        "effects": [{ "type": "failure" }],
+        "storyHeadline": "Shut it down after years with nothing to show",
+        "tag": "ABANDONED"
+      },
+      {
+        "id": "opt-keep-going",
+        "label": "Keep going",
+        "detail": "One more year to prove it can work.",
+        "effects": [{ "type": "morale", "value": -5 }],
+        "storyHeadline": "Kept grinding with nothing to show for it"
+      }
+    ]
+  },
+  {
+    "id": "event-recession",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "climateIs",
+        "value": "cooling"
+      }
+    ],
+    "headline": "Market pullback begins",
+    "body": "Rates are rising and investors are getting cautious everywhere at once. Your own board just called an emergency meeting.",
+    "options": [
+      {
+        "id": "opt-hunker",
+        "label": "Cut burn immediately",
+        "detail": "Freeze hiring and slow spending so the cash lasts through whatever's coming.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -2
+          },
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Tightened belt in uncertain times"
+      },
+      {
+        "id": "opt-invest",
+        "label": "Keep spending through it",
+        "detail": "Everyone else is pulling back. Keep hiring and shipping while they do.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -50000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Invested while others retreated"
+      }
+    ]
+  },
+  {
+    "id": "event-talent-war",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "climateIs",
+        "value": "frothy"
+      },
+      {
+        "type": "staffAbove",
+        "value": 5
+      }
+    ],
+    "headline": "Big tech company tries to poach your team",
+    "body": "A well-known name is offering your engineers salaries you can't match. One of them has already said yes.",
+    "options": [
+      {
+        "id": "opt-raise-match",
+        "label": "Raise salaries to match",
+        "detail": "Spend what it takes to keep the rest of the team from following.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -80000
+          },
+          {
+            "type": "staff",
+            "value": 0
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Matched offers to retain talent"
+      },
+      {
+        "id": "opt-let-go",
+        "label": "Let them go",
+        "detail": "You can't compete on money yet. Wish them well and keep building.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1
+          },
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Lost engineer to bigger company"
+      }
+    ]
+  },
+  {
+    "id": "event-currency-crisis",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "countryHasCurrencyRisk",
+        "value": true
+      }
+    ],
+    "headline": "Local currency crashes 30%",
+    "body": "Your revenue comes in local currency. Your cloud bills are in dollars. Overnight, those bills got a third more expensive.",
+    "options": [
+      {
+        "id": "opt-raise-prices",
+        "label": "Raise prices immediately",
+        "detail": "Protect your margins. Some customers grumble, but the bills still get paid.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 20000
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Raised prices to survive a currency shock"
+      },
+      {
+        "id": "opt-eat-cost",
+        "label": "Absorb the cost",
+        "detail": "Keep prices exactly where they are and take the hit to your own margin instead.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 15000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Took a margin hit for customer loyalty"
+      }
+    ]
+  },
+  {
+    "id": "event-ipo-window",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 7
+      },
+      {
+        "type": "revenueAbove",
+        "value": 5000000
+      },
+      {
+        "type": "climateIs",
+        "value": "frothy"
+      }
+    ],
+    "headline": "A smaller, quieter buyout — dressed up as an IPO",
+    "body": "Your bankers think the market would buy your story, but what they're really offering is a buyout at a rich multiple, paid out as if you'd listed. Tech IPOs are hot right now, and this is the version of that you can actually get.",
+    "options": [
+      {
+        "id": "opt-ipo-yes",
+        "label": "Take it and step away",
+        "detail": "Cash out at today's market price and let the company become someone else's story from here.",
+        "effects": [
+          {
+            "type": "end",
+            "endingType": "ipo"
+          }
+        ],
+        "storyHeadline": "Took a public-style buyout and stepped away",
+        "mentorHint": "It's priced like a real exit, not a headline number a banker made up. Once you take it, this company is no longer yours to run."
+      },
+      {
+        "id": "opt-ipo-wait",
+        "label": "Wait another year",
+        "detail": "Let the offer go and see if the window is still open next year.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Passed on an early buyout to wait it out",
+        "mentorHint": "Waiting costs nothing today. Windows like this one don't stay open on your schedule."
+      }
+    ]
+  },
+  {
+    "id": "ev-money-stops",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "climateIs",
+        "value": "frozen"
+      }
+    ],
+    "headline": "The money stops",
+    "body": "Every fund you know has gone quiet. Not \"no\" \u2014 just quiet.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Cut a third of the staff now",
+        "detail": "Cash lasts much longer. Morale takes a real hit.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 14,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": -30
+          },
+          {
+            "type": "staff",
+            "value": -30,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Cut staff to survive a funding freeze",
+        "tag": "CUT STAFF",
+        "mentorHint": "Cash lasts. So does the fact that the people who stayed watched you decide who didn't."
+      },
+      {
+        "id": "b",
+        "label": "Raise at half the price you wanted",
+        "detail": "You give up more than you'd like.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-marcus",
+            "fundingStage": "seriesA",
+            "targetDilutionPct": 22
+          }
+        ],
+        "storyHeadline": "Raised down, but raised",
+        "tag": "DOWN ROUND",
+        "icon": "investor",
+        "mentorHint": "You get the round. The price you accepted becomes the price everyone remembers next time."
+      },
+      {
+        "id": "c",
+        "label": "Try to survive on revenue alone",
+        "detail": "A real bet on the business as it stands.",
+        "effects": [],
+        "storyHeadline": "Tried to survive the freeze on revenue alone",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "You made it, and you own all of it.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -8,
+              "unit": "runwayMonths"
+            }
+          ],
+          "loseText": "You ran out with eight months to spare.",
+          "winStoryHeadline": "Survived the freeze on revenue alone",
+          "loseStoryHeadline": "Nearly ran out surviving the freeze alone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-everyone-throwing-money",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "climateIs",
+        "value": "frothy"
+      }
+    ],
+    "headline": "Everyone is throwing money",
+    "body": "Three funds have emailed you this week. One offered before seeing a single number.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take the biggest cheque",
+        "detail": "Cash to spare. Now you have to grow fast or die.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-marcus",
+            "fundingStage": "seriesB",
+            "targetDilutionPct": 15
+          }
+        ],
+        "storyHeadline": "Took the biggest offer on the table",
+        "tag": "TOOK THE BIG CHEQUE",
+        "icon": "investor",
+        "mentorHint": "The cheque is real. So is the growth rate they'll now expect every quarter, forever."
+      },
+      {
+        "id": "b",
+        "label": "Take a small one at a silly price",
+        "detail": "Barely any dilution.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-karim",
+            "fundingStage": "seed",
+            "targetDilutionPct": 4
+          }
+        ],
+        "storyHeadline": "Took a small round at a great price",
+        "tag": "SMALL ROUND",
+        "icon": "investor",
+        "mentorHint": "Barely any dilution \u2014 and a board seat you now owe a favour to."
+      },
+      {
+        "id": "c",
+        "label": "Take none",
+        "detail": "Feels very smart in two years.",
+        "effects": [],
+        "storyHeadline": "Turned down every offer in a frothy market",
+        "tag": "TOOK NONE",
+        "mentorHint": "Nothing's given up today. What it costs only shows up the day you need money and the market's changed its mind."
+      }
+    ]
+  },
+  {
+    "id": "ev-bank-fails",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "cashLastsAbove",
+        "value": 2
+      }
+    ],
+    "headline": "Your bank fails",
+    "body": "On a Friday afternoon your bank stops answering. Your payroll is Monday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Borrow from an investor personally, overnight",
+        "detail": "Cash is safe. They never let you forget it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -2,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Borrowed overnight to cover a bank failure",
+        "tag": "EMERGENCY LOAN"
+      },
+      {
+        "id": "b",
+        "label": "Tell the staff the truth and wait",
+        "detail": "A real gamble on the bank releasing funds.",
+        "effects": [],
+        "storyHeadline": "Waited out a bank failure",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "The money was released within a week.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -25,
+              "unit": "percent"
+            }
+          ],
+          "loseText": "You lost a third of it in the chaos.",
+          "winStoryHeadline": "The bank released the funds",
+          "loseStoryHeadline": "Lost cash to a bank failure"
+        }
+      },
+      {
+        "id": "c",
+        "label": "Take an emergency loan at a terrible rate",
+        "detail": "Cash is safe. It costs you for years.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 10,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Took an expensive emergency loan",
+        "tag": "EXPENSIVE LOAN"
+      }
+    ]
+  },
+  {
+    "id": "ev-biggest-customer-bust",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "revenueAbove",
+        "value": 1000000
+      }
+    ],
+    "headline": "The biggest customer goes bust",
+    "body": "They owe you four months and they aren't paying anyone.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sue",
+        "detail": "Expensive, and a coin flip on getting anything back.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -60000
+          }
+        ],
+        "storyHeadline": "Sued a customer who went bust",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 30000
+            }
+          ],
+          "winText": "Got half of it back.",
+          "losePct": 50,
+          "loseEffects": [],
+          "loseText": "Got nothing back.",
+          "winStoryHeadline": "Recovered some money in court",
+          "loseStoryHeadline": "Got nothing suing a bankrupt customer"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Write it off and move on",
+        "detail": "Revenue takes a hit. You move on.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.7,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Wrote off a bankrupt customer",
+        "tag": "WROTE IT OFF"
+      }
+    ]
+  },
+  {
+    "id": "ev-prices-rising",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Prices are rising everywhere",
+    "body": "Everything costs more. Your staff have noticed before you have.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Raise everyone's pay",
+        "detail": "Costs rise. Morale improves.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": 15,
+            "unit": "percent"
+          },
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Raised pay to keep up with prices",
+        "tag": "RAISED PAY"
+      },
+      {
+        "id": "b",
+        "label": "Raise your prices",
+        "detail": "Revenue holds. You lose some customers.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.18,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Raised prices with the market",
+        "tag": "RAISED PRICES"
+      },
+      {
+        "id": "c",
+        "label": "Do nothing and hope",
+        "detail": "Two people leave for more money.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -20
+          }
+        ],
+        "storyHeadline": "Did nothing while prices rose around you",
+        "tag": "DID NOTHING"
+      }
+    ]
+  },
+  {
+    "id": "ev-rival-enormous-round",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "A rival raises an enormous round",
+    "body": "{RIVAL} just raised more money than you've ever seen. They're hiring your people by Friday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Raise too, at any price",
+        "detail": "You get the cash. You give up a lot.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-tomas-lindqvist",
+            "fundingStage": "seriesB",
+            "targetDilutionPct": 25
+          }
+        ],
+        "storyHeadline": "Raised in a hurry to keep pace with a rival",
+        "tag": "MATCHED THE RAISE",
+        "icon": "investor",
+        "mentorHint": "You match the raise. You also match their burn rate, with less cash to survive it."
+      },
+      {
+        "id": "b",
+        "label": "Compete on being profitable instead",
+        "detail": "Nothing changes now. Matters enormously later.",
+        "effects": [],
+        "storyHeadline": "Chose profitability over matching a rival's raise",
+        "tag": "STAYED PROFITABLE",
+        "mentorHint": "Nothing changes today. The cost is patience \u2014 yours, and everyone watching you not react."
+      }
+    ]
+  },
+  {
+    "id": "ev-early-acquisition-offer",
+    "rarity": "rare",
+    "isGamble": false,
+    "category": "opportunity",
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "yearMax",
+        "value": 6
+      },
+      {
+        "type": "revenueAbove",
+        "value": 500000
+      }
+    ],
+    "headline": "Someone offers to buy you \u2014 too early",
+    "body": "{ACQUIRER} offers a number that would change your life but not your grandchildren's.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Say no",
+        "detail": "They walk. In a few years you'll know whether that was clever.",
+        "effects": [],
+        "storyHeadline": "Turned down an early acquisition offer",
+        "tag": "TURNED IT DOWN"
+      },
+      {
+        "id": "b",
+        "label": "Ask for double",
+        "detail": "A real bet on your own negotiating position.",
+        "effects": [],
+        "storyHeadline": "Countered an early acquisition offer",
+        "gamble": {
+          "winPct": 40,
+          "winEffects": [],
+          "winText": "They agreed.",
+          "losePct": 60,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -10
+            }
+          ],
+          "loseText": "They walked, and told people you were difficult.",
+          "winStoryHeadline": "Doubled down on an offer and won",
+          "loseStoryHeadline": "Pushed too hard on an early offer"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-tax-bill",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "category": "money",
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "The tax bill nobody warned you about",
+    "body": "An accountant made a mistake three years ago. The government has noticed.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Pay it",
+        "detail": "One large, clean payment.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -200000
+          }
+        ],
+        "storyHeadline": "Paid an unexpected tax bill in full",
+        "tag": "PAID IT"
+      },
+      {
+        "id": "b",
+        "label": "Payment plan",
+        "detail": "Cash lasts, and the company survives.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -10,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Put a tax bill on a payment plan",
+        "tag": "PAYMENT PLAN"
+      }
+    ]
+  },
+  {
+    "id": "ev-small-or-big-round",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "hasInvestors",
+        "value": false
+      }
+    ],
+    "headline": "A small round or a big one",
+    "body": "Two term sheets on the table. One is much bigger than the other, and comes with much bigger expectations attached.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take the bigger round",
+        "detail": "More runway, more pressure to grow fast enough to justify it.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-marcus",
+            "fundingStage": "seriesA",
+            "targetDilutionPct": 20
+          }
+        ],
+        "storyHeadline": "Took the big round",
+        "tag": "WENT BIG",
+        "icon": "investor",
+        "mentorHint": "The number's exciting. So is the growth rate you've now promised to hit."
+      },
+      {
+        "id": "b",
+        "label": "Take the smaller round",
+        "detail": "Less cash, less equity given up, less to prove on someone else's timeline.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-karim",
+            "fundingStage": "seed",
+            "targetDilutionPct": 8
+          }
+        ],
+        "storyHeadline": "Took the smaller, careful round",
+        "tag": "STAYED SMALL",
+        "icon": "investor",
+        "mentorHint": "Smaller cheque, smaller dilution \u2014 and less room if the plan needs more runway than you think."
+      }
+    ]
+  },
+  {
+    "id": "ev-turn-down-round-entirely",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "Turn down the round entirely",
+    "body": "You don't actually need the money any more.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Say no to everyone",
+        "detail": "You keep every share you have.",
+        "effects": [],
+        "storyHeadline": "Turned down funding while profitable",
+        "tag": "TURNED DOWN",
+        "mentorHint": "You keep every share. You also lose the cash cushion for whatever happens next."
+      },
+      {
+        "id": "b",
+        "label": "Take it anyway, for speed",
+        "detail": "Cash to move faster, at a real cost.",
+        "effects": [
+          {
+            "type": "funding",
+            "characterId": "char-priya",
+            "fundingStage": "seriesB",
+            "targetDilutionPct": 18
+          }
+        ],
+        "storyHeadline": "Took funding anyway, for speed",
+        "tag": "TOOK IT FOR SPEED",
+        "icon": "investor",
+        "mentorHint": "Speed, at a real cost \u2014 equity you didn't actually need to give up."
+      }
+    ]
+  },
+  {
+    "id": "ev-rival-cuts-prices",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "They cut their prices",
+    "body": "{RIVAL} just went 40% cheaper.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Match",
+        "detail": "Revenue takes a real hit.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.75,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Matched a rival's price cut",
+        "tag": "MATCHED PRICE"
+      },
+      {
+        "id": "b",
+        "label": "Hold and explain why you're better",
+        "detail": "Lose the price-sensitive customers, keep the rest.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.85,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Held prices against a rival's cut",
+        "tag": "HELD PRICE"
+      }
+    ]
+  },
+  {
+    "id": "ev-rival-partner-offer",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "A rival offers to partner",
+    "body": "Work together on one thing, stay separate otherwise.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Do it",
+        "detail": "Both of you grow. Some of what they learn is now about you.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Partnered with a rival on one thing",
+        "tag": "PARTNERED WITH RIVAL"
+      },
+      {
+        "id": "b",
+        "label": "Decline",
+        "detail": "Nothing.",
+        "effects": [],
+        "storyHeadline": "Declined a rival's partnership offer",
+        "tag": "DECLINED"
+      }
+    ]
+  },
+  {
+    "id": "ev-rival-in-trouble",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "A rival is in trouble",
+    "body": "Word is {RIVAL} is running out of money.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire their people",
+        "detail": "Output climbs.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 3
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.1,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Hired talent from a struggling rival",
+        "tag": "HIRED THEIR PEOPLE"
+      },
+      {
+        "id": "b",
+        "label": "Approach their customers",
+        "detail": "Revenue climbs. You look a little like a vulture.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.25,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Went after a struggling rival's customers",
+        "tag": "TOOK THEIR CUSTOMERS"
+      },
+      {
+        "id": "c",
+        "label": "Buy them outright",
+        "detail": "Acquire what's left of them — the team, the customers, all of it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -50000
+          },
+          {
+            "type": "staff",
+            "value": 3
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.3,
+            "years": 2
+          },
+          {
+            "type": "rivalAcquired"
+          }
+        ],
+        "storyHeadline": "Bought out a struggling rival outright",
+        "tag": "ACQUIRED RIVAL"
+      }
+    ]
+  },
+  {
+    "id": "ev-well-funded-newcomer",
+    "rarity": "rare",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Someone new arrives with far more money",
+    "body": "A well-funded newcomer entering your market.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fight",
+        "detail": "Years of an uncertain fight.",
+        "effects": [],
+        "storyHeadline": "Fought a well-funded newcomer",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.2,
+              "years": 2
+            }
+          ],
+          "winText": "You held your ground and then some.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.75,
+              "years": 2
+            }
+          ],
+          "loseText": "They out-spent you into a smaller company.",
+          "winStoryHeadline": "Held off a well-funded newcomer",
+          "loseStoryHeadline": "Lost ground to a well-funded newcomer"
+        }
+      },
+      {
+        "id": "b",
+        "label": "Go somewhere they aren't",
+        "detail": "Smaller for now. Safe.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.8,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Moved away from a well-funded newcomer",
+        "tag": "REPOSITIONED"
+      }
+    ]
+  },
+  {
+    "id": "ev-bank-wants-collateral",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "revenueAbove",
+        "value": 300000
+      },
+      {
+        "type": "hasLoan",
+        "value": false
+      },
+      {
+        "type": "bankruptciesBelow",
+        "value": 2
+      }
+    ],
+    "headline": "A bank will lend, if you sign personally",
+    "body": "Not against the company. Against you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sign it",
+        "detail": "Cash now. The debt is yours if the company can't pay.",
+        "effects": [
+          {
+            "type": "loan",
+            "value": 300000,
+            "years": 4,
+            "holderLabel": "Fen & Iron Trust"
+          }
+        ],
+        "storyHeadline": "Signed a personal guarantee for a bank loan",
+        "tag": "SIGNED PERSONALLY",
+        "mentorHint": "The company's debt usually stays the company's. A personal guarantee quietly changes that."
+      },
+      {
+        "id": "b",
+        "label": "Not on those terms",
+        "detail": "The offer stands. You just don't take it.",
+        "effects": [],
+        "storyHeadline": "Turned down a personally-guaranteed loan",
+        "tag": "TURNED IT DOWN",
+        "mentorHint": "Nothing happens today. Nothing happens tomorrow either \u2014 that's the actual offer."
+      }
+    ]
+  },
+  {
+    "id": "ev-loan-covenant",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "hasLoan",
+        "value": true
+      },
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "The bank wants a tighter covenant",
+    "body": "New terms, mid-loan. They can mostly do this.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Accept the new terms",
+        "detail": "Reporting, restrictions, a real drag on how you run things.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -8
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Accepted a tighter loan covenant",
+        "tag": "ACCEPTED THE COVENANT"
+      },
+      {
+        "id": "b",
+        "label": "Pay it off instead",
+        "detail": "Clear the whole balance now and this stops being their business.",
+        "effects": [
+          {
+            "type": "repayLoan"
+          }
+        ],
+        "storyHeadline": "Paid off the loan rather than accept a covenant",
+        "tag": "PAID IT OFF"
+      }
+    ]
+  },
+  {
+    "id": "ev-second-loan-tempting",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "hasLoan",
+        "value": true
+      },
+      {
+        "type": "revenueAbove",
+        "value": 400000
+      },
+      {
+        "type": "bankruptciesBelow",
+        "value": 2
+      }
+    ],
+    "headline": "A second loan, easy to get now",
+    "body": "You already pay one lender on time. A second one wants in on that.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take it too",
+        "detail": "More cash now. Two payments every month from here on.",
+        "effects": [
+          {
+            "type": "loan",
+            "value": 250000,
+            "years": 4,
+            "holderLabel": "Northfield Capital"
+          }
+        ],
+        "storyHeadline": "Took on a second loan",
+        "tag": "DOUBLED DOWN ON DEBT",
+        "mentorHint": "The first loan being easy to pay is not evidence the second one will be."
+      },
+      {
+        "id": "b",
+        "label": "One is enough",
+        "detail": "Say no while it's still an easy no.",
+        "effects": [],
+        "storyHeadline": "Declined a second loan",
+        "tag": "STAYED AT ONE"
+      }
+    ]
+  },
+  {
+    "id": "ev-refinance-loan",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "hasLoan",
+        "value": true
+      },
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Refinancing is on the table",
+    "body": "Rates have moved since you borrowed. A new lender offers to clear the old loan and write a fresh one.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Refinance it",
+        "detail": "The old balance disappears into a new loan, priced on who you are today, not who you were.",
+        "effects": [
+          {
+            "type": "repayLoan"
+          },
+          {
+            "type": "loan",
+            "value": 350000,
+            "years": 5,
+            "holderLabel": "Harrow & Vance"
+          }
+        ],
+        "storyHeadline": "Refinanced the loan",
+        "tag": "REFINANCED",
+        "mentorHint": "Today's rate might be better. It might not. You won't know which until it's signed."
+      },
+      {
+        "id": "b",
+        "label": "Leave it as it is",
+        "detail": "The devil you know, on the terms you already agreed to.",
+        "effects": [],
+        "storyHeadline": "Left the loan as it was",
+        "tag": "LEFT IT"
+      }
+    ]
+  },
+  {
+    "id": "ev-behind-on-payments",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "hasLoan",
+        "value": true
+      },
+      {
+        "type": "cashLastsBelow",
+        "value": 6
+      }
+    ],
+    "headline": "A payment is due and cash is tight",
+    "body": "The loan doesn't care that this is a bad month.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Find the cash somehow",
+        "detail": "Draw down further to make it on time.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Scraped together a loan payment",
+        "tag": "PAID ON TIME"
+      },
+      {
+        "id": "b",
+        "label": "Miss it",
+        "detail": "Keep the cash. Explain it to the bank instead.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -20
+          },
+          {
+            "type": "cash",
+            "value": -20000
+          }
+        ],
+        "storyHeadline": "Missed a loan payment",
+        "tag": "MISSED A PAYMENT",
+        "mentorHint": "The fee is the small cost. What a missed payment does to the next loan is the real one."
+      }
+    ]
+  },
+  {
+    "id": "ev-bankruptcy-shadow",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "bankruptciesAbove",
+        "value": 0
+      },
+      {
+        "type": "hasLoan",
+        "value": false
+      },
+      {
+        "type": "revenueAbove",
+        "value": 100000
+      },
+      {
+        "type": "bankruptciesBelow",
+        "value": 2
+      }
+    ],
+    "headline": "A lender remembers last time",
+    "body": "They'll still write the loan. The number they quote makes clear they looked you up first.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take it anyway",
+        "detail": "The rate is the rate. It's still cash you don't have otherwise.",
+        "effects": [
+          {
+            "type": "loan",
+            "value": 200000,
+            "years": 4,
+            "holderLabel": "A lender who did their homework"
+          }
+        ],
+        "storyHeadline": "Took a loan priced for a founder who'd failed before",
+        "tag": "TOOK THE RATE",
+        "mentorHint": "A worse rate isn't a worse loan. It's the same loan, costing what your record says it should."
+      },
+      {
+        "id": "b",
+        "label": "Bootstrap instead",
+        "detail": "Not at that price.",
+        "effects": [],
+        "storyHeadline": "Walked away from a loan priced for a past bankruptcy",
+        "tag": "WALKED AWAY"
+      }
+    ]
+  },
+  {
+    "id": "ev-pay-off-loan-early",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "hasLoan",
+        "value": true
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "You could clear the loan today",
+    "body": "The cash is sitting right there. So is the balance.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Pay it off",
+        "detail": "The payments stop. So does the interest.",
+        "effects": [
+          {
+            "type": "repayLoan"
+          }
+        ],
+        "storyHeadline": "Paid off the loan early",
+        "tag": "PAID IT OFF",
+        "mentorHint": "The interest saved is real. So is every other thing that cash could have done instead."
+      },
+      {
+        "id": "b",
+        "label": "Keep the cash working",
+        "detail": "The loan is cheap money. Let it keep being cheap money.",
+        "effects": [],
+        "storyHeadline": "Kept the loan running rather than pay it off",
+        "tag": "KEPT BORROWING"
+      }
+    ]
+  }
+]

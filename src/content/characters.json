@@ -1,0 +1,815 @@
+[
+  {
+    "id": "char-priya",
+    "fullName": "Priya Volkov",
+    "gender": "f",
+    "role": "investor",
+    "history": "made her money in freight logistics",
+    "firm": "Meridian Ventures",
+    "sentiment": 70
+  },
+  {
+    "id": "char-marcus",
+    "fullName": "Marcus Delacroix",
+    "gender": "m",
+    "role": "investor",
+    "history": "runs a startup school, believes he invented the concept",
+    "firm": "Alder Lane Partners",
+    "sentiment": 60
+  },
+  {
+    "id": "char-iris",
+    "fullName": "Iris Bardi",
+    "gender": "f",
+    "role": "mentor",
+    "history": "ex-banker, still dresses like it",
+    "sentiment": 75
+  },
+  {
+    "id": "char-john",
+    "fullName": "John Chen",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "engineer with the stamina of three people",
+    "sentiment": 80
+  },
+  {
+    "id": "char-sofia",
+    "fullName": "Sofia Brennan",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "met you in a queue for something neither of you got",
+    "sentiment": 60,
+    "trait": "remembers everything"
+  },
+  {
+    "id": "char-idris",
+    "fullName": "Idris Bardi",
+    "gender": "m",
+    "role": "mentor",
+    "history": "ex-banker, wears expensive watches",
+    "sentiment": 55
+  },
+  {
+    "id": "char-karim",
+    "fullName": "Karim Okonjo",
+    "gender": "m",
+    "role": "investor",
+    "history": "funds only what he can visit by train",
+    "firm": "Kestrel Group",
+    "sentiment": 50
+  },
+  {
+    "id": "char-tessellate",
+    "fullName": "Elena Grieve",
+    "gender": "f",
+    "role": "rival",
+    "history": "runs Tessellate, moves fast and mostly gets away with it",
+    "firm": "Tessellate",
+    "sentiment": 30
+  },
+  {
+    "id": "char-pallas",
+    "fullName": "Hugo Achterberg",
+    "gender": "m",
+    "role": "rival",
+    "history": "runs Pallas, been wrong loudly twice",
+    "firm": "Pallas",
+    "sentiment": 20
+  },
+  {
+    "id": "char-acquirer",
+    "fullName": "Halbert Group",
+    "gender": "m",
+    "role": "acquirer",
+    "history": "strategic buyer for larger portfolio",
+    "firm": "Halbert Group",
+    "sentiment": 50
+  },
+  {
+    "id": "char-lucia-volkov",
+    "fullName": "Lucia Volkov",
+    "gender": "f",
+    "role": "investor",
+    "history": "made her money in freight, asks the question you avoided",
+    "sentiment": 50
+  },
+  {
+    "id": "char-priya-raghunathan",
+    "fullName": "Priya Raghunathan",
+    "gender": "f",
+    "role": "investor",
+    "history": "sold two logistics firms, mentions neither",
+    "sentiment": 50
+  },
+  {
+    "id": "char-nils-aslan",
+    "fullName": "Nils Aslan",
+    "gender": "m",
+    "role": "investor",
+    "history": "put in the first $50k, still calls on Sundays",
+    "sentiment": 50
+  },
+  {
+    "id": "char-elena-bardi",
+    "fullName": "Elena Bardi",
+    "gender": "f",
+    "role": "investor",
+    "history": "the only investor who reads the whole email",
+    "sentiment": 50
+  },
+  {
+    "id": "char-tomas-lindqvist",
+    "fullName": "Tomas Lindqvist",
+    "gender": "m",
+    "role": "investor",
+    "history": "sold two companies, openly regrets the first",
+    "sentiment": 50
+  },
+  {
+    "id": "char-dorothy-achebe",
+    "fullName": "Dorothy Achebe",
+    "gender": "f",
+    "role": "investor",
+    "history": "was a nurse for thirty years, invests in health only",
+    "sentiment": 50
+  },
+  {
+    "id": "char-ruben-castellanos",
+    "fullName": "Ruben Castellanos",
+    "gender": "m",
+    "role": "investor",
+    "history": "inherited it, knows it, slightly embarrassed",
+    "sentiment": 50
+  },
+  {
+    "id": "char-kenji-whitlock",
+    "fullName": "Kenji Whitlock",
+    "gender": "m",
+    "role": "investor",
+    "history": "famous for one enormous win and eleven quiet losses",
+    "sentiment": 50
+  },
+  {
+    "id": "char-agnes-thorne",
+    "fullName": "Agnes Thorne",
+    "gender": "f",
+    "role": "investor",
+    "history": "seventy-four, still does every deal herself",
+    "sentiment": 50
+  },
+  {
+    "id": "char-farid-benali",
+    "fullName": "Farid Benali",
+    "gender": "m",
+    "role": "investor",
+    "history": "texts at 2am, decides in a day",
+    "sentiment": 50
+  },
+  {
+    "id": "char-solveig-rask",
+    "fullName": "Solveig Rask",
+    "gender": "f",
+    "role": "investor",
+    "history": "asks for numbers nobody else asks for",
+    "sentiment": 50
+  },
+  {
+    "id": "char-ivan-petrossian",
+    "fullName": "Ivan Petrossian",
+    "gender": "m",
+    "role": "investor",
+    "history": "backed your competitor first and never mentions it",
+    "sentiment": 50
+  },
+  {
+    "id": "char-margot-feuillet",
+    "fullName": "Margot Feuillet",
+    "gender": "f",
+    "role": "investor",
+    "history": "collects companies the way others collect art",
+    "sentiment": 50
+  },
+  {
+    "id": "char-chidi-okonjo",
+    "fullName": "Chidi Okonjo",
+    "gender": "m",
+    "role": "investor",
+    "history": "the first person to say yes, and reminds you",
+    "sentiment": 50
+  },
+  {
+    "id": "char-beatrix-vogel",
+    "fullName": "Beatrix Vogel",
+    "gender": "f",
+    "role": "investor",
+    "history": "never invests in anyone under thirty",
+    "sentiment": 50
+  },
+  {
+    "id": "char-samir-haddad",
+    "fullName": "Samir Haddad",
+    "gender": "m",
+    "role": "investor",
+    "history": "takes six months, then wires in an hour",
+    "sentiment": 50
+  },
+  {
+    "id": "char-rosa-lindgren",
+    "fullName": "Rosa Lindgren",
+    "gender": "f",
+    "role": "investor",
+    "history": "runs the money for a family that made it in cement",
+    "sentiment": 50
+  },
+  {
+    "id": "char-amara-diallo",
+    "fullName": "Amara Diallo",
+    "gender": "f",
+    "role": "investor",
+    "history": "left a big fund to do her own thing, quietly better",
+    "sentiment": 50
+  },
+  {
+    "id": "char-peter-halloway",
+    "fullName": "Peter Halloway",
+    "gender": "m",
+    "role": "investor",
+    "history": "has one good story and tells it every meeting",
+    "sentiment": 50
+  },
+  {
+    "id": "char-yuki-brennan",
+    "fullName": "Yuki Brennan",
+    "gender": "f",
+    "role": "investor",
+    "history": "invests only in things she uses herself",
+    "sentiment": 50
+  },
+  {
+    "id": "char-grigor-toma",
+    "fullName": "Grigor Toma",
+    "gender": "m",
+    "role": "investor",
+    "history": "will fund you and wants your weekends",
+    "sentiment": 50
+  },
+  {
+    "id": "char-sofia-marchetti",
+    "fullName": "Sofia Marchetti",
+    "gender": "f",
+    "role": "investor",
+    "history": "the local money, knows everyone in the city",
+    "sentiment": 50
+  },
+  {
+    "id": "char-malik-osei",
+    "fullName": "Malik Osei",
+    "gender": "m",
+    "role": "investor",
+    "history": "was an engineer, still reads your code",
+    "sentiment": 50
+  },
+  {
+    "id": "char-hannelore-specht",
+    "fullName": "Hannelore Specht",
+    "gender": "f",
+    "role": "investor",
+    "history": "punctual, exact, terrifying, fair",
+    "sentiment": 50
+  },
+  {
+    "id": "char-priya-brennan",
+    "fullName": "Priya Brennan",
+    "gender": "f",
+    "role": "staff",
+    "history": "your first designer, still your best one",
+    "sentiment": 60
+  },
+  {
+    "id": "char-owen-takahashi",
+    "fullName": "Owen Takahashi",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "quit a job everyone told him to keep",
+    "sentiment": 60,
+    "trait": "never says no to a customer"
+  },
+  {
+    "id": "char-nadia-ferreira",
+    "fullName": "Nadia Ferreira",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "can build anything, explains nothing",
+    "sentiment": 60,
+    "trait": "disappears when stressed"
+  },
+  {
+    "id": "char-callum-boyd",
+    "fullName": "Callum Boyd",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "was your worst manager, now your best partner",
+    "sentiment": 60,
+    "trait": "fights with everyone useful"
+  },
+  {
+    "id": "char-ines-moreau",
+    "fullName": "Ines Moreau",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "joined for six weeks, stayed eleven years",
+    "sentiment": 60,
+    "trait": "quietly ambitious"
+  },
+  {
+    "id": "char-dmitri-ackerman",
+    "fullName": "Dmitri Ackerman",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "has failed at this twice and says so freely",
+    "sentiment": 60,
+    "trait": "assumes the worst, usually right"
+  },
+  {
+    "id": "char-fatima-nazari",
+    "fullName": "Fatima Nazari",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "does the work nobody volunteers for",
+    "sentiment": 60,
+    "trait": "keeps score"
+  },
+  {
+    "id": "char-bruno-salgado",
+    "fullName": "Bruno Salgado",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "knows every supplier in the country",
+    "sentiment": 60,
+    "trait": "promises too much"
+  },
+  {
+    "id": "char-lena-hollis",
+    "fullName": "Lena Hollis",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "left a safe career at forty-one",
+    "sentiment": 60,
+    "trait": "impatient with slow decisions"
+  },
+  {
+    "id": "char-kwame-antwi",
+    "fullName": "Kwame Antwi",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "studied something unrelated, learned the rest",
+    "sentiment": 60,
+    "trait": "better with people than product"
+  },
+  {
+    "id": "char-astrid-nilsen",
+    "fullName": "Astrid Nilsen",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "reads the contracts nobody reads",
+    "sentiment": 60,
+    "trait": "risk-averse to a fault"
+  },
+  {
+    "id": "char-rafael-costa",
+    "fullName": "Rafael Costa",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "can sell anything, including things you don't have",
+    "sentiment": 60,
+    "trait": "over-optimistic forecasts"
+  },
+  {
+    "id": "char-mei-ling-duarte",
+    "fullName": "Mei-Ling Duarte",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "fixed the thing everyone said was unfixable",
+    "sentiment": 60,
+    "trait": "won't delegate"
+  },
+  {
+    "id": "char-tobias-krause",
+    "fullName": "Tobias Krause",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "the only person who tells you the truth",
+    "sentiment": 60,
+    "trait": "blunt to the point of damage"
+  },
+  {
+    "id": "char-zainab-idris",
+    "fullName": "Zainab Idris",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "ran a business at nineteen and lost it",
+    "sentiment": 60,
+    "trait": "moves faster than you"
+  },
+  {
+    "id": "char-hector-villalba",
+    "fullName": "Hector Villalba",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "was a customer before he was a founder",
+    "sentiment": 60,
+    "trait": "too close to the customers"
+  },
+  {
+    "id": "char-saoirse-nolan",
+    "fullName": "Saoirse Nolan",
+    "gender": "f",
+    "role": "cofounder",
+    "history": "does three jobs and mentions none of them",
+    "sentiment": 60,
+    "trait": "burns out silently"
+  },
+  {
+    "id": "char-yusuf-demir",
+    "fullName": "Yusuf Demir",
+    "gender": "m",
+    "role": "cofounder",
+    "history": "joined because his brother said not to",
+    "sentiment": 60,
+    "trait": "needs to be right"
+  },
+  {
+    "id": "char-adaeze-okafor",
+    "fullName": "Adaeze Okafor",
+    "gender": "f",
+    "role": "investor",
+    "history": "started in market trading, ended in venture capital",
+    "firm": "Meridian Ventures",
+    "sentiment": 50
+  },
+  {
+    "id": "char-vera-lindqvist",
+    "fullName": "Vera Lindqvist",
+    "gender": "f",
+    "role": "investor",
+    "history": "asks about your family before your numbers",
+    "firm": "Alder Lane Partners",
+    "sentiment": 50
+  },
+  {
+    "id": "char-emeka-balogun",
+    "fullName": "Emeka Balogun",
+    "gender": "m",
+    "role": "investor",
+    "history": "made it in telecoms, spends it on strangers",
+    "firm": "Aldgate Ventures",
+    "sentiment": 50
+  },
+  {
+    "id": "char-clara-bergmann",
+    "fullName": "Clara Bergmann",
+    "gender": "f",
+    "role": "investor",
+    "history": "says no in one sentence, and means it",
+    "firm": "Harrow Bridge Capital",
+    "sentiment": 50
+  },
+  {
+    "id": "char-rival-anya-sorokin",
+    "fullName": "Anya Sorokin",
+    "gender": "f",
+    "role": "rival",
+    "history": "ships faster than anyone should be able to",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-julien-marchand",
+    "fullName": "Julien Marchand",
+    "gender": "m",
+    "role": "rival",
+    "history": "copied you exactly and admits it cheerfully",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-rosalind-chu",
+    "fullName": "Rosalind Chu",
+    "gender": "f",
+    "role": "rival",
+    "history": "was your first employee, four years ago",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-matteo-ferrari",
+    "fullName": "Matteo Ferrari",
+    "gender": "m",
+    "role": "rival",
+    "history": "inherited the company and is better than his father",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-greta-pavlović",
+    "fullName": "Greta Pavlović",
+    "gender": "f",
+    "role": "rival",
+    "history": "never gives an interview",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-ismail-toure",
+    "fullName": "Ismail Toure",
+    "gender": "m",
+    "role": "rival",
+    "history": "has more money and less urgency",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-baptiste-roy",
+    "fullName": "Baptiste Roy",
+    "gender": "m",
+    "role": "rival",
+    "history": "started six months after you, on purpose",
+    "sentiment": 30
+  },
+  {
+    "id": "char-rival-nour-khalil",
+    "fullName": "Nour Khalil",
+    "gender": "f",
+    "role": "rival",
+    "history": "solves the problem differently and possibly better",
+    "sentiment": 30
+  },
+  {
+    "id": "char-staff-andre-kowalski",
+    "fullName": "Andre Kowalski",
+    "gender": "m",
+    "role": "staff",
+    "history": "the first hire, still the fastest",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-tobias-wren",
+    "fullName": "Tobias Wren",
+    "gender": "m",
+    "role": "staff",
+    "history": "came from a bigger company and never looked back",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-halima-sesay",
+    "fullName": "Halima Sesay",
+    "gender": "f",
+    "role": "staff",
+    "history": "runs onboarding like it's a live show",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-piotr-nowak",
+    "fullName": "Piotr Nowak",
+    "gender": "m",
+    "role": "staff",
+    "history": "fixes the thing before you know it broke",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-camila-restrepo",
+    "fullName": "Camila Restrepo",
+    "gender": "f",
+    "role": "staff",
+    "history": "turned a two-week trial into three years",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-ade-bankole",
+    "fullName": "Ade Bankole",
+    "gender": "m",
+    "role": "staff",
+    "history": "the calmest person in every incident",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-marta-sobek",
+    "fullName": "Marta Sobek",
+    "gender": "f",
+    "role": "staff",
+    "history": "reads every support ticket personally",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-dylan-okafor",
+    "fullName": "Dylan Okafor",
+    "gender": "m",
+    "role": "staff",
+    "history": "hired for one role, does four",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-ravi-menon",
+    "fullName": "Ravi Menon",
+    "gender": "m",
+    "role": "staff",
+    "history": "the reason the demo never breaks",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-sinead-carroll",
+    "fullName": "Sinead Carroll",
+    "gender": "f",
+    "role": "staff",
+    "history": "negotiated her own offer up, twice",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-bogdan-iliescu",
+    "fullName": "Bogdan Iliescu",
+    "gender": "m",
+    "role": "staff",
+    "history": "ships on Fridays and owns it if it breaks",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-thandiwe-moyo",
+    "fullName": "Thandiwe Moyo",
+    "gender": "f",
+    "role": "staff",
+    "history": "turned down two competitors to join",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-sam-ferreira",
+    "fullName": "Sam Ferreira",
+    "gender": "nb",
+    "role": "staff",
+    "history": "nobody remembers hiring, everyone remembers helping",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-noor-haddad",
+    "fullName": "Noor Haddad",
+    "gender": "f",
+    "role": "staff",
+    "history": "the one who actually reads the contracts",
+    "sentiment": 60
+  },
+  {
+    "id": "char-staff-lars-ecklund",
+    "fullName": "Lars Ecklund",
+    "gender": "m",
+    "role": "staff",
+    "history": "quiet until the room needs an answer",
+    "sentiment": 60
+  },
+  {
+    "id": "char-acquirer-atlas-holdings",
+    "fullName": "Atlas Holdings",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "buys three or four companies a year, quietly",
+    "firm": "Atlas Holdings",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-marlowe-group",
+    "fullName": "Marlowe Group",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "strategic buyer, slow process, fair price",
+    "firm": "Marlowe Group",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-sentinel-industries",
+    "fullName": "Sentinel Industries",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "rolls up smaller players into one big one",
+    "firm": "Sentinel Industries",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-verrano-holdings",
+    "fullName": "Verrano Holdings",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "known for a fast close and a hard cap",
+    "firm": "Verrano Holdings",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-ostrava-partners",
+    "fullName": "Ostrava Partners",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "acquires for the team as often as the product",
+    "firm": "Ostrava Partners",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-cranemoor-industries",
+    "fullName": "Cranemoor Industries",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "big enough that the offer is never the ceiling",
+    "firm": "Cranemoor Industries",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-pelican-bay-holdings",
+    "fullName": "Pelican Bay Holdings",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "buys three or four companies a year, quietly",
+    "firm": "Pelican Bay Holdings",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-ironvale-group",
+    "fullName": "Ironvale Group",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "strategic buyer, slow process, fair price",
+    "firm": "Ironvale Group",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-saltmarsh-capital",
+    "fullName": "Saltmarsh Capital",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "rolls up smaller players into one big one",
+    "firm": "Saltmarsh Capital",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-norvex",
+    "fullName": "Norvex",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "known for a fast close and a hard cap",
+    "firm": "Norvex",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-cadence-systems",
+    "fullName": "Cadence Systems",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "acquires for the team as often as the product",
+    "firm": "Cadence Systems",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-trellis-global",
+    "fullName": "Trellis Global",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "big enough that the offer is never the ceiling",
+    "firm": "Trellis Global",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-beaumont-data",
+    "fullName": "Beaumont Data",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "buys three or four companies a year, quietly",
+    "firm": "Beaumont Data",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-ardent-foods",
+    "fullName": "Ardent Foods",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "strategic buyer, slow process, fair price",
+    "firm": "Ardent Foods",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-ravello-health",
+    "fullName": "Ravello Health",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "rolls up smaller players into one big one",
+    "firm": "Ravello Health",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-quillon-logistics",
+    "fullName": "Quillon Logistics",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "known for a fast close and a hard cap",
+    "firm": "Quillon Logistics",
+    "sentiment": 50
+  },
+  {
+    "id": "char-acquirer-sundry-retail-group",
+    "fullName": "Sundry Retail Group",
+    "gender": "nb",
+    "role": "acquirer",
+    "history": "acquires for the team as often as the product",
+    "firm": "Sundry Retail Group",
+    "sentiment": 50
+  }
+]

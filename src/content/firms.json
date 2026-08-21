@@ -1,0 +1,380 @@
+[
+  {
+    "id": "firm-meridian",
+    "name": "Meridian Ventures",
+    "type": "vc",
+    "stage": "seed",
+    "description": "Early-stage, founder-friendly"
+  },
+  {
+    "id": "firm-alder",
+    "name": "Alder Lane Partners",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "Growth-stage focused, strong operators"
+  },
+  {
+    "id": "firm-kestrel",
+    "name": "Kestrel Group",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "International presence, slow to decide"
+  },
+  {
+    "id": "firm-halbert",
+    "name": "Halbert Group",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "Corporate acquirer, integration-focused"
+  },
+  {
+    "id": "firm-sequoia",
+    "name": "Sequoia Capital",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "Legendary investor, rare allocation"
+  },
+  {
+    "id": "firm-andreessen",
+    "name": "Andreessen Horowitz",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "Large checks, operational support"
+  },
+  {
+    "id": "firm-benchmark",
+    "name": "Benchmark",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "Concentrated fund, deep technical expertise"
+  },
+  {
+    "id": "firm-aldgate-ventures",
+    "name": "Aldgate Ventures",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-harrow-bridge-capital",
+    "name": "Harrow Bridge Capital",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-northgate-partners",
+    "name": "Northgate Partners",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-blackthorn-capital",
+    "name": "Blackthorn Capital",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-ninefold",
+    "name": "Ninefold",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-cormorant-partners",
+    "name": "Cormorant Partners",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-kestrel-lane",
+    "name": "Kestrel Lane",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-stonecrop-ventures",
+    "name": "Stonecrop Ventures",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-sable-hart",
+    "name": "Sable & Hart",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-larkspur-capital",
+    "name": "Larkspur Capital",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-fenwick-row",
+    "name": "Fenwick Row",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-copperfield-partners",
+    "name": "Copperfield Partners",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-vantage-hollow",
+    "name": "Vantage Hollow",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-thistledown-capital",
+    "name": "Thistledown Capital",
+    "type": "vc",
+    "stage": "seriesA",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-rookery-ventures",
+    "name": "Rookery Ventures",
+    "type": "vc",
+    "stage": "seriesB",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-bellweather-fund",
+    "name": "Bellweather Fund",
+    "type": "vc",
+    "stage": "seed",
+    "description": "venture fund"
+  },
+  {
+    "id": "firm-fairhaven-bank",
+    "name": "Fairhaven Bank",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-marchmont-trust",
+    "name": "Marchmont Trust",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-union-peninsula-bank",
+    "name": "Union Peninsula Bank",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-castellan-credit",
+    "name": "Castellan Credit",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-greyfriars-bank",
+    "name": "Greyfriars Bank",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-aurelia-savings",
+    "name": "Aurelia Savings",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-whitcombe-co",
+    "name": "Whitcombe & Co",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-northport-mutual",
+    "name": "Northport Mutual",
+    "type": "bank",
+    "stage": "debt",
+    "description": "lender, not an investor — repayments, no shares given"
+  },
+  {
+    "id": "firm-atlas-holdings",
+    "name": "Atlas Holdings",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-marlowe-group",
+    "name": "Marlowe Group",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-sentinel-industries",
+    "name": "Sentinel Industries",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-verrano-holdings",
+    "name": "Verrano Holdings",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-ostrava-partners",
+    "name": "Ostrava Partners",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-cranemoor-industries",
+    "name": "Cranemoor Industries",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-pelican-bay-holdings",
+    "name": "Pelican Bay Holdings",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-ironvale-group",
+    "name": "Ironvale Group",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-saltmarsh-capital",
+    "name": "Saltmarsh Capital",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "holding company, potential acquirer"
+  },
+  {
+    "id": "firm-the-foundry-year",
+    "name": "The Foundry Year",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-groundwork",
+    "name": "Groundwork",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-nine-weeks",
+    "name": "Nine Weeks",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-anvil-program",
+    "name": "Anvil Program",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-the-long-table",
+    "name": "The Long Table",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-firstlight",
+    "name": "Firstlight",
+    "type": "accelerator",
+    "stage": "seed",
+    "description": "cohort program, small check, real curriculum"
+  },
+  {
+    "id": "firm-norvex",
+    "name": "Norvex",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-cadence-systems",
+    "name": "Cadence Systems",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-trellis-global",
+    "name": "Trellis Global",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-beaumont-data",
+    "name": "Beaumont Data",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-ardent-foods",
+    "name": "Ardent Foods",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-ravello-health",
+    "name": "Ravello Health",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-quillon-logistics",
+    "name": "Quillon Logistics",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  },
+  {
+    "id": "firm-sundry-retail-group",
+    "name": "Sundry Retail Group",
+    "type": "strategic",
+    "stage": "exit",
+    "description": "corporate that might buy you"
+  }
+]

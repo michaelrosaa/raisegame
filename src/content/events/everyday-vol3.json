@@ -1,0 +1,3346 @@
+[
+  {
+    "id": "ev-v3-lease-is-up",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "The lease is up",
+    "body": "Renew, move, or stop having one.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Renew for five years",
+        "detail": "Cheaper per month, but you're locked in if anything changes.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -1200
+          }
+        ],
+        "storyHeadline": "Locked in a five-year lease"
+      },
+      {
+        "id": "b",
+        "label": "Move somewhere smaller and better",
+        "detail": "A smaller space that actually works for you.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -80000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Moved to a smaller, better office"
+      },
+      {
+        "id": "c",
+        "label": "No office at all",
+        "detail": "Fully remote — cheaper, but new hires take longer to feel real.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 8,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Went fully remote"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-standing-desk",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 8
+      }
+    ],
+    "headline": "Somebody wants a standing desk",
+    "body": "Then everybody wants a standing desk.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy them for everyone",
+        "detail": "The whole office, standing desks, done.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -18000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Bought standing desks for everyone"
+      },
+      {
+        "id": "b",
+        "label": "Buy one for whoever asks",
+        "detail": "Mild resentment, but it works fine.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -4000
+          },
+          {
+            "type": "morale",
+            "value": 3
+          }
+        ],
+        "storyHeadline": "Bought standing desks on request"
+      },
+      {
+        "id": "c",
+        "label": "No",
+        "detail": "Three people buy their own and mention it, repeatedly.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -8
+          }
+        ],
+        "storyHeadline": "Said no to the standing desks"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-drum-school",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The upstairs neighbours are a drum school",
+    "body": "Tuesdays and Thursdays, two till six.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Move",
+        "detail": "Everyone is relieved the moment the boxes are out.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -120000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Moved offices to escape the drum school"
+      },
+      {
+        "id": "b",
+        "label": "Buy the whole team headphones",
+        "detail": "Output recovers. It's a faintly absurd solution that works.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Bought headphones instead of moving"
+      },
+      {
+        "id": "c",
+        "label": "Complain to the landlord",
+        "detail": "Nothing changes. You have made an enemy downstairs.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -2
+          }
+        ],
+        "storyHeadline": "Complained to the landlord, to no effect"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-sleeping-in-office",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "staffAbove",
+        "value": 15
+      }
+    ],
+    "headline": "Someone has started sleeping in the office",
+    "body": "Not metaphorically. There is a duvet.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Talk to them properly",
+        "detail": "You discover something serious is going on at home.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Talked to the person sleeping in the office"
+      },
+      {
+        "id": "b",
+        "label": "Ban it and say nothing else",
+        "detail": "They leave, quietly, within four months.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Banned sleeping in the office"
+      },
+      {
+        "id": "c",
+        "label": "Ignore it",
+        "detail": "It becomes normal. Normal is worse than you'd think.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Let it become normal"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-second-office",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "staffAbove",
+        "value": 40
+      }
+    ],
+    "headline": "A second office in a cheaper city",
+    "body": "Talent is 40% cheaper two hundred miles away.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Open it",
+        "detail": "Costs come down. The culture quietly splits in two.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -3000
+          },
+          {
+            "type": "morale",
+            "value": -8
+          }
+        ],
+        "storyHeadline": "Opened a second office"
+      },
+      {
+        "id": "b",
+        "label": "Stay in one place",
+        "detail": "Expensive, coherent, and slower to grow.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Kept everyone in one office"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-coffee-machine",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 10
+      }
+    ],
+    "headline": "The coffee machine",
+    "body": "The cheap one has broken again. The good one is $4,200.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy the good one",
+        "detail": "It gets mentioned in exit interviews for a decade.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -4200
+          },
+          {
+            "type": "morale",
+            "value": 12
+          }
+        ],
+        "storyHeadline": "Bought the good coffee machine"
+      },
+      {
+        "id": "b",
+        "label": "Another cheap one",
+        "detail": "It breaks again in fourteen months.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -800
+          }
+        ],
+        "storyHeadline": "Bought another cheap coffee machine"
+      },
+      {
+        "id": "c",
+        "label": "Everyone can go to the café",
+        "detail": "They were going anyway, but it stings a little.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -6
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Sent everyone to the café instead"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-pay-in-product",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A customer wants to pay in something other than money",
+    "body": "They have no cash and a warehouse full of their product.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Accept",
+        "detail": "Revenue on paper, a storage problem in reality.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 15000
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Accepted payment in product"
+      },
+      {
+        "id": "b",
+        "label": "Refuse",
+        "detail": "You lose the customer and keep your sanity.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": -5000
+          }
+        ],
+        "storyHeadline": "Refused payment in product"
+      },
+      {
+        "id": "c",
+        "label": "Take half in cash, half in product",
+        "detail": "Awkward, but it works.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 8000
+          },
+          {
+            "type": "morale",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Split the payment between cash and product"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-biggest-customer-discount",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Your biggest customer wants a discount to renew",
+    "body": "Fifteen percent, or they'll look elsewhere.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give it",
+        "detail": "They stay four more years, at a lower price.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -6,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Gave the biggest customer a discount to stay"
+      },
+      {
+        "id": "b",
+        "label": "Hold firm",
+        "detail": "A coin flip on whether they were bluffing.",
+        "effects": [],
+        "storyHeadline": "Held firm on price",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "They stayed at full price.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "annualRevenue",
+              "value": -12,
+              "unit": "percent"
+            }
+          ],
+          "loseText": "They left for a competitor."
+        }
+      },
+      {
+        "id": "c",
+        "label": "Give it in exchange for a three-year commitment",
+        "detail": "The same discount, but with certainty attached.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -6,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Traded a discount for a three-year commitment"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-customer-using-it-wrong",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "A customer is using it wrong and blaming you",
+    "body": "Very publicly, at some length.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fix their setup personally",
+        "detail": "Two days gone. They become an advocate.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 8000
+          }
+        ],
+        "storyHeadline": "Personally fixed a customer's setup"
+      },
+      {
+        "id": "b",
+        "label": "Reply publicly with the facts",
+        "detail": "You are right, and you look defensive anyway.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -3
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Replied publicly with the facts"
+      },
+      {
+        "id": "c",
+        "label": "Refund them and part ways",
+        "detail": "Small cost, and silence afterward.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3000
+          }
+        ],
+        "storyHeadline": "Refunded the customer and parted ways"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-buy-a-hundred",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "Someone wants to buy a hundred at once",
+    "body": "Cash up front, at 40% off.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Take it",
+        "detail": "The margin is gone, and now they resell it cheaper than you do.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 7,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Sold a hundred units at a steep discount"
+      },
+      {
+        "id": "b",
+        "label": "Refuse",
+        "detail": "Cash stays tight. Pricing stays intact.",
+        "effects": [],
+        "storyHeadline": "Refused the bulk order"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-feature-already-exists",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A customer asks for a feature that already exists",
+    "body": "For the sixth time this month, by six different people.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Rebuild how the product explains itself",
+        "detail": "Six weeks of work. Support load drops sharply.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -10000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Rebuilt how the product explains itself"
+      },
+      {
+        "id": "b",
+        "label": "Write better documentation",
+        "detail": "Two weeks, and it helps somewhat.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.01,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Wrote better documentation"
+      },
+      {
+        "id": "c",
+        "label": "Answer each email personally",
+        "detail": "Warm, and completely unsustainable.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -4
+          }
+        ],
+        "storyHeadline": "Answered every email personally"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-reference-call",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "The reference call",
+    "body": "A prospective customer wants to speak to an existing one. Your best customer is on holiday. Your second best is difficult.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Use the difficult one",
+        "detail": "A real risk they mention the outage.",
+        "effects": [],
+        "storyHeadline": "Used the difficult customer as a reference",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "revenueStep",
+              "value": 20000
+            }
+          ],
+          "winText": "It worked — they signed.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "revenueStep",
+              "value": -8000
+            }
+          ],
+          "loseText": "They mentioned the outage. The deal wobbled."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Wait two weeks for the good one",
+        "detail": "The deal cools while you wait.",
+        "effects": [],
+        "storyHeadline": "Waited for the better reference",
+        "gamble": {
+          "winPct": 70,
+          "winEffects": [
+            {
+              "type": "revenueStep",
+              "value": 15000
+            }
+          ],
+          "winText": "The wait paid off — they signed.",
+          "losePct": 30,
+          "loseEffects": [
+            {
+              "type": "revenueStep",
+              "value": -15000
+            }
+          ],
+          "loseText": "The deal died while you waited."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-overcharged-two-years",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "A customer has been quietly overcharged for two years",
+    "body": "A billing error in your favour. Nobody has noticed.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Tell them and refund it",
+        "detail": "They tell four other companies about you, all of it good.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -60000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Told the customer and refunded the overcharge"
+      },
+      {
+        "id": "b",
+        "label": "Fix it silently going forward",
+        "detail": "Nothing happens, unless someone runs the numbers.",
+        "effects": [],
+        "storyHeadline": "Fixed the billing error silently"
+      },
+      {
+        "id": "c",
+        "label": "Say nothing at all",
+        "detail": "A real chance it surfaces later, and badly.",
+        "effects": [],
+        "storyHeadline": "Said nothing about the overcharge",
+        "gamble": {
+          "winPct": 60,
+          "winEffects": [],
+          "winText": "It never surfaced.",
+          "losePct": 40,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -40000
+            },
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "It surfaced. It was very bad."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-same-week-off",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 6
+      }
+    ],
+    "headline": "Two people want the same week off",
+    "body": "Both booked flights. Neither will move.",
+    "options": [
+      {
+        "id": "a",
+        "label": "First to ask wins",
+        "detail": "Clear, and one person is unhappy about it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Let the first person to ask win"
+      },
+      {
+        "id": "b",
+        "label": "Make them sort it out",
+        "detail": "They do, badly.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Made them sort it out themselves"
+      },
+      {
+        "id": "c",
+        "label": "Both go, you cover",
+        "detail": "A terrible week for you, and a good one for morale.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -2000
+          },
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Covered for both of them"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-work-fell-off-a-cliff",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Someone's work has fallen off a cliff",
+    "body": "It has been six weeks. They used to be your best.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Ask what's going on",
+        "detail": "Something is wrong at home. They recover.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Asked what was going on, and helped"
+      },
+      {
+        "id": "b",
+        "label": "Formal performance process",
+        "detail": "They leave. Later you find out why.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Started a formal performance process"
+      },
+      {
+        "id": "c",
+        "label": "Wait it out",
+        "detail": "It either resolves, or it spreads.",
+        "effects": [],
+        "storyHeadline": "Waited it out",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "It resolved on its own.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "morale",
+              "value": -10
+            }
+          ],
+          "loseText": "It spread to the rest of the team."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-four-day-week",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 25
+      }
+    ],
+    "headline": "Everyone wants Fridays off",
+    "body": "Four-day week, same pay.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Try it for six months",
+        "detail": "Either it works, or reversing it costs you goodwill.",
+        "effects": [],
+        "storyHeadline": "Tried a four-day week",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.1,
+              "years": 2
+            }
+          ],
+          "winText": "Output held, and hiring got noticeably easier.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.85,
+              "years": 1
+            },
+            {
+              "type": "morale",
+              "value": -8
+            }
+          ],
+          "loseText": "Output dropped, and reversing it cost you goodwill."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Four days at 90% pay",
+        "detail": "Most people accept it, and it works.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -1500
+          },
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Moved to four days at 90% pay"
+      },
+      {
+        "id": "c",
+        "label": "No",
+        "detail": "Straightforward, and not popular.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -12
+          }
+        ],
+        "storyHeadline": "Said no to the four-day week"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-company-dog",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The company dog situation",
+    "body": "Someone brought a dog. It has been four months. Nobody knows whose it is. It has a nickname and a bed.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Make it official",
+        "detail": "One allergy complaint you handle badly. Worth it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 16
+          }
+        ],
+        "storyHeadline": "Made the company dog official"
+      },
+      {
+        "id": "b",
+        "label": "Find the owner",
+        "detail": "The dog leaves. Nobody forgives you.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Found the dog's owner"
+      },
+      {
+        "id": "c",
+        "label": "Do nothing",
+        "detail": "The correct answer, and everybody knows it.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Did nothing about the dog"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-title-not-a-raise",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Somebody wants a title, not a raise",
+    "body": "\"Head of\" something. It costs you nothing and it costs you everything.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Give it",
+        "detail": "Free, and three others ask within a month.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          }
+        ],
+        "storyHeadline": "Gave out the title"
+      },
+      {
+        "id": "b",
+        "label": "Give the raise instead",
+        "detail": "More expensive, but there's no precedent to manage.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -1250
+          }
+        ],
+        "storyHeadline": "Gave a raise instead of a title"
+      },
+      {
+        "id": "c",
+        "label": "Neither",
+        "detail": "They leave within eight months.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Gave neither title nor raise"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-engineer-wants-to-manage",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Your best engineer wants to become a manager",
+    "body": "They would be a mediocre manager and they are an excellent engineer.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Let them try",
+        "detail": "You lose an engineer and gain a mediocre manager.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Let the engineer try management"
+      },
+      {
+        "id": "b",
+        "label": "Say no honestly and pay them more",
+        "detail": "Resentful for a quarter, grateful for a decade.",
+        "effects": [
+          {
+            "type": "monthlyBurn",
+            "value": -800
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Said no honestly and paid them more"
+      },
+      {
+        "id": "c",
+        "label": "Invent a senior technical track",
+        "detail": "A month of thinking. It solves this permanently.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -5000
+          },
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Invented a senior technical track"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-leaving-for-a-rival",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "hasRival",
+        "value": true
+      }
+    ],
+    "headline": "Somebody is leaving for a competitor",
+    "body": "They gave four weeks and they're being decent about it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Let them work the notice",
+        "detail": "Awkward, dignified, correct.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 3
+          }
+        ],
+        "storyHeadline": "Let them work their notice"
+      },
+      {
+        "id": "b",
+        "label": "Walk them out today",
+        "detail": "Everyone else quietly updates their CV.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -15
+          }
+        ],
+        "storyHeadline": "Walked them out immediately"
+      },
+      {
+        "id": "c",
+        "label": "Counter-offer",
+        "detail": "A real chance they take the raise and leave anyway.",
+        "effects": [],
+        "storyHeadline": "Made a counter-offer",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "They stayed.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "staff",
+              "value": -1
+            },
+            {
+              "type": "cash",
+              "value": -10000
+            }
+          ],
+          "loseText": "They took the raise and left within the year anyway."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-christmas-party",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      },
+      {
+        "type": "staffAbove",
+        "value": 10
+      }
+    ],
+    "headline": "The Christmas party",
+    "body": "Small budget, or generous one.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Spend properly",
+        "detail": "Two stories that last a decade.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -25000
+          },
+          {
+            "type": "morale",
+            "value": 20
+          }
+        ],
+        "storyHeadline": "Threw a proper Christmas party"
+      },
+      {
+        "id": "b",
+        "label": "Something modest",
+        "detail": "Fine, and forgettable.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -5000
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Threw a modest Christmas party"
+      },
+      {
+        "id": "c",
+        "label": "Cash bonus instead, no party",
+        "detail": "Nobody remembers it, but everyone banks it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Gave a cash bonus instead of a party"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-parent-at-meeting",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Someone brought their parent to a meeting",
+    "body": "It's a salary negotiation. The parent has notes.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Handle it graciously",
+        "detail": "Strange, memorable, and they stay for years.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 6
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.02,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Handled the parent-in-the-meeting gracefully"
+      },
+      {
+        "id": "b",
+        "label": "End it and reschedule",
+        "detail": "Correct, and slightly cold.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -2
+          }
+        ],
+        "storyHeadline": "Ended the meeting and rescheduled"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-staff-together",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "staffAbove",
+        "value": 20
+      }
+    ],
+    "headline": "Two of your staff are together and nobody has said anything",
+    "body": "Everyone knows. One of them manages the other.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Move the reporting line",
+        "detail": "Handled, with mild embarrassment. Correct.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Moved the reporting line"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "It ends badly, eighteen months from now.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Said nothing about it"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-breaks-on-fridays",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The thing keeps breaking on Fridays",
+    "body": "Nobody knows why. It is always Friday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Stop everything until it's found",
+        "detail": "A week gone. It was something stupid.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -8000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Stopped everything to find the Friday bug"
+      },
+      {
+        "id": "b",
+        "label": "Restart it every Friday morning",
+        "detail": "Works, embarrassing, permanent.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -2
+          }
+        ],
+        "storyHeadline": "Started restarting it every Friday"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-supplier-gone-quiet",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A supplier has gone quiet",
+    "body": "Three unanswered emails and a full order book.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Find a second supplier immediately",
+        "detail": "Costs something now. Safe forever after.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -40000
+          }
+        ],
+        "storyHeadline": "Found a second supplier immediately"
+      },
+      {
+        "id": "b",
+        "label": "Keep calling",
+        "detail": "Either they were on holiday, or they've gone under.",
+        "effects": [],
+        "storyHeadline": "Kept calling the supplier",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [],
+          "winText": "They were on holiday. Everything resumed.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -40000
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 0.9,
+              "years": 1
+            }
+          ],
+          "loseText": "They'd gone under. You scrambled for weeks."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-rewrite-everything",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "industryIs",
+        "value": "Software"
+      }
+    ],
+    "headline": "Somebody suggests rewriting everything in a new language",
+    "body": "They are half right, which is the problem.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Let them rewrite one piece",
+        "detail": "Six weeks, and it proves the point sensibly.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Let them rewrite one piece"
+      },
+      {
+        "id": "b",
+        "label": "Full rewrite",
+        "detail": "Eight months of shipping nothing.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -60000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.7,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Approved a full rewrite"
+      },
+      {
+        "id": "c",
+        "label": "No",
+        "detail": "They leave within a year.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Said no to the rewrite"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-demo-broke",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 3
+      }
+    ],
+    "headline": "The demo broke in front of the customer",
+    "body": "Badly, and they saw the error message.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Be honest and reschedule",
+        "detail": "Some customers respect it. Some don't.",
+        "effects": [],
+        "storyHeadline": "Was honest and rescheduled the demo",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "revenueStep",
+              "value": 20000
+            }
+          ],
+          "winText": "They respected it, and signed.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "revenueStep",
+              "value": -10000
+            }
+          ],
+          "loseText": "They went quiet and never came back."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Talk over it and continue",
+        "detail": "It works today, and costs you later.",
+        "effects": [
+          {
+            "type": "revenueStep",
+            "value": 15000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.92,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Talked over the broken demo and kept going"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-too-many-products",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      }
+    ],
+    "headline": "You have too many products and none of them are good",
+    "body": "Every one of them is halfway there.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Kill two of three",
+        "detail": "Revenue drops now. It's worth far more in two years.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -25,
+            "unit": "percent"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.4,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Killed two of three products"
+      },
+      {
+        "id": "b",
+        "label": "Hire enough people to do all three properly",
+        "detail": "It buys focus, at a real cost to runway.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -10,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Hired to properly support all three products"
+      },
+      {
+        "id": "c",
+        "label": "Continue",
+        "detail": "Nothing improves. Nothing ever does.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 3
+          }
+        ],
+        "storyHeadline": "Kept all three products limping along"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-tiny-customer-support-load",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A tiny customer is using 60% of your support time",
+    "body": "They pay $90 a month.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Fire them as a customer",
+        "detail": "A trivial revenue loss, and enormous relief.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -0.5,
+            "unit": "percent"
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Fired the tiny customer"
+      },
+      {
+        "id": "b",
+        "label": "Charge them properly",
+        "detail": "They leave anyway, just a little slower.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -0.5,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Tried charging the tiny customer properly"
+      },
+      {
+        "id": "c",
+        "label": "Keep absorbing it",
+        "detail": "The support team notices. Morale takes the hit.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -6
+          }
+        ],
+        "storyHeadline": "Kept absorbing the tiny customer's support load"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-one-persons-laptop",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Everything is on one person's laptop",
+    "body": "Including things nobody else understands.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Spend a month documenting it",
+        "detail": "Dull, essential, and it costs a little morale.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -6000
+          },
+          {
+            "type": "morale",
+            "value": -5
+          }
+        ],
+        "storyHeadline": "Spent a month documenting everything"
+      },
+      {
+        "id": "b",
+        "label": "Carry on",
+        "detail": "A real, if small, chance of a genuine crisis.",
+        "effects": [],
+        "storyHeadline": "Carried on as before",
+        "gamble": {
+          "winPct": 85,
+          "winEffects": [],
+          "winText": "Nothing happened. This time.",
+          "losePct": 15,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -50000
+            },
+            {
+              "type": "morale",
+              "value": -15
+            }
+          ],
+          "loseText": "They left, and everything they knew left with them."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-tax-refund",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "An unexpected tax refund",
+    "body": "$40,000 you had not counted on.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Straight into the bank",
+        "detail": "Simple, and it buys real runway.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 2,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Banked the unexpected tax refund"
+      },
+      {
+        "id": "b",
+        "label": "Bonus to the team",
+        "detail": "Gone in a week, and it means something.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 25
+          }
+        ],
+        "storyHeadline": "Gave the tax refund out as bonuses"
+      },
+      {
+        "id": "c",
+        "label": "Spend it on marketing",
+        "detail": "A real, if temporary, spike in signups.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.2,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Spent the tax refund on marketing"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-accountant-found-something",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "The accountant found something",
+    "body": "You have been paying for a service you cancelled two years ago.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Claim it back",
+        "detail": "Four months of phone calls, and it's real money.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 18000
+          }
+        ],
+        "storyHeadline": "Clawed back two years of wasted payments"
+      },
+      {
+        "id": "b",
+        "label": "Just cancel it properly",
+        "detail": "Simpler, and it still helps.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 1,
+            "unit": "runwayMonths"
+          }
+        ],
+        "storyHeadline": "Cancelled the wasted subscription properly"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-prices-havent-changed",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Your prices have not changed in four years",
+    "body": "Everything else has.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Raise them 20% for everyone",
+        "detail": "A meaningful jump in revenue, and some loud complaints.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": 14,
+            "unit": "percent"
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Raised prices 20% across the board"
+      },
+      {
+        "id": "b",
+        "label": "New customers only",
+        "detail": "Slower, and nobody complains.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": 6,
+            "unit": "percent"
+          }
+        ],
+        "storyHeadline": "Raised prices for new customers only"
+      },
+      {
+        "id": "c",
+        "label": "Leave it",
+        "detail": "Margin quietly erodes, forever.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 3
+          }
+        ],
+        "storyHeadline": "Left prices exactly where they were"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-cheaper-insurance",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A cheaper insurance quote",
+    "body": "Half the price, from a company you have never heard of.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Switch",
+        "detail": "Real savings, with a small chance it bites you later.",
+        "effects": [],
+        "storyHeadline": "Switched to the cheaper insurer",
+        "gamble": {
+          "winPct": 90,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 2,
+              "unit": "runwayMonths"
+            }
+          ],
+          "winText": "It was fine. You saved the difference.",
+          "losePct": 10,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -30000
+            }
+          ],
+          "loseText": "They refused a claim when it mattered."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Stay",
+        "detail": "Expensive, boring, safe.",
+        "effects": [],
+        "storyHeadline": "Stayed with the existing insurer"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-company-car",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      },
+      {
+        "type": "isProfitable",
+        "value": true
+      }
+    ],
+    "headline": "The company car question",
+    "body": "Someone has done the tax maths and presented it enthusiastically.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Yes",
+        "detail": "A permanent, low-level argument about who gets which.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Approved company cars"
+      },
+      {
+        "id": "b",
+        "label": "No",
+        "detail": "Correctly, and without incident.",
+        "effects": [],
+        "storyHeadline": "Said no to company cars"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-owed-money-nearly-bust",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "You are owed money by someone who is nearly bust",
+    "body": "Take a haircut now or wait and hope.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Settle for 40% today",
+        "detail": "Modest, and done.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": 15000
+          }
+        ],
+        "storyHeadline": "Settled for 40% today"
+      },
+      {
+        "id": "b",
+        "label": "Wait",
+        "detail": "Everything, eventually — or nothing, ever.",
+        "effects": [],
+        "storyHeadline": "Waited for the full amount",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "cash",
+              "value": 35000
+            }
+          ],
+          "winText": "They paid everything, eventually.",
+          "losePct": 50,
+          "loseEffects": [],
+          "loseText": "They went under. You got nothing."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-currency-moved",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Currency moved against you",
+    "body": "Nine percent, overnight, for reasons unrelated to you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hedge from now on",
+        "detail": "No more surprises, at a small permanent cost.",
+        "effects": [
+          {
+            "type": "annualRevenue",
+            "value": -9,
+            "unit": "percent"
+          },
+          {
+            "type": "monthlyBurn",
+            "value": 200
+          }
+        ],
+        "storyHeadline": "Started hedging currency exposure"
+      },
+      {
+        "id": "b",
+        "label": "Ride it",
+        "detail": "It moves back, or it doesn't.",
+        "effects": [],
+        "storyHeadline": "Rode out the currency swing",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "annualRevenue",
+              "value": -3,
+              "unit": "percent"
+            }
+          ],
+          "winText": "It moved back. No lasting harm.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "annualRevenue",
+              "value": -9,
+              "unit": "percent"
+            }
+          ],
+          "loseText": "It didn't move back."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-journalist-industry-piece",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A journalist wants to write about your industry",
+    "body": "You'd be one of four companies mentioned.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Talk to them",
+        "detail": "You might be the lead example, or barely a footnote.",
+        "effects": [],
+        "storyHeadline": "Talked to the journalist",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.08,
+              "years": 1
+            }
+          ],
+          "winText": "You were the lead example.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.0,
+              "years": 1
+            }
+          ],
+          "loseText": "You were the also-ran, barely mentioned."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Decline",
+        "detail": "{RIVAL} is quoted at length instead.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Declined to talk to the journalist"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-website-down-a-day",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Your website has been down for a day and nobody told you",
+    "body": "A customer mentioned it in passing.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Build proper monitoring",
+        "detail": "It never happens again.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -8000
+          }
+        ],
+        "storyHeadline": "Built proper uptime monitoring"
+      },
+      {
+        "id": "b",
+        "label": "Apologise and move on",
+        "detail": "It happens again in eleven months.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Apologised and moved on"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-video-takes-product-apart",
+    "rarity": "uncommon",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Someone made a video taking your product apart",
+    "body": "Fairly, and it has 200,000 views.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Respond publicly and fix the issues",
+        "detail": "They make a follow-up, and it's a good one.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -5000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Responded publicly and fixed the issues"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "It stays the top search result for two years.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 2
+          }
+        ],
+        "storyHeadline": "Said nothing about the video"
+      },
+      {
+        "id": "c",
+        "label": "Contact them privately",
+        "detail": "They either quietly update it, or post the email.",
+        "effects": [],
+        "storyHeadline": "Contacted the reviewer privately",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.05,
+              "years": 1
+            }
+          ],
+          "winText": "They updated it quietly.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.9,
+              "years": 1
+            }
+          ],
+          "loseText": "They posted the email. It got worse."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-an-award-to-enter",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "An award you could enter",
+    "body": "Entry costs $3,000 and everybody knows it's mostly bought.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Enter",
+        "detail": "It either goes on everything for a decade, or it's $3,000 gone.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3000
+          }
+        ],
+        "storyHeadline": "Entered the industry award",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 1.1,
+              "years": 3
+            }
+          ],
+          "winText": "You won. It goes on everything for a decade.",
+          "losePct": 50,
+          "loseEffects": [],
+          "loseText": "You didn't win. $3,000 gone."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "{RIVAL} wins it and mentions it constantly.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Skipped the industry award"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-conference-wants-you-to-speak",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "A conference wants you to speak",
+    "body": "Unpaid, four hundred people, two days including travel.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go",
+        "detail": "Two customers and a hire, for two days of your time.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -2000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.04,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Spoke at the conference"
+      },
+      {
+        "id": "b",
+        "label": "Send someone else",
+        "detail": "They come back energised. Half the value, none of your time.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.02,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Sent someone else to speak"
+      },
+      {
+        "id": "c",
+        "label": "Decline",
+        "detail": "Nothing happens, either way.",
+        "effects": [],
+        "storyHeadline": "Declined the speaking slot"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-pigeon-in-office",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "A pigeon has moved into the office",
+    "body": "It has been three weeks. It is not leaving.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Call someone professional",
+        "detail": "Done, and mildly sad about it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -400
+          },
+          {
+            "type": "morale",
+            "value": -2
+          }
+        ],
+        "storyHeadline": "Called in a professional for the pigeon"
+      },
+      {
+        "id": "b",
+        "label": "Adopt it",
+        "detail": "It appears in the company photo now.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Adopted the office pigeon"
+      },
+      {
+        "id": "c",
+        "label": "Leave the window open and hope",
+        "detail": "It invites another one.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -1
+          }
+        ],
+        "storyHeadline": "Left the window open and hoped"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-company-name-as-a-band",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Somebody registered your company name as a band",
+    "body": "They are quite good. They have 40,000 monthly listeners.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Legal letter",
+        "detail": "You look ridiculous, and they gain 20,000 listeners.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -5
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Sent the band a legal letter"
+      },
+      {
+        "id": "b",
+        "label": "Sponsor them",
+        "detail": "Unexpectedly excellent marketing.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -8000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Sponsored the band using your name"
+      },
+      {
+        "id": "c",
+        "label": "Nothing",
+        "detail": "People confuse you forever, occasionally in your favour.",
+        "effects": [],
+        "storyHeadline": "Ignored the band using your name"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-office-plant-important",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "The office plant has become important",
+    "body": "It has a name, a schedule, and a dedicated group chat.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy nine more",
+        "detail": "One dies eventually, and it is genuinely upsetting.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 12
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Bought nine more office plants"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing and let it continue",
+        "detail": "Correct, and it costs nothing.",
+        "effects": [],
+        "storyHeadline": "Let the office plant situation continue"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-intern-automated-own-job",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "An intern automated their own job in three weeks",
+    "body": "They now have nothing to do and have told you.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hire them properly",
+        "detail": "An excellent hire, and it shows immediately.",
+        "effects": [
+          {
+            "type": "staff",
+            "value": 1
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Hired the intern properly"
+      },
+      {
+        "id": "b",
+        "label": "Give them something harder",
+        "detail": "They solve that too.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Gave the intern something harder"
+      },
+      {
+        "id": "c",
+        "label": "Let the internship end",
+        "detail": "They go to {RIVAL} and do it there instead.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.98,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Let the internship end"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-product-used-in-crime",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Your product was used in a crime",
+    "body": "Creatively, and it was in the news.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Say nothing",
+        "detail": "Signups jump. You feel strange about it.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.15,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": -2
+          }
+        ],
+        "storyHeadline": "Said nothing about the crime"
+      },
+      {
+        "id": "b",
+        "label": "Add a safeguard",
+        "detail": "Three weeks of work, and it's the correct call.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -9000
+          }
+        ],
+        "storyHeadline": "Added a safeguard after the incident"
+      },
+      {
+        "id": "c",
+        "label": "Make a statement",
+        "detail": "It extends the story by another week.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.95,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Made a public statement about the crime"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-stealing-good-chair",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      },
+      {
+        "type": "staffAbove",
+        "value": 12
+      }
+    ],
+    "headline": "Somebody keeps stealing the good chair",
+    "body": "It has escalated. There is a spreadsheet.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy twelve good chairs",
+        "detail": "The golden age begins.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -6000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Bought good chairs for everyone"
+      },
+      {
+        "id": "b",
+        "label": "Assign the chair permanently",
+        "detail": "Civil war.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -10
+          }
+        ],
+        "storyHeadline": "Assigned the good chair permanently"
+      },
+      {
+        "id": "c",
+        "label": "Remove the chair",
+        "detail": "Unity, through loss.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Removed the good chair entirely"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-pub-quiz-answer",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 8
+      }
+    ],
+    "headline": "The company is now a pub quiz answer",
+    "body": "Someone sent a photograph. The question was unflattering.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Post it yourself",
+        "detail": "Everyone loves you for a week.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Posted the pub quiz photo"
+      },
+      {
+        "id": "b",
+        "label": "Nothing",
+        "detail": "It was already funny without you.",
+        "effects": [],
+        "storyHeadline": "Said nothing about the pub quiz"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-name-misspelled-on-sign",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "A conference has put your name on a sign, misspelled",
+    "body": "On the main stage, in three-metre letters.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Correct them",
+        "detail": "Fixed by the afternoon. Nobody noticed.",
+        "effects": [],
+        "storyHeadline": "Got the misspelled sign corrected"
+      },
+      {
+        "id": "b",
+        "label": "Photograph it and post it",
+        "detail": "Thirty thousand people notice, all of them warmly.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 10
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Posted a photo of the misspelled sign"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-silly-street-name",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 4
+      }
+    ],
+    "headline": "Your office is on a street with a very silly name",
+    "body": "It is on all your paperwork, permanently.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Lean into it",
+        "detail": "It becomes part of the brand, genuinely memorable.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.04,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Leaned into the silly street name"
+      },
+      {
+        "id": "b",
+        "label": "Use a PO box",
+        "detail": "Dull, professional, forgettable.",
+        "effects": [],
+        "storyHeadline": "Used a PO box instead"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-feeding-a-fox",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "Somebody has been feeding a fox behind the building",
+    "body": "There are now four foxes. It is a situation.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Stop it firmly",
+        "detail": "The correct call, and not a popular one.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -8
+          }
+        ],
+        "storyHeadline": "Stopped the fox feeding firmly"
+      },
+      {
+        "id": "b",
+        "label": "Do nothing",
+        "detail": "The foxes end up in a national newspaper article about your company.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.02,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 2
+          }
+        ],
+        "storyHeadline": "Let the fox situation continue"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-cease-and-desist-joke",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 5
+      }
+    ],
+    "headline": "A very large company has sent you a cease-and-desist for a joke on your website",
+    "body": "The joke is good. Their letter is nine pages.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Remove it",
+        "detail": "Free, and slightly humiliating.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Removed the joke"
+      },
+      {
+        "id": "b",
+        "label": "Publish the letter",
+        "detail": "Free press for a week, and an enemy for a decade.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.08,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Published the cease-and-desist letter"
+      },
+      {
+        "id": "c",
+        "label": "Make the joke better and put it back",
+        "detail": "They either escalate, or they give up.",
+        "effects": [],
+        "storyHeadline": "Made the joke better and republished it",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "growthMultiplier",
+              "value": 0.95,
+              "years": 1
+            }
+          ],
+          "winText": "They gave up. You won this one.",
+          "losePct": 50,
+          "loseEffects": [
+            {
+              "type": "cash",
+              "value": -15000
+            },
+            {
+              "type": "growthMultiplier",
+              "value": 0.9,
+              "years": 1
+            }
+          ],
+          "loseText": "They escalated. It got expensive and loud."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-cofounder-competitive-sport",
+    "rarity": "absurd",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 6
+      },
+      {
+        "type": "hasCofounder",
+        "value": true
+      }
+    ],
+    "headline": "Your co-founder has entered a competitive sport",
+    "body": "Seriously. They train at 5am and talk about it constantly.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sponsor them",
+        "detail": "Brilliant internal morale, and mild absurdity.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -10000
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Sponsored your co-founder's sport"
+      },
+      {
+        "id": "b",
+        "label": "Say nothing",
+        "detail": "They're noticeably happier, and working slightly less.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 0.97,
+            "years": 1
+          },
+          {
+            "type": "morale",
+            "value": 5
+          }
+        ],
+        "storyHeadline": "Said nothing about the sport"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-offsite-or-bonuses",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Team offsite, or bonuses?",
+    "body": "Both cost something. Only one costs cash.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Team offsite",
+        "detail": "A shared experience, off-site, on the company.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -15000
+          },
+          {
+            "type": "morale",
+            "value": 18
+          }
+        ],
+        "storyHeadline": "Held a team offsite"
+      },
+      {
+        "id": "b",
+        "label": "Bonuses instead",
+        "detail": "Cash, kept simple.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 12
+          }
+        ],
+        "storyHeadline": "Gave bonuses instead of an offsite"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-rebrand-colours",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Rebrand the colours?",
+    "body": "Nobody asked for this. Somebody wants to do it anyway.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Do it",
+        "detail": "Nobody outside notices. Everyone inside feels new.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -12000
+          },
+          {
+            "type": "morale",
+            "value": 8
+          }
+        ],
+        "storyHeadline": "Rebranded the company colours"
+      },
+      {
+        "id": "b",
+        "label": "Leave it",
+        "detail": "Nothing changes, correctly.",
+        "effects": [],
+        "storyHeadline": "Left the colours alone"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-industry-dinner",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Do you go to the industry dinner?",
+    "body": "Free food, forced conversation, maybe something useful.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go",
+        "detail": "One useful conversation, or one wasted evening.",
+        "effects": [],
+        "storyHeadline": "Went to the industry dinner",
+        "gamble": {
+          "winPct": 50,
+          "winEffects": [
+            {
+              "type": "revenueStep",
+              "value": 10000
+            }
+          ],
+          "winText": "One conversation turned into something real.",
+          "losePct": 50,
+          "loseEffects": [],
+          "loseText": "A wasted evening, nothing more."
+        }
+      },
+      {
+        "id": "b",
+        "label": "Skip it",
+        "detail": "An evening back.",
+        "effects": [],
+        "storyHeadline": "Skipped the industry dinner"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-buy-the-domain",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Buy the domain you don't need?",
+    "body": "You don't need it. You might, someday.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Buy it",
+        "detail": "Tidy, and cheap enough not to matter.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -2000
+          }
+        ],
+        "storyHeadline": "Bought the domain"
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "One less thing to renew.",
+        "effects": [],
+        "storyHeadline": "Didn't buy the domain"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-website-photos",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Update the website photos?",
+    "body": "The old ones are three years and one rebrand out of date.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Update them",
+        "detail": "A small, real bump in conversion.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -4000
+          },
+          {
+            "type": "growthMultiplier",
+            "value": 1.03,
+            "years": 1
+          }
+        ],
+        "storyHeadline": "Updated the website photos"
+      },
+      {
+        "id": "b",
+        "label": "Leave them",
+        "detail": "Nobody's complained yet.",
+        "effects": [],
+        "storyHeadline": "Left the website photos as they were"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-book-club",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Someone wants to start a company book club",
+    "body": "Three people will attend twice. It's still worth it.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Support it",
+        "detail": "Small, cheap, genuinely appreciated.",
+        "effects": [
+          {
+            "type": "morale",
+            "value": 6
+          }
+        ],
+        "storyHeadline": "Supported the company book club"
+      },
+      {
+        "id": "b",
+        "label": "Let it fade",
+        "detail": "It fades on its own, no harm done.",
+        "effects": [],
+        "storyHeadline": "Let the book club idea fade"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-newsletter-weekly",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Should the newsletter go weekly?",
+    "body": "More frequent, more work, unclear if anyone reads it either way.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Go weekly",
+        "detail": "Someone's whole Thursday, forever, in exchange for real signups.",
+        "effects": [
+          {
+            "type": "growthMultiplier",
+            "value": 1.05,
+            "years": 2
+          },
+          {
+            "type": "morale",
+            "value": -3
+          }
+        ],
+        "storyHeadline": "Took the newsletter weekly"
+      },
+      {
+        "id": "b",
+        "label": "Keep it as is",
+        "detail": "Less reach, less effort.",
+        "effects": [],
+        "storyHeadline": "Kept the newsletter as it was"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-free-lunch-fridays",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Free lunch on Fridays?",
+    "body": "Not expensive individually. Very expensive at scale.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Yes",
+        "detail": "Everyone stays till three. Worth it.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -3,
+            "unit": "runwayMonths"
+          },
+          {
+            "type": "morale",
+            "value": 15
+          }
+        ],
+        "storyHeadline": "Started free lunch on Fridays"
+      },
+      {
+        "id": "b",
+        "label": "No",
+        "detail": "Nothing changes.",
+        "effects": [],
+        "storyHeadline": "Skipped free lunch Fridays"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-sponsor-school-kit",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Sponsor the local school's football kit?",
+    "body": "A small, local, mostly invisible act of goodwill.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Sponsor it",
+        "detail": "Nothing measurable. Everybody feels good.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -1500
+          },
+          {
+            "type": "morale",
+            "value": 3
+          }
+        ],
+        "storyHeadline": "Sponsored the local school's football kit"
+      },
+      {
+        "id": "b",
+        "label": "Don't",
+        "detail": "Nobody notices either way.",
+        "effects": [],
+        "storyHeadline": "Didn't sponsor the school kit"
+      }
+    ]
+  },
+  {
+    "id": "ev-v3-print-business-cards",
+    "rarity": "common",
+    "isGamble": false,
+    "conditions": [
+      {
+        "type": "yearMin",
+        "value": 2
+      }
+    ],
+    "headline": "Print business cards again?",
+    "body": "Nobody has asked for one in two years. Somebody still wants them.",
+    "options": [
+      {
+        "id": "a",
+        "label": "Print them",
+        "detail": "Faintly retro, occasionally useful.",
+        "effects": [
+          {
+            "type": "cash",
+            "value": -600
+          }
+        ],
+        "storyHeadline": "Printed business cards again"
+      },
+      {
+        "id": "b",
+        "label": "Skip it",
+        "detail": "Nobody misses them.",
+        "effects": [],
+        "storyHeadline": "Skipped printing business cards"
+      }
+    ]
+  }
+]
